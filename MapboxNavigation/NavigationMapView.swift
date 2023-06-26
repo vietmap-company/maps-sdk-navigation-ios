@@ -3,6 +3,7 @@ import Mapbox
 import MapboxDirections
 import MapboxCoreNavigation
 import Turf
+import MapKit
 
 /**
  `NavigationMapView` is a subclass of `MGLMapView` with convenience functions for adding `Route` lines to a map.
@@ -112,7 +113,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         }
         set {
             if tracksUserCourse || userLocationForCourseTracking != nil {
-//                super.showsUserLocation = false
+                super.showsUserLocation = false
                 
                 if userCourseView == nil {
                     userCourseView = UserPuckCourseView(frame: CGRect(origin: .zero, size: CGSize(width: 75, height: 75)))
@@ -120,7 +121,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
                 userCourseView?.isHidden = !newValue
             } else {
                 userCourseView?.isHidden = true
-//                super.showsUserLocation = newValue
+                super.showsUserLocation = newValue
             }
         }
     }
@@ -178,6 +179,9 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
      */
     open var trackUpdateCourse = true
 
+    open var updateCameraWhenTurn = true
+    
+    var timerUpdateWhenTurn = 0
     /**
      A `UIView` used to indicate the user’s location and course on the map.
      
@@ -192,7 +196,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
                 } else {
                     userCourseView.center = userAnchorPoint
                 }
-                // addSubview(userCourseView)
+                addSubview(userCourseView)
             }
         }
     }
@@ -231,8 +235,8 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         makeGestureRecognizersUpdateCourseView()
         
         resumeNotifications()
-        super.showsUserLocation = true
-        setUserTrackingMode(.follow, animated: true, completionHandler: nil)
+//        super.showsUserLocation = true
+//        setUserTrackingMode(.follow, animated: true, completionHandler: nil)
     }
     
     deinit {
@@ -342,36 +346,51 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
     }
     
 
-    @objc public func updateCourseTracking(location: CLLocation?, camera: MGLMapCamera? = nil, animated: Bool = false) {
+    public func updateCourseTracking(location: CLLocation?, camera: MGLMapCamera? = nil, animated: Bool = false, distanceStep: CLLocationDistance? = 0) {
         // While animating to overhead mode, don't animate the puck.
-        let duration: TimeInterval = animated && !isAnimatingToOverheadMode ? 1 : 0
+        if updateCameraWhenTurn {
+            updateCameraWhenTurn = ((distanceStep ?? 0) > 75.0)
+        }
+        let duration: TimeInterval = animated && !isAnimatingToOverheadMode ? (updateCameraWhenTurn ? 1 : 0) : 0
         animatesUserLocation = animated
         userLocationForCourseTracking = location
         guard let location = location, CLLocationCoordinate2DIsValid(location.coordinate) else {
             return
         }
-        
+
         if tracksUserCourse {
             let point = userAnchorPoint
-            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
-            let newCamera = camera ?? MGLMapCamera(lookingAtCenter: location.coordinate, fromDistance: altitude, pitch: 45, heading: location.course)
+//            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
             let function: CAMediaTimingFunction? = animated ? CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear) : nil
-            setCamera(newCamera, withDuration: duration, animationTimingFunction: function, edgePadding: padding, completionHandler: nil)
-        }
-        if !tracksUserCourse || userAnchorPoint != userCourseView?.center ?? userAnchorPoint {
-            UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {
-                self.userCourseView?.center = self.convert(location.coordinate, toPointTo: self)
-            })
+            let newCamera = camera ?? MGLMapCamera(lookingAtCenter: location.coordinate, altitude: altitude, pitch: 45, heading: location.course)
+            setCamera(newCamera, withDuration: duration, animationTimingFunction: function, completionHandler: nil)
         }
         
+        if !tracksUserCourse || userAnchorPoint != userCourseView?.center ?? userAnchorPoint {
+           UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {
+               if let userCourseView = self.userCourseView {
+                   userCourseView.center = self.convert(location.coordinate, toPointTo: self)
+               }
+           })
+       }
+        
         if let userCourseView = userCourseView as? UserCourseView {
-            if let customTransformation = userCourseView.update?(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse) {
+            if let customTransformation = userCourseView.update?(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: false) {
                 customTransformation
             } else {
                 self.userCourseView?.applyDefaultUserPuckTransformation(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse)
             }
         } else {
             userCourseView?.applyDefaultUserPuckTransformation(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse)
+        }
+        
+        if !updateCameraWhenTurn {
+            timerUpdateWhenTurn = timerUpdateWhenTurn + 1
+        }
+
+        if timerUpdateWhenTurn >= 2 {
+            updateCameraWhenTurn = true
+            timerUpdateWhenTurn = 0
         }
     }
     
@@ -1256,4 +1275,14 @@ public protocol NavigationMapViewCourseTrackingDelegate: AnyObject {
      */
     @objc(navigationMapViewDidStopTrackingCourse:)
     optional func navigationMapViewDidStopTrackingCourse(_ mapView: NavigationMapView)
+}
+
+extension CLLocationCoordinate2D {
+    static func - (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: lhs.latitude - rhs.latitude, longitude: lhs.longitude - rhs.longitude)
+    }
+    
+    func dotProduct(_ coordinate: CLLocationCoordinate2D) -> Double {
+        return latitude * coordinate.latitude + longitude * coordinate.longitude
+    }
 }

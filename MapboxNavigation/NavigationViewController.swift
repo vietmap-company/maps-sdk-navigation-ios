@@ -466,17 +466,19 @@ open class NavigationViewController: UIViewController {
         let shouldPreventReroutesWhenArrivingAtWaypoint = routeController.delegate?.routeController?(routeController, shouldPreventReroutesWhenArrivingAt: routeController.routeProgress.currentLeg.destination) ?? true
         let userHasArrivedAndShouldPreventRerouting = shouldPreventReroutesWhenArrivingAtWaypoint && !routeController.routeProgress.currentLegProgress.userHasArrivedAtWaypoint
         
+        // start Author: NhatPV
+        let distance = routeProgress.currentLegProgress.currentStepProgress.distanceRemaining
+        
         if snapsUserLocationAnnotationToRoute,
             userHasArrivedAndShouldPreventRerouting {
-            mapViewController?.mapView.updateCourseTracking(location: location, animated: true)
-        }
+            mapViewController?.mapView.updateCourseTracking(location: location, animated: true, distanceStep: distance)
+        } 
     }
     
     @objc func didPassInstructionPoint(notification: NSNotification) {
         let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
         
-        mapViewController?.updateCameraAltitude(for: routeProgress)
-        
+        mapViewController?.updateCameraAltitudeController(for: routeProgress)
         clearStaleNotifications()
         
         if routeProgress.currentLegProgress.currentStepProgress.durationRemaining <= RouteControllerHighAlertInterval {
