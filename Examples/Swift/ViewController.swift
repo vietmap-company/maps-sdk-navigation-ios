@@ -189,6 +189,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         waypoints.insert(userWaypoint, at: 0)
 
         let options = NavigationRouteOptions(waypoints: waypoints)
+        options.shapeFormat = .polyline6
 
         requestRoute(with: options, success: defaultSuccess, failure: defaultFailure)
     }
@@ -269,19 +270,19 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     }
     
     @objc func progressDidChange(_ notification: NSNotification ) {
-        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
-        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
-        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
-            let camera = MGLMapCamera(
-                lookingAtCenter: location.coordinate,
-                acrossDistance: 500,
-                pitch: 75,
-                heading: location.course
-            )
-            print("locaiton: \(location.coordinate)")
-            navigationViewController.mapView?.setCamera(camera, animated: true)
-        }
-        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
+//        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
+//        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
+//        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
+//            let camera = MGLMapCamera(
+//                lookingAtCenter: location.coordinate,
+//                acrossDistance: 500,
+//                pitch: 75,
+//                heading: location.course
+//            )
+//            print("locaiton: \(location.coordinate)")
+//            navigationViewController.mapView?.setCamera(camera, animated: true)
+//        }
+//        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
     }
 
     func configureMapView(_ mapView: NavigationMapView) {
