@@ -175,7 +175,7 @@
 		AE997D2221137B8B00EB0AAB /* String+LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE997D2121137B8B00EB0AAB /* String+LocalizedConstants.swift */; };
 		AEC3AC9A2106703100A26F34 /* HighwayShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3AC992106703100A26F34 /* HighwayShield.swift */; };
 		AEF2C8F22072B603007B061F /* routeWithTunnels_9thStreetDC.json in Resources */ = {isa = PBXBuildFile; fileRef = AEF2C8F12072B603007B061F /* routeWithTunnels_9thStreetDC.json */; };
-		BEA06EC82A4BE50D00B89772 /* Mapbox in Frameworks */ = {isa = PBXBuildFile; productRef = BEA06EC72A4BE50D00B89772 /* Mapbox */; };
+		BEA06ECB2A4C19B600B89772 /* Mapbox in Frameworks */ = {isa = PBXBuildFile; productRef = BEA06ECA2A4C19B600B89772 /* Mapbox */; };
 		C51511D120EAC89D00372A91 /* CPMapTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51511D020EAC89D00372A91 /* CPMapTemplate.swift */; };
 		C51DF8661F38C31C006C6A15 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DF8651F38C31C006C6A15 /* Locale.swift */; };
 		C51DF8671F38C337006C6A15 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9800E1EFBCDAD006DBF2E /* Date.swift */; };
@@ -908,7 +908,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA06EC82A4BE50D00B89772 /* Mapbox in Frameworks */,
+				BEA06ECB2A4C19B600B89772 /* Mapbox in Frameworks */,
 				C538E501278DCD0900200823 /* Solar.xcframework in Frameworks */,
 				C538E4FD278DCD0700200823 /* MapboxSpeech.xcframework in Frameworks */,
 				35E9B0AD1F9E0F8F00BF84AB /* MapboxNavigation.framework in Frameworks */,
@@ -1610,7 +1610,7 @@
 			);
 			name = "Example-Swift";
 			packageProductDependencies = (
-				BEA06EC72A4BE50D00B89772 /* Mapbox */,
+				BEA06ECA2A4C19B600B89772 /* Mapbox */,
 			);
 			productName = "Example-Swift";
 			productReference = 358D14631E5E3B7700ADE590 /* Example-Swift.app */;
@@ -1822,7 +1822,7 @@
 			);
 			mainGroup = C5ADFBBF1DDCC7840011824B;
 			packageReferences = (
-				BEA06EC62A4BE50D00B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */,
+				BEA06EC92A4C19B600B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */,
 			);
 			productRefGroup = C5ADFBCA1DDCC7840011824B /* Products */;
 			projectDirPath = "";
@@ -3299,20 +3299,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BEA06EC62A4BE50D00B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */ = {
+		BEA06EC92A4C19B600B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vietmap-company/maps-sdk-ios.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.0;
+				version = 1.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BEA06EC72A4BE50D00B89772 /* Mapbox */ = {
+		BEA06ECA2A4C19B600B89772 /* Mapbox */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BEA06EC62A4BE50D00B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
+			package = BEA06EC92A4C19B600B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
 			productName = Mapbox;
 		};
 /* End XCSwiftPackageProductDependency section */
