@@ -105,23 +105,23 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
     
     open override var showsUserLocation: Bool {
         get {
-            if tracksUserCourse || userLocationForCourseTracking != nil {
-                return !(userCourseView?.isHidden ?? true)
-            }
+//            if tracksUserCourse || userLocationForCourseTracking != nil {
+//                return !(userCourseView?.isHidden ?? true)
+//            }
             return super.showsUserLocation
         }
         set {
-            if tracksUserCourse || userLocationForCourseTracking != nil {
+//            if tracksUserCourse || userLocationForCourseTracking != nil {
 //                super.showsUserLocation = false
                 
-                if userCourseView == nil {
-                    userCourseView = UserPuckCourseView(frame: CGRect(origin: .zero, size: CGSize(width: 75, height: 75)))
-                }
-                userCourseView?.isHidden = !newValue
-            } else {
-                userCourseView?.isHidden = true
+//                if userCourseView == nil {
+//                    userCourseView = UserPuckCourseView(frame: CGRect(origin: .zero, size: CGSize(width: 75, height: 75)))
+//                }
+//                userCourseView?.isHidden = !newValue
+//            } else {
+//                userCourseView?.isHidden = true
 //                super.showsUserLocation = newValue
-            }
+//            }
         }
     }
     
@@ -232,7 +232,6 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         
         resumeNotifications()
         super.showsUserLocation = true
-        setUserTrackingMode(.follow, animated: true, completionHandler: nil)
     }
     
     deinit {
@@ -275,9 +274,9 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         super.mapViewDidFinishRenderingFrameFullyRendered(fullyRendered)
         
         guard shouldPositionCourseViewFrameByFrame else { return }
-        guard let location = userLocationForCourseTracking else { return }
+//        guard let location = userLocationForCourseTracking else { return }
         
-        userCourseView?.center = convert(location.coordinate, toPointTo: self)
+//        userCourseView?.center = convert(location.coordinate, toPointTo: self)
     }
     
     // MARK: - Notifications
@@ -352,12 +351,13 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         }
         
         if tracksUserCourse {
-            let point = userAnchorPoint
-            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
-            let newCamera = camera ?? MGLMapCamera(lookingAtCenter: location.coordinate, fromDistance: altitude, pitch: 45, heading: location.course)
+//            let point = userAnchorPoint
+//            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
+            let newCamera = camera ?? MGLMapCamera(lookingAtCenter: location.coordinate, altitude: altitude, pitch: 45, heading: location.course)
             let function: CAMediaTimingFunction? = animated ? CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear) : nil
-            setCamera(newCamera, withDuration: duration, animationTimingFunction: function, edgePadding: padding, completionHandler: nil)
+            setCamera(newCamera, withDuration: duration, animationTimingFunction: function, completionHandler: nil)
         }
+        /* Author NhatPV
         if !tracksUserCourse || userAnchorPoint != userCourseView?.center ?? userAnchorPoint {
             UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {
                 self.userCourseView?.center = self.convert(location.coordinate, toPointTo: self)
@@ -373,6 +373,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         } else {
             userCourseView?.applyDefaultUserPuckTransformation(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse)
         }
+         */
     }
     
     //MARK: -  Gesture Recognizers
@@ -418,12 +419,12 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
                 }
             }
         }
-        
-        if sender.state == .changed {
-            guard let location = userLocationForCourseTracking else { return }
-            userCourseView?.layer.removeAllAnimations()
-            userCourseView?.center = convert(location.coordinate, toPointTo: self)
-        }
+//        
+//        if sender.state == .changed {
+//            guard let location = userLocationForCourseTracking else { return }
+//            userCourseView?.layer.removeAllAnimations()
+//            userCourseView?.center = convert(location.coordinate, toPointTo: self)
+//        }
     }
     
     // MARK: Feature Addition/Removal

@@ -52,6 +52,10 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     }
 
     // MARK: Directions Request Handlers
+    
+    @objc public var overheadInsets: UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 20, bottom: 70, right: 20)
+    }
 
     fileprivate lazy var defaultSuccess: RouteRequestSuccess = { [weak self] (routes) in
         guard let current = routes.first else { return }
@@ -60,6 +64,9 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self?.waypoints = current.routeOptions.waypoints
         self?.clearMap.isHidden = false
         self?.longPressHintView.isHidden = true
+        self?.mapView?.userTrackingMode = .none;
+        self?.mapView?.setOverheadCameraView(from: (self?.waypoints.first!.coordinate)!, along: current.coordinates!, for: self!.overheadInsets)
+//        self?.mapView?.userTrackingMode = .follow;
     }
 
     fileprivate lazy var defaultFailure: RouteRequestFailure = { [weak self] (error) in
@@ -189,6 +196,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         waypoints.insert(userWaypoint, at: 0)
 
         let options = NavigationRouteOptions(waypoints: waypoints)
+        options.shapeFormat = .polyline6
 
         requestRoute(with: options, success: defaultSuccess, failure: defaultFailure)
     }
@@ -269,19 +277,19 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     }
     
     @objc func progressDidChange(_ notification: NSNotification ) {
-        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
-        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
-        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
-            let camera = MGLMapCamera(
-                lookingAtCenter: location.coordinate,
-                acrossDistance: 500,
-                pitch: 75,
-                heading: location.course
-            )
-            print("locaiton: \(location.coordinate)")
-            navigationViewController.mapView?.setCamera(camera, animated: true)
-        }
-        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
+//        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
+//        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
+//        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
+//            let camera = MGLMapCamera(
+//                lookingAtCenter: location.coordinate,
+//                acrossDistance: 500,
+//                pitch: 75,
+//                heading: location.course
+//            )
+//            print("locaiton: \(location.coordinate)")
+//            navigationViewController.mapView?.setCamera(camera, animated: true)
+//        }
+//        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
     }
 
     func configureMapView(_ mapView: NavigationMapView) {
