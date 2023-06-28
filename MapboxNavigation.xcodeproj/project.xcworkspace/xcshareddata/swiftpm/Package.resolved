@@ -1,12 +1,12 @@
 {
   "pins" : [
     {
-      "identity" : "maps-sdk-ios",
+      "identity" : "maplibre-gl-native-distribution",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/vietmap-company/maps-sdk-ios.git",
+      "location" : "https://github.com/maplibre/maplibre-gl-native-distribution",
       "state" : {
-        "revision" : "ad3b4210ff68cf8ffa713ab06d6168ebf649b59e",
-        "version" : "1.0.1"
+        "revision" : "d761956e81e74d8bdbfba31e0ec3a75616190658",
+        "version" : "5.12.2"
       }
     }
   ],
