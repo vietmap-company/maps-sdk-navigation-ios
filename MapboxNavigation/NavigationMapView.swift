@@ -1114,6 +1114,15 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
     @objc public func recenterMap() {
         tracksUserCourse = true
         enableFrameByFrameCourseViewTracking(for: 3)
+        if let location = self.userLocation?.location {
+            let camera = MGLMapCamera(
+                lookingAtCenter: location.coordinate,
+                acrossDistance: defaultAltitude,
+                pitch: 0,
+                heading: location.course
+            )
+            self.setCamera(camera, withDuration: 1, animationTimingFunction: nil)
+        }
     }
 }
 
