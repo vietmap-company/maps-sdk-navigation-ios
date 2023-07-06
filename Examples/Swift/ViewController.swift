@@ -64,9 +64,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self?.waypoints = current.routeOptions.waypoints
         self?.clearMap.isHidden = false
         self?.longPressHintView.isHidden = true
-        self?.mapView?.userTrackingMode = .none;
         self?.mapView?.setOverheadCameraView(from: (self?.waypoints.first!.coordinate)!, along: current.coordinates!, for: self!.overheadInsets)
-//        self?.mapView?.userTrackingMode = .follow;
     }
 
     fileprivate lazy var defaultFailure: RouteRequestFailure = { [weak self] (error) in
@@ -180,6 +178,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView?.removeWaypoints()
         waypoints.removeAll()
         longPressHintView.isHidden = false
+        mapView?.recenterMap()
     }
 
     @IBAction func startButtonPressed(_ sender: Any) {
@@ -257,7 +256,8 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 
         self.navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
         navigationViewController.delegate = self
-        navigationViewController.mapView?.showsUserHeadingIndicator = true
+//        navigationViewController.mapView?.showsUserHeadingIndicator = true
+        navigationViewController.mapView?.userTrackingMode = .followWithHeading
         presentAndRemoveMapview(navigationViewController)
     }
 
@@ -270,11 +270,20 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self.navigationViewController.mapView?.styleURL = URL(string: "https://api.maptiler.com/maps/streets/style.json?key=AVXR2vOTw3aGpqw8nlv2");
         self.navigationViewController.mapView?.tracksUserCourse = true
         NotificationCenter.default.addObserver(self, selector: #selector(progressDidChange(_ :)), name: .routeControllerProgressDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(progressDidReroute(_ :)), name: .routeControllerDidReroute, object: nil)
         present(navigationViewController, animated: true) {
             self.mapView?.removeFromSuperview()
             self.mapView = nil
         }
     }
+    
+    @objc func progressDidReroute(_ notification: Notification) {
+        if let userInfo = notification.object as? RouteController {
+            navigationViewController.mapView?.showRoutes([userInfo.routeProgress.route])
+            navigationViewController.mapView?.recenterMap()
+            navigationViewController.mapView?.tracksUserCourse = true
+        }
+   }
     
     @objc func progressDidChange(_ notification: NSNotification ) {
 //        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
@@ -296,7 +305,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.delegate = self
         mapView.navigationMapDelegate = self
-        mapView.userTrackingMode = .follow
+        mapView.userTrackingMode = .followWithHeading
 
         let singleTap = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(tap:)))
         mapView.gestureRecognizers?.filter({ $0 is UILongPressGestureRecognizer }).forEach(singleTap.require(toFail:))
