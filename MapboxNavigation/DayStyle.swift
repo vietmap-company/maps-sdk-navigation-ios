@@ -1,5 +1,5 @@
 import Foundation
-import Mapbox
+import VietMap
 
 
 extension UIColor {

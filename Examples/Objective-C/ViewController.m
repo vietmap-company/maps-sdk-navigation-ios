@@ -4,7 +4,7 @@
 @import MapboxCoreNavigation;
 @import MapboxDirections;
 @import MapboxNavigation;
-@import Mapbox;
+@import VietMap;
 
 @interface ViewController () <AVSpeechSynthesizerDelegate>
 @property (nonatomic, weak) IBOutlet MGLMapView *mapView;

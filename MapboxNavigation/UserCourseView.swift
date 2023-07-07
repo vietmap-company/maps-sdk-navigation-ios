@@ -1,6 +1,6 @@
 import UIKit
 import Turf
-import Mapbox
+import VietMap
 
 let PuckSize: CGFloat = 45
 let ArrowSize = PuckSize * 0.6
