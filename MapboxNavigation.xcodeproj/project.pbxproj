@@ -175,7 +175,7 @@
 		AE997D2221137B8B00EB0AAB /* String+LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE997D2121137B8B00EB0AAB /* String+LocalizedConstants.swift */; };
 		AEC3AC9A2106703100A26F34 /* HighwayShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3AC992106703100A26F34 /* HighwayShield.swift */; };
 		AEF2C8F22072B603007B061F /* routeWithTunnels_9thStreetDC.json in Resources */ = {isa = PBXBuildFile; fileRef = AEF2C8F12072B603007B061F /* routeWithTunnels_9thStreetDC.json */; };
-		BEA06ECE2A4C1A6D00B89772 /* Mapbox in Frameworks */ = {isa = PBXBuildFile; productRef = BEA06ECD2A4C1A6D00B89772 /* Mapbox */; };
+		BE5523012A56AA13009A6944 /* Mapbox in Frameworks */ = {isa = PBXBuildFile; productRef = BE5523002A56AA13009A6944 /* Mapbox */; };
 		C51511D120EAC89D00372A91 /* CPMapTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51511D020EAC89D00372A91 /* CPMapTemplate.swift */; };
 		C51DF8661F38C31C006C6A15 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DF8651F38C31C006C6A15 /* Locale.swift */; };
 		C51DF8671F38C337006C6A15 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9800E1EFBCDAD006DBF2E /* Date.swift */; };
@@ -908,7 +908,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEA06ECE2A4C1A6D00B89772 /* Mapbox in Frameworks */,
+				BE5523012A56AA13009A6944 /* Mapbox in Frameworks */,
 				C538E501278DCD0900200823 /* Solar.xcframework in Frameworks */,
 				C538E4FD278DCD0700200823 /* MapboxSpeech.xcframework in Frameworks */,
 				35E9B0AD1F9E0F8F00BF84AB /* MapboxNavigation.framework in Frameworks */,
@@ -1610,7 +1610,7 @@
 			);
 			name = "Example-Swift";
 			packageProductDependencies = (
-				BEA06ECD2A4C1A6D00B89772 /* Mapbox */,
+				BE5523002A56AA13009A6944 /* Mapbox */,
 			);
 			productName = "Example-Swift";
 			productReference = 358D14631E5E3B7700ADE590 /* Example-Swift.app */;
@@ -1822,7 +1822,7 @@
 			);
 			mainGroup = C5ADFBBF1DDCC7840011824B;
 			packageReferences = (
-				BEA06ECC2A4C1A6D00B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */,
+				BE5522FF2A56AA13009A6944 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */,
 			);
 			productRefGroup = C5ADFBCA1DDCC7840011824B /* Products */;
 			projectDirPath = "";
@@ -1984,7 +1984,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This Run Script build phase helps to keep the navigation SDK’s developers from exposing their own access tokens during development. See <https://www.mapbox.com/help/ios-private-access-token/> for more information. If you are developing an application privately, you may add the MGLMapboxAccessToken key directly to your Info.plist file and delete this build phase.\n\ntoken_file=~/.mapbox\ntoken_file2=~/mapbox\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\nplutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\necho 'warning: Missing Mapbox access token'\nopen 'https://www.mapbox.com/studio/account/tokens/'\necho \"warning: Get an access token from <https://www.mapbox.com/studio/account/tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n";
+			shellScript = "";
 		};
 		C53F2F0320EBC95600D9798F /* Apply Mapbox Access Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1999,7 +1999,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This Run Script build phase helps to keep the navigation SDK’s developers from exposing their own access tokens during development. See <https://www.mapbox.com/help/ios-private-access-token/> for more information. If you are developing an application privately, you may add the MGLMapboxAccessToken key directly to your Info.plist file and delete this build phase.\n\ntoken_file=~/.mapbox\ntoken_file2=~/mapbox\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'warning: Missing Mapbox access token'\n  open 'https://www.mapbox.com/account/access-tokens/'\n  echo \"warning: Get an access token from <https://www.mapbox.com/account/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n";
+			shellScript = "";
 		};
 		DA408F661FB3CA3C004D9661 /* Apply Mapbox Access Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2014,7 +2014,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This Run Script build phase helps to keep the navigation SDK’s developers from exposing their own access tokens during development. See <https://www.mapbox.com/help/ios-private-access-token/> for more information. If you are developing an application privately, you may add the MGLMapboxAccessToken key directly to your Info.plist file and delete this build phase.\n\ntoken_file=~/.mapbox\ntoken_file2=~/mapbox\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'warning: Missing Mapbox access token'\n  open 'https://www.mapbox.com/account/access-tokens/'\n  echo \"warning: Get an access token from <https://www.mapbox.com/account/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n";
+			shellScript = "";
 		};
 		DA408F671FB3CA5C004D9661 /* Apply Mapbox Access Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2029,7 +2029,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This Run Script build phase helps to keep the navigation SDK’s developers from exposing their own access tokens during development. See <https://www.mapbox.com/help/ios-private-access-token/> for more information. If you are developing an application privately, you may add the MGLMapboxAccessToken key directly to your Info.plist file and delete this build phase.\n\ntoken_file=~/.mapbox\ntoken_file2=~/mapbox\ntoken=\"$(cat $token_file 2>/dev/null || cat $token_file2 2>/dev/null)\"\nif [ \"$token\" ]; then\n  plutil -replace MGLMapboxAccessToken -string $token \"$TARGET_BUILD_DIR/$INFOPLIST_PATH\"\nelse\n  echo 'warning: Missing Mapbox access token'\n  open 'https://www.mapbox.com/account/access-tokens/'\n  echo \"warning: Get an access token from <https://www.mapbox.com/account/access-tokens/>, then create a new file at $token_file or $token_file2 that contains the access token.\"\nfi\n";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -3299,20 +3299,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BEA06ECC2A4C1A6D00B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */ = {
+		BE5522FF2A56AA13009A6944 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/vietmap-company/maps-sdk-ios.git";
 			requirement = {
 				kind = exactVersion;
-				version = 1.0.1;
+				version = 1.0.2;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BEA06ECD2A4C1A6D00B89772 /* Mapbox */ = {
+		BE5523002A56AA13009A6944 /* Mapbox */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = BEA06ECC2A4C1A6D00B89772 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
+			package = BE5522FF2A56AA13009A6944 /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
 			productName = Mapbox;
 		};
 /* End XCSwiftPackageProductDependency section */

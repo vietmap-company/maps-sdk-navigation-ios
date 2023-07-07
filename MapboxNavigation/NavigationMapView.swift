@@ -351,7 +351,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         if updateCameraWhenTurn {
             updateCameraWhenTurn = ((distanceStep ?? 0) > 75.0)
         }
-        let duration: TimeInterval = animated && !isAnimatingToOverheadMode ? (updateCameraWhenTurn ? 1 : 0) : 0
+        let duration: TimeInterval = animated && !isAnimatingToOverheadMode ? (updateCameraWhenTurn ? 3 : 0) : 0
         animatesUserLocation = animated
         userLocationForCourseTracking = location
         guard let location = location, CLLocationCoordinate2DIsValid(location.coordinate) else {
@@ -359,7 +359,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         }
 
         if tracksUserCourse {
-            let point = userAnchorPoint
+//            let point = userAnchorPoint
 //            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
             let function: CAMediaTimingFunction? = animated ? CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear) : nil
             let newCamera = camera ?? MGLMapCamera(lookingAtCenter: location.coordinate, altitude: altitude, pitch: 45, heading: location.course)
