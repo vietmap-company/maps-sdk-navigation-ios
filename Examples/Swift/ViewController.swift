@@ -52,6 +52,10 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     }
 
     // MARK: Directions Request Handlers
+    
+    @objc public var overheadInsets: UIEdgeInsets {
+        return UIEdgeInsets(top: 20, left: 20, bottom: 70, right: 20)
+    }
 
     fileprivate lazy var defaultSuccess: RouteRequestSuccess = { [weak self] (routes) in
         guard let current = routes.first else { return }
@@ -60,6 +64,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self?.waypoints = current.routeOptions.waypoints
         self?.clearMap.isHidden = false
         self?.longPressHintView.isHidden = true
+        self?.mapView?.setOverheadCameraView(from: (self?.waypoints.first!.coordinate)!, along: current.coordinates!, for: self!.overheadInsets)
     }
 
     fileprivate lazy var defaultFailure: RouteRequestFailure = { [weak self] (error) in
@@ -173,6 +178,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView?.removeWaypoints()
         waypoints.removeAll()
         longPressHintView.isHidden = false
+        mapView?.recenterMap()
     }
 
     @IBAction func startButtonPressed(_ sender: Any) {
@@ -250,7 +256,8 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 
         self.navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
         navigationViewController.delegate = self
-        navigationViewController.mapView?.showsUserHeadingIndicator = true
+//        navigationViewController.mapView?.showsUserHeadingIndicator = true
+        navigationViewController.mapView?.userTrackingMode = .followWithHeading
         presentAndRemoveMapview(navigationViewController)
     }
 
@@ -303,7 +310,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         mapView.delegate = self
         mapView.navigationMapDelegate = self
-        mapView.userTrackingMode = .follow
+        mapView.userTrackingMode = .followWithHeading
 
         let singleTap = UILongPressGestureRecognizer(target: self, action: #selector(didLongPress(tap:)))
         mapView.gestureRecognizers?.filter({ $0 is UILongPressGestureRecognizer }).forEach(singleTap.require(toFail:))

@@ -24,7 +24,7 @@ extension Locale {
     /**
      Set locale language
      */
-    public static var localeVoice = "en"
+    public static var localeVoice = "vi"
     
     /**
      Returns a `Locale` from `preferredLocalLanguageCountryCode`.
