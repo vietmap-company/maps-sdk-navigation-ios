@@ -340,27 +340,27 @@ class RouteMapViewController: UIViewController {
     }
     
     func updateCameraAltitudeController(for routeProgress: RouteProgress) {
-            guard mapView.tracksUserCourse else { return } //only adjust when we are actively tracking user course
+        guard mapView.tracksUserCourse else { return } //only adjust when we are actively tracking user course
 
-            let zoomOutAltitude = mapView.zoomedOutMotorwayAltitude
-            let defaultAltitude = mapView.defaultAltitude
-            let isLongRoad = routeProgress.distanceRemaining >= mapView.longManeuverDistance
-            let currentStep = routeProgress.currentLegProgress.currentStep
-            let upComingStep = routeProgress.currentLegProgress.upComingStep
+        let zoomOutAltitude = mapView.zoomedOutMotorwayAltitude
+        let defaultAltitude = mapView.defaultAltitude
+        let isLongRoad = routeProgress.distanceRemaining >= mapView.longManeuverDistance
+        let currentStep = routeProgress.currentLegProgress.currentStep
+        let upComingStep = routeProgress.currentLegProgress.upComingStep
 
-            //If the user is at the last turn maneuver, the map should zoom in to the default altitude.
-            let currentInstruction = routeProgress.currentLegProgress.currentStepProgress.currentSpokenInstruction
+        //If the user is at the last turn maneuver, the map should zoom in to the default altitude.
+        let currentInstruction = routeProgress.currentLegProgress.currentStepProgress.currentSpokenInstruction
 
-            //If the user is on a motorway, not exiting, and their segment is sufficently long, the map should zoom out to the motorway altitude.
-            //otherwise, zoom in if it's the last instruction on the step.
-            let currentStepIsMotorway = currentStep.isMotorway
-            let nextStepIsMotorway = upComingStep?.isMotorway ?? false
-            if currentStepIsMotorway, nextStepIsMotorway, isLongRoad {
-                setCamera(altitude: zoomOutAltitude)
-            } else if currentInstruction == currentStep.lastInstruction {
-                setCamera(altitude: defaultAltitude)
-            }
+        //If the user is on a motorway, not exiting, and their segment is sufficently long, the map should zoom out to the motorway altitude.
+        //otherwise, zoom in if it's the last instruction on the step.
+        let currentStepIsMotorway = currentStep.isMotorway
+        let nextStepIsMotorway = upComingStep?.isMotorway ?? false
+        if currentStepIsMotorway, nextStepIsMotorway, isLongRoad {
+            setCamera(altitude: zoomOutAltitude)
+        } else if currentInstruction == currentStep.lastInstruction {
+            setCamera(altitude: defaultAltitude)
         }
+    }
 
     func updateCameraAltitude(for routeProgress: RouteProgress) {
         guard mapView.tracksUserCourse else { return } //only adjust when we are actively tracking user course

@@ -257,7 +257,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     func navigationLocationManager() -> NavigationLocationManager {
         guard let route = routes?.first else { return NavigationLocationManager() }
         let simulator = SimulatedLocationManager(route: route)
-        simulator.speedMultiplier = 0.7
+        simulator.speedMultiplier = 1
         return simulationButton.isSelected ? simulator : NavigationLocationManager()
     }
 

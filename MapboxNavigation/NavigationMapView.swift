@@ -21,6 +21,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         fileprivate static let decreasedFramesPerSecond = MGLMapViewPreferredFramesPerSecond(rawValue: 5)
     }
     
+    @objc public var defaultAltitudeVM: CLLocationDistance = 250.0
     /**
      Returns the altitude that the map camera initally defaults to.
      */
@@ -160,7 +161,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         didSet {
             if tracksUserCourse {
                 enableFrameByFrameCourseViewTracking(for: 3)
-                altitude = defaultAltitude
+                altitude = defaultAltitudeVM
                 showsUserLocation = true
                 courseTrackingDelegate?.navigationMapViewDidStartTrackingCourse?(self)
             } else {
@@ -179,7 +180,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
      */
     open var trackUpdateCourse = true
 
-    open var updateCameraWhenTurn = true
+    var startCaculateAltitude = false
     
     var timerUpdateWhenTurn = 0
     /**
@@ -206,19 +207,19 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
     //MARK: - Initalizers
     
     public override init(frame: CGRect) {
-        altitude = defaultAltitude
+        altitude = defaultAltitudeVM
         super.init(frame: frame)
         commonInit()
     }
     
     public required init?(coder decoder: NSCoder) {
-        altitude = defaultAltitude
+        altitude = defaultAltitudeVM
         super.init(coder: decoder)
         commonInit()
     }
     
     public override init(frame: CGRect, styleURL: URL?) {
-        altitude = defaultAltitude
+        altitude = defaultAltitudeVM
         super.init(frame: frame, styleURL: styleURL)
         commonInit()
     }
@@ -345,34 +346,54 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         tracksUserCourse = false
     }
     
-
-    public func updateCourseTracking(location: CLLocation?, camera: MGLMapCamera? = nil, animated: Bool = false, distanceStep: CLLocationDistance? = 0) {
+    var coordinateOld: CLLocationCoordinate2D?
+    var distanceTraveledOld: CLLocationDistance? = 0
+    public func updateCourseTracking(location: CLLocation?, camera: MGLMapCamera? = nil, animated: Bool = false, distanceStep: CLLocationDistance? = 0, distanceTraveled: CLLocationDistance? = 0) {
         // While animating to overhead mode, don't animate the puck.
-        if updateCameraWhenTurn {
-            updateCameraWhenTurn = ((distanceStep ?? 0) > 75.0)
-        }
-        let duration: TimeInterval = animated && !isAnimatingToOverheadMode ? (updateCameraWhenTurn ? 3 : 0) : 0
+//        var duration: TimeInterval = animated && !isAnimatingToOverheadMode ? 1 : 0
+        var duration: TimeInterval = 1
+        var durationCourseView: TimeInterval = !tracksUserCourse ? 1 : 0
+        var coordinate: CLLocationCoordinate2D
+        var updateCourseView = true
         animatesUserLocation = animated
         userLocationForCourseTracking = location
         guard let location = location, CLLocationCoordinate2DIsValid(location.coordinate) else {
             return
         }
+        coordinate = location.coordinate
+        if distanceStep != 0 && distanceStep! < 25 && tracksUserCourse {
+            startCaculateAltitude = true
+        }
 
-        if tracksUserCourse {
-//            let point = userAnchorPoint
-//            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
+        if startCaculateAltitude {
+            timerUpdateWhenTurn += 1
+            durationCourseView = 0.2
+            if distanceTraveled! > 0 && distanceTraveled! < distanceTraveledOld! {
+                startCaculateAltitude = false
+                timerUpdateWhenTurn = 0
+                durationCourseView = 0
+                duration = 0.5
+                coordinate = coordinateOld!
+                updateCourseView = false
+            }
+        }
+
+        if tracksUserCourse && !startCaculateAltitude {
             let function: CAMediaTimingFunction? = animated ? CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear) : nil
-            let newCamera = camera ?? MGLMapCamera(lookingAtCenter: location.coordinate, altitude: altitude, pitch: 45, heading: location.course)
-            setCamera(newCamera, withDuration: duration, animationTimingFunction: function, completionHandler: nil)
+            let newCamera = camera ?? MGLMapCamera(lookingAtCenter: coordinate, altitude: altitude, pitch: 45, heading: location.course)
+                setCamera(newCamera, withDuration: duration, animationTimingFunction: function, completionHandler: nil)
         }
         
-        if !tracksUserCourse || userAnchorPoint != userCourseView?.center ?? userAnchorPoint {
-           UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {
-               if let userCourseView = self.userCourseView {
-                   userCourseView.center = self.convert(location.coordinate, toPointTo: self)
-               }
-           })
-       }
+        if updateCourseView {
+            if !tracksUserCourse || userAnchorPoint != userCourseView?.center ?? userAnchorPoint {
+                UIView.animate(withDuration: durationCourseView, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {
+                   if let userCourseView = self.userCourseView {
+                       userCourseView.center = self.convert(location.coordinate, toPointTo: self)
+                   }
+               })
+            }
+        }
+        
         
         if let userCourseView = userCourseView as? UserCourseView {
             if let customTransformation = userCourseView.update?(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: false) {
@@ -384,14 +405,8 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
             userCourseView?.applyDefaultUserPuckTransformation(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse)
         }
         
-        if !updateCameraWhenTurn {
-            timerUpdateWhenTurn = timerUpdateWhenTurn + 1
-        }
-
-        if timerUpdateWhenTurn >= 2 {
-            updateCameraWhenTurn = true
-            timerUpdateWhenTurn = 0
-        }
+        coordinateOld = location.coordinate
+        distanceTraveledOld = distanceTraveled
     }
     
     //MARK: -  Gesture Recognizers
@@ -1109,7 +1124,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
             camera.pitch = 0
             camera.heading = 0
             camera.centerCoordinate = userLocation
-            camera.altitude = self.defaultAltitude
+            camera.altitude = self.defaultAltitudeVM
             setCamera(camera, withDuration: 1, animationTimingFunction: nil) { [weak self] in
                 self?.isAnimatingToOverheadMode = false
             }
