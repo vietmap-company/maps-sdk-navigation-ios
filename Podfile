@@ -52,7 +52,7 @@ target 'MapboxNavigation' do
   use_frameworks!
 
   # Pods for MapboxNavigation
-  pod 'VietMap', '~> 1.0.9'
+  pod 'VietMap', '~> 1.0.13'
 
   target 'MapboxNavigationTests' do
     # Pods for testing

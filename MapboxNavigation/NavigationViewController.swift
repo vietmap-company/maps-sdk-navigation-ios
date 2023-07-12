@@ -479,7 +479,7 @@ open class NavigationViewController: UIViewController {
     @objc func didPassInstructionPoint(notification: NSNotification) {
         let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
         
-       mapViewController?.updateCameraAltitudeController(for: routeProgress)
+        mapViewController?.updateCameraAltitudeController(for: routeProgress)
         clearStaleNotifications()
         
         if routeProgress.currentLegProgress.currentStepProgress.durationRemaining <= RouteControllerHighAlertInterval {

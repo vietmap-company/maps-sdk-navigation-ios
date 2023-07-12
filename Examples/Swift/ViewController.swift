@@ -257,7 +257,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self.navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
         navigationViewController.delegate = self
 //        navigationViewController.mapView?.showsUserHeadingIndicator = true
-        navigationViewController.mapView?.userTrackingMode = .followWithHeading
+        navigationViewController.mapView?.userTrackingMode = .follow
         presentAndRemoveMapview(navigationViewController)
     }
 

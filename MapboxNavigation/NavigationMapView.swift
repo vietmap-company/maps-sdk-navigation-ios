@@ -107,9 +107,9 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
     
     open override var showsUserLocation: Bool {
         get {
-//            if tracksUserCourse || userLocationForCourseTracking != nil {
-//                return !(userCourseView?.isHidden ?? true)
-//            }
+            if tracksUserCourse || userLocationForCourseTracking != nil {
+                return !(userCourseView?.isHidden ?? true)
+            }
             return super.showsUserLocation
         }
         set {
@@ -280,9 +280,9 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         super.mapViewDidFinishRenderingFrameFullyRendered(fullyRendered)
         
         guard shouldPositionCourseViewFrameByFrame else { return }
-//        guard let location = userLocationForCourseTracking else { return }
+        guard let location = userLocationForCourseTracking else { return }
         
-//        userCourseView?.center = convert(location.coordinate, toPointTo: self)
+        userCourseView?.center = convert(location.coordinate, toPointTo: self)
     }
     
     // MARK: - Notifications
@@ -430,12 +430,12 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
                 }
             }
         }
-//        
-//        if sender.state == .changed {
-//            guard let location = userLocationForCourseTracking else { return }
-//            userCourseView?.layer.removeAllAnimations()
-//            userCourseView?.center = convert(location.coordinate, toPointTo: self)
-//        }
+
+        if sender.state == .changed {
+            guard let location = userLocationForCourseTracking else { return }
+            userCourseView?.layer.removeAllAnimations()
+            userCourseView?.center = convert(location.coordinate, toPointTo: self)
+        }
     }
     
     // MARK: Feature Addition/Removal

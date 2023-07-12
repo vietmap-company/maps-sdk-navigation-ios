@@ -1,16 +1,16 @@
 PODS:
-  - VietMap (1.0.9)
+  - VietMap (1.0.13)
 
 DEPENDENCIES:
-  - VietMap (~> 1.0.9)
+  - VietMap (~> 1.0.13)
 
 SPEC REPOS:
   trunk:
     - VietMap
 
 SPEC CHECKSUMS:
-  VietMap: 95a589dc1b0be70aaab9724fddf7ac677325215b
+  VietMap: e27a9d0fb95d362d4322d24738cb564fe9b51035
 
-PODFILE CHECKSUM: 6f3ca851364be3e83db74a6c135106477b4c64e1
+PODFILE CHECKSUM: 9f8bcfffe75d20eb421766dabf0774e69dc4888f
 
 COCOAPODS: 1.12.1
