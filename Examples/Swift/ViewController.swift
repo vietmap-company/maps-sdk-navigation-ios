@@ -265,11 +265,23 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         self.navigationViewController.mapView?.styleURL = URL(string: "https://api.maptiler.com/maps/streets/style.json?key=AVXR2vOTw3aGpqw8nlv2");
         self.navigationViewController.mapView?.tracksUserCourse = true
         NotificationCenter.default.addObserver(self, selector: #selector(progressDidChange(_ :)), name: .routeControllerProgressDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(progressDidReroute(_ :)), name: .routeControllerDidReroute, object: nil)
         present(navigationViewController, animated: true) {
             self.mapView?.removeFromSuperview()
             self.mapView = nil
         }
     }
+    
+    @objc func progressDidReroute(_ notification: Notification) {
+        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
+        if let userInfo = notification.object as? RouteController {
+            navigationViewController.mapView?.showRoutes([userInfo.routeProgress.route])
+//            centerMap(userInfo.locationManager.location!)
+            navigationViewController.mapView?.recenterMap()
+            navigationViewController.mapView?.tracksUserCourse = true
+            navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
+        }
+   }
     
     @objc func progressDidChange(_ notification: NSNotification ) {
 //        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
