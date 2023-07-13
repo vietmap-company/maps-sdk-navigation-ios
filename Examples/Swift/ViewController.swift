@@ -292,7 +292,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     
     @objc func progressDidChange(_ notification: NSNotification ) {
 //        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
-//        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
+        let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
 //        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
 //            let camera = MGLMapCamera(
 //                lookingAtCenter: location.coordinate,
@@ -303,7 +303,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 //            print("locaiton: \(location.coordinate)")
 //            navigationViewController.mapView?.setCamera(camera, animated: true)
 //        }
-//        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
+        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
     }
 
     func configureMapView(_ mapView: NavigationMapView) {

@@ -134,6 +134,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
      */
     var userAnchorPoint: CGPoint {
         if let anchorPoint = navigationMapDelegate?.navigationMapViewUserAnchorPoint?(self), anchorPoint != .zero {
+//            regionAnchorPoint = CGRect(origin: anchorPoint, size: size)
             return anchorPoint
         }
         
@@ -144,14 +145,31 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
                                        left: (50 + courseViewWidth / 2),
                                        bottom: (50 + courseViewHeight / 2),
                                        right: (50 + courseViewWidth / 2))
-        return CGPoint(x: max(min(contentFrame.midX,
-                                  contentFrame.maxX - edgePadding.right),
-                              contentFrame.minX + edgePadding.left),
-                       y: max(max(min(contentFrame.minY + contentFrame.height * 0.8,
-                                      contentFrame.maxY - edgePadding.bottom),
-                                  contentFrame.minY + edgePadding.top),
-                              contentFrame.minY + contentFrame.height * 0.5))
+        let anchorPoint = CGPoint(x: max(min(contentFrame.midX,
+                                             contentFrame.maxX - edgePadding.right),
+                                         contentFrame.minX + edgePadding.left),
+                                  y: max(max(min(contentFrame.minY + contentFrame.height * 0.6,
+                                                 contentFrame.maxY - edgePadding.bottom),
+                                             contentFrame.minY + edgePadding.top),
+                                         contentFrame.minY + contentFrame.height * 0.5))
+//        regionAnchorPoint = CGRect(origin: anchorPoint, size: size)
+        return anchorPoint
     }
+//    let size = CGSize(width: 75, height: 75)
+//    var regionAnchorPoint: CGRect? {
+//        didSet {
+//            if let region = regionAnchorPoint {
+//                let originX = region.origin.x - size.width / 2
+//                let originY = region.origin.y - size.height / 2
+//
+//                let origin = CGPoint(x: originX, y: originY)
+//                let regionNew = CGRect(origin: origin, size: size)
+//                let regionView = UIView(frame: regionNew)
+//                regionView.backgroundColor = UIColor.red
+//                addSubview(regionView)
+//            }
+//        }
+//    }
     
     /**
      Determines whether the map should follow the user location and rotate when the course changes.
@@ -162,7 +180,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
             if tracksUserCourse {
                 enableFrameByFrameCourseViewTracking(for: 3)
                 altitude = defaultAltitude
-                showsUserLocation = true
+//                showsUserLocation = true
                 courseTrackingDelegate?.navigationMapViewDidStartTrackingCourse?(self)
             } else {
                 courseTrackingDelegate?.navigationMapViewDidStopTrackingCourse?(self)
@@ -262,9 +280,10 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         super.layoutSubviews()
         
         //If the map is in tracking mode, make sure we update the camera after the layout pass.
-        if (tracksUserCourse) {
-            updateCourseTracking(location: userLocationForCourseTracking, animated: false)
-        }
+//        if (tracksUserCourse) {
+//            updateCourseTracking(location: userLocationForCourseTracking, animated: false)
+//        }
+        print(regionAnchorPoint?.contains(userCourseView?.center ?? userAnchorPoint))
     }
     */
 
@@ -360,11 +379,13 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         coordinate = location.coordinate
 
         if tracksUserCourse {
+//            let point = userAnchorPoint
+//            let padding = UIEdgeInsets(top: point.y, left: point.x, bottom: bounds.height - point.y, right: bounds.width - point.x)
             let function: CAMediaTimingFunction? = animated ? CAMediaTimingFunction(name: CAMediaTimingFunctionName.linear) : nil
             let newCamera = camera ?? MGLMapCamera(lookingAtCenter: coordinate, altitude: altitude, pitch: 45, heading: location.course)
-                setCamera(newCamera, withDuration: duration, animationTimingFunction: function, completionHandler: nil)
+            setCamera(newCamera, withDuration: duration, animationTimingFunction: function, completionHandler: nil)
         }
-
+       
         if !tracksUserCourse && userAnchorPoint != userCourseView?.center ?? userAnchorPoint {
             UIView.animate(withDuration: duration, delay: 0, options: [.curveLinear, .beginFromCurrentState], animations: {
                if let userCourseView = self.userCourseView {
@@ -374,7 +395,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         }
 
         if let userCourseView = userCourseView as? UserCourseView {
-            if let customTransformation = userCourseView.update?(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: false) {
+            if let customTransformation = userCourseView.update?(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse) {
                 customTransformation
             } else {
                 self.userCourseView?.applyDefaultUserPuckTransformation(location: location, pitch: self.camera.pitch, direction: direction, animated: animated, tracksUserCourse: tracksUserCourse)

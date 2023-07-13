@@ -198,7 +198,7 @@ class RouteMapViewController: UIViewController {
     }
 
     @objc func recenter(_ sender: AnyObject) {
-        mapView.trackUpdateCourse = false
+//        mapView.trackUpdateCourse = false
         mapView.tracksUserCourse = true
         isInOverviewMode = false
         updateCameraAltitude(for: routeController.routeProgress)
@@ -366,7 +366,7 @@ class RouteMapViewController: UIViewController {
         guard mapView.tracksUserCourse else { return } //only adjust when we are actively tracking user course
 
         let zoomOutAltitude = mapView.zoomedOutMotorwayAltitude
-        let defaultAltitude: CLLocationDistance = 500.0
+        let defaultAltitude = mapView.defaultAltitude
         let isLongRoad = routeProgress.distanceRemaining >= mapView.longManeuverDistance
         let currentStep = routeProgress.currentLegProgress.currentStep
         let upComingStep = routeProgress.currentLegProgress.upComingStep
@@ -386,7 +386,7 @@ class RouteMapViewController: UIViewController {
         if let location = routeController.locationManager.location {
             let camera = MGLMapCamera(
                 lookingAtCenter: location.coordinate,
-                acrossDistance: defaultAltitude,
+                acrossDistance: mapView.altitude,
                 pitch: 45,
                 heading: location.course
             )

@@ -472,7 +472,7 @@ open class NavigationViewController: UIViewController {
         
         if snapsUserLocationAnnotationToRoute,
             userHasArrivedAndShouldPreventRerouting {
-            mapViewController?.mapView.updateCourseTracking(location: location, animated: true, distanceStep: distance, distanceTraveled: distanceTraveled)
+            mapViewController?.mapView.updateCourseTracking(location: location, animated: true)
         } 
     }
     
