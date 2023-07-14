@@ -285,7 +285,6 @@ class ViewController: UIViewController, MGLMapViewDelegate {
             navigationViewController.mapView?.showRoutes([userInfo.routeProgress.route])
 //            centerMap(userInfo.locationManager.location!)
             navigationViewController.mapView?.recenterMap()
-            navigationViewController.mapView?.tracksUserCourse = true
             navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
         }
    }
