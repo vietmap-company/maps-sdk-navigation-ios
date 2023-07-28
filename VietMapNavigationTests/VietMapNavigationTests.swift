@@ -2,7 +2,7 @@ import XCTest
 import FBSnapshotTestCase
 import MapboxDirections
 @testable import VietMapNavigation
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 let response = Fixture.JSONFromFileNamed(name: "route-with-lanes")
 let jsonRoute = (response["routes"] as! [AnyObject]).first as! [String : Any]

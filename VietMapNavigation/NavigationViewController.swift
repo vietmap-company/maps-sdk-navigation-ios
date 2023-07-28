@@ -1,5 +1,5 @@
 import UIKit
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import MapboxDirections
 import VietMap
 #if canImport(CarPlay)

@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["VietMapNavigation/**/*.{h,m,swift}", "MapboxCoreNavigation/{Date,Sequence,String}.swift"]
+  s.source_files = ["VietMapNavigation/**/*.{h,m,swift}", "VietMapCoreNavigation/{Date,Sequence,String}.swift"]
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
@@ -43,7 +43,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.module_name = "VietMapNavigation"
 
-  s.dependency "MapboxCoreNavigation", "#{s.version.to_s}"
+  s.dependency "VietMapCoreNavigation", "#{s.version.to_s}"
   s.dependency "Mapbox-iOS-SDK", "~> 4.3"
   s.dependency "Solar", "~> 2.1"
   s.dependency "MapboxSpeech", "~> 0.0.1"

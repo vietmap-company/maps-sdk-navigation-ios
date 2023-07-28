@@ -2,7 +2,7 @@ import Foundation
 import CoreLocation
 import AVFoundation
 import MapboxSpeech
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import MapboxDirections
 
 /**

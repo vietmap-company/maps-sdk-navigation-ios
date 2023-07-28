@@ -2,7 +2,7 @@ import UIKit
 import VietMapNavigation
 #if canImport(CarPlay)
 import CarPlay
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import MapboxDirections
 
 

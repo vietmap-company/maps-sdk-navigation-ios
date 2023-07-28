@@ -32,7 +32,7 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["VietMapNavigation/*", "MapboxCoreNavigation/*"]
+  s.source_files = ["VietMapNavigation/*", "VietMapCoreNavigation/*"]
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 

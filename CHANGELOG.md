@@ -835,7 +835,7 @@ Beginning with this release, the navigation SDK and Core Navigation are written 
 
 ## v0.2.0 (April 14, 2017)
 
-* Renamed VietMapNavigation and VietMapNavigationUI to MapboxCoreNavigation and VietMapNavigation, respectively. VietMapNavigation provides the complete turn-by-turn navigation experience, including UI and voice announcements, while MapboxCoreNavigation provides the raw utilities for building your own UI. ([#129](https://github.com/mapbox/mapbox-navigation-ios/pull/129))
+* Renamed VietMapNavigation and VietMapNavigationUI to VietMapCoreNavigation and VietMapNavigation, respectively. VietMapNavigation provides the complete turn-by-turn navigation experience, including UI and voice announcements, while VietMapCoreNavigation provides the raw utilities for building your own UI. ([#129](https://github.com/mapbox/mapbox-navigation-ios/pull/129))
 * Exposed methods on NavigationMapView that you can override to customize the route line’s appearance on the map. ([#116](https://github.com/mapbox/mapbox-navigation-ios/pull/116))
 * Removed an unused dependency on MapboxGeocoder.swift. ([#112](https://github.com/mapbox/mapbox-navigation-ios/pull/112))
 * Fixed memory leaks. ([#120](https://github.com/mapbox/mapbox-navigation-ios/pull/120))

@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C5ADFBC81DDCC7840011824B"
-               BuildableName = "MapboxCoreNavigation.framework"
-               BlueprintName = "MapboxCoreNavigation"
+               BuildableName = "VietMapCoreNavigation.framework"
+               BlueprintName = "VietMapCoreNavigation"
                ReferencedContainer = "container:VietMapNavigation.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -31,8 +31,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C5ADFBC81DDCC7840011824B"
-            BuildableName = "MapboxCoreNavigation.framework"
-            BlueprintName = "MapboxCoreNavigation"
+            BuildableName = "VietMapCoreNavigation.framework"
+            BlueprintName = "VietMapCoreNavigation"
             ReferencedContainer = "container:VietMapNavigation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -42,8 +42,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C5ADFBD11DDCC7840011824B"
-               BuildableName = "MapboxCoreNavigationTests.xctest"
-               BlueprintName = "MapboxCoreNavigationTests"
+               BuildableName = "VietMapCoreNavigationTests.xctest"
+               BlueprintName = "VietMapCoreNavigationTests"
                ReferencedContainer = "container:VietMapNavigation.xcodeproj">
             </BuildableReference>
             <SkippedTests>
@@ -68,8 +68,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C5ADFBC81DDCC7840011824B"
-            BuildableName = "MapboxCoreNavigation.framework"
-            BlueprintName = "MapboxCoreNavigation"
+            BuildableName = "VietMapCoreNavigation.framework"
+            BlueprintName = "VietMapCoreNavigation"
             ReferencedContainer = "container:VietMapNavigation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -84,8 +84,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C5ADFBC81DDCC7840011824B"
-            BuildableName = "MapboxCoreNavigation.framework"
-            BlueprintName = "MapboxCoreNavigation"
+            BuildableName = "VietMapCoreNavigation.framework"
+            BlueprintName = "VietMapCoreNavigation"
             ReferencedContainer = "container:VietMapNavigation.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

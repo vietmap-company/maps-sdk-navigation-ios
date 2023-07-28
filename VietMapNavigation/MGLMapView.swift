@@ -1,7 +1,7 @@
 import Foundation
 import VietMap
 import MapboxDirections
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 
 /**
  An extension on `MGLMapView` that allows for toggling traffic on a map style that contains a [Mapbox Traffic source](https://www.mapbox.com/vector-tiles/mapbox-traffic-v1/).

@@ -1,6 +1,6 @@
 import UIKit
 import MapboxDirections
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import Turf
 
 /// :nodoc:

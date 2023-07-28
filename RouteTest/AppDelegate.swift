@@ -1,6 +1,6 @@
 import UIKit
 import VietMapNavigation
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import MapboxDirections
 
 @UIApplicationMain

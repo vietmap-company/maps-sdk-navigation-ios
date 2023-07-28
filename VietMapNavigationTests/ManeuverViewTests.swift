@@ -2,7 +2,7 @@ import XCTest
 import FBSnapshotTestCase
 import MapboxDirections
 @testable import VietMapNavigation
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 
 class ManeuverViewTests: FBSnapshotTestCase {

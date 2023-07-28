@@ -2,7 +2,7 @@ import XCTest
 import MapboxDirections
 import Turf
 import MapboxMobileEvents
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 fileprivate let mbTestHeading: CLLocationDirection = 50
 

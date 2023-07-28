@@ -1,5 +1,5 @@
 import XCTest
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 
 class NavigationLocationManagerTests: XCTestCase {
     

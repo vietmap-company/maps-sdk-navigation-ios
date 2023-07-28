@@ -1,6 +1,6 @@
 import XCTest
 import CoreLocation
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 let oneMile: CLLocationDistance = .metersPerMile
 let oneYard: CLLocationDistance = 0.9144

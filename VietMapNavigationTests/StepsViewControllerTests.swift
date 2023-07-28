@@ -1,6 +1,6 @@
 import XCTest
 import MapboxDirections
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 @testable import VietMapNavigation
 
 class StepsViewControllerTests: XCTestCase {

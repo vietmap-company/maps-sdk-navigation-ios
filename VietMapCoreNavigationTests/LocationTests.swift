@@ -1,6 +1,6 @@
 import XCTest
 import CoreLocation
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 class LocationTests: XCTestCase {
     

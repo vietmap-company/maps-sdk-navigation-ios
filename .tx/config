@@ -16,8 +16,8 @@ source_lang = en
 type = STRINGSDICT
 
 [mapbox-navigation-ios.LocalizableCoreStrings]
-file_filter = MapboxCoreNavigation/Resources/<lang>.lproj/Localizable.strings
-source_file = MapboxCoreNavigation/Resources/Base.lproj/Localizable.strings
+file_filter = VietMapCoreNavigation/Resources/<lang>.lproj/Localizable.strings
+source_file = VietMapCoreNavigation/Resources/Base.lproj/Localizable.strings
 source_lang = en
 
 [mapbox-navigation-ios.swiftexample]

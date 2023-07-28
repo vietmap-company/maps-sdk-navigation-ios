@@ -272,7 +272,7 @@ open class RouteController: NSObject, Router {
                 CLLocationCoordinate2D(latitude: 52.02224357, longitude: 5.78149084),
                 CLLocationCoordinate2D(latitude: 52.03924958, longitude: 5.55054131)
             ],
-            bundle: .mapboxCoreNavigation,
+            bundle: .VietMapCoreNavigation,
             accessToken: "nonsense"
         )
     }()
@@ -284,7 +284,7 @@ open class RouteController: NSObject, Router {
                 CLLocationCoordinate2D(latitude: 52.02224357, longitude: 5.78149084),
                 CLLocationCoordinate2D(latitude: 52.03924958, longitude: 5.55054131)
             ],
-            bundle: .mapboxCoreNavigation,
+            bundle: .VietMapCoreNavigation,
             accessToken: "nonsense"
         )
     }()
@@ -662,7 +662,7 @@ extension RouteController: CLLocationManagerDelegate {
                 guard let data = data, let currentVersion = String(data: data, encoding: .utf8)?.trimmingCharacters(in: .newlines) else { return }
 
                 if latestVersion != currentVersion {
-                    let updateString = NSLocalizedString("UPDATE_AVAILABLE", bundle: .mapboxCoreNavigation, value: "Mapbox Navigation SDK for iOS version %@ is now available.", comment: "Inform developer an update is available")
+                    let updateString = NSLocalizedString("UPDATE_AVAILABLE", bundle: .VietMapCoreNavigation, value: "Mapbox Navigation SDK for iOS version %@ is now available.", comment: "Inform developer an update is available")
                     print(String.localizedStringWithFormat(updateString, latestVersion), "https://github.com/mapbox/mapbox-navigation-ios/releases/tag/v\(latestVersion)")
                 }
             }).resume()

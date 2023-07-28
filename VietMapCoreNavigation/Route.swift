@@ -1,6 +1,6 @@
 //
 //  Route.swift
-//  MapboxCoreNavigation
+//  VietMapCoreNavigation
 //
 //  Created by Sander van Tulden on 28/10/2022.
 //  Copyright © 2022 Mapbox. All rights reserved.

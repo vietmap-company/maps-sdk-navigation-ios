@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.name = "MapboxCoreNavigation"
+  s.name = "VietMapCoreNavigation"
   s.version = "1.0.2"
   s.summary = "Core components for turn-by-turn navigation on iOS."
 
@@ -33,12 +33,12 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = "MapboxCoreNavigation"
+  s.source_files = "VietMapCoreNavigation"
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name = "MapboxCoreNavigation"
+  s.module_name = "VietMapCoreNavigation"
 
   s.dependency "MapboxDirections.swift", "~> 0.23.0"
   s.dependency "MapboxMobileEvents", "~> 0.5"

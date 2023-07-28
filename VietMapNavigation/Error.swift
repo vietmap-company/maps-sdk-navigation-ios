@@ -1,5 +1,5 @@
 import Foundation
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 
 extension NSError {
     /**

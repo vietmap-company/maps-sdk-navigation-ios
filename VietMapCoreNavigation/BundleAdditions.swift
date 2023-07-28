@@ -29,7 +29,7 @@ extension Bundle {
         }
     }
     
-    class var mapboxCoreNavigation: Bundle {
+    class var VietMapCoreNavigation: Bundle {
         get { return Bundle(for: RouteController.self) }
     }
 }

@@ -4,7 +4,7 @@ import CarPlay
 import MapboxGeocoder
 #endif
 import Turf
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import MapboxDirections
 
 /**

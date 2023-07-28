@@ -1,7 +1,7 @@
 #import <XCTest/XCTest.h>
-#import "MapboxCoreNavigationTests-Swift.h"
+#import "VietMapCoreNavigationTests-Swift.h"
 //@import Mapbox;
-@import MapboxCoreNavigation;
+@import VietMapCoreNavigation;
 @import MapboxDirections;
 
 @interface BridgingTests : XCTestCase

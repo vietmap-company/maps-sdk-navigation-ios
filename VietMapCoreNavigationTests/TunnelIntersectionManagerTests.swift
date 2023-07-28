@@ -1,7 +1,7 @@
 import XCTest
 import MapboxDirections
 import Turf
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 struct TunnelDetectorTestData {
     static let ninthStreetFileName = "routeWithTunnels_9thStreetDC"

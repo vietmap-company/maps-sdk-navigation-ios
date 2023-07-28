@@ -37,7 +37,7 @@
 ⚠️ Important: Order matters here ⚠️
 
 1. Update pods: `pod repo update`
-1. Push MapboxCoreNavigation: `pod trunk push MapboxCoreNavigation.podspec`
+1. Push VietMapCoreNavigation: `pod trunk push VietMapCoreNavigation.podspec`
 1. Update pods: `pod repo update`
 1. Push VietMapNavigation: `pod trunk push VietMapNavigation.podspec`
 

@@ -73,7 +73,7 @@ Use the following code as inspiration:
 ```
 import Mapbox
 import MapboxDirections
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import VietMapNavigation
 
 class ViewController: UIViewController {

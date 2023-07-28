@@ -1,6 +1,6 @@
 PODS:
   - Mapbox-iOS-SDK (4.3.0)
-  - MapboxCoreNavigation (0.20.1):
+  - VietMapCoreNavigation (0.20.1):
     - MapboxDirections.swift (~> 0.23.0)
     - MapboxMobileEvents (~> 0.5)
     - Turf (~> 0.2)
@@ -9,7 +9,7 @@ PODS:
   - MapboxMobileEvents (0.5.0)
   - VietMapNavigation (0.20.1):
     - Mapbox-iOS-SDK (~> 4.3)
-    - MapboxCoreNavigation (= 0.20.1)
+    - VietMapCoreNavigation (= 0.20.1)
     - MapboxSpeech (~> 0.0.1)
     - Solar (~> 2.1)
   - MapboxSpeech (0.0.1)
@@ -18,7 +18,7 @@ PODS:
   - Turf (0.2.0)
 
 DEPENDENCIES:
-  - MapboxCoreNavigation (from `../../../`)
+  - VietMapCoreNavigation (from `../../../`)
   - VietMapNavigation (from `../../../`)
 
 SPEC REPOS:
@@ -32,14 +32,14 @@ SPEC REPOS:
     - Turf
 
 EXTERNAL SOURCES:
-  MapboxCoreNavigation:
+  VietMapCoreNavigation:
     :path: "../../../"
   VietMapNavigation:
     :path: "../../../"
 
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 7d8d510088ba7900d11aa3ceb98f563b040efca1
-  MapboxCoreNavigation: 67ea54fd4919bc1d5de9eaf104c020f0f63ee08a
+  VietMapCoreNavigation: 67ea54fd4919bc1d5de9eaf104c020f0f63ee08a
   MapboxDirections.swift: 1c8eb3fd29b7548d9ce53edc99e2e2aabfa767fa
   MapboxMobileEvents: e4aa629e4e2e3c250b5dadc15b63d67b91469a79
   VietMapNavigation: c69ce7e9b7487bee4b8e5260f86426d036961c51

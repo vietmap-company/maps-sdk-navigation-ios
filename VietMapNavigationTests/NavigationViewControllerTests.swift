@@ -1,6 +1,6 @@
 import XCTest
 import MapboxDirections
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 import Turf
 @testable import VietMapNavigation
 

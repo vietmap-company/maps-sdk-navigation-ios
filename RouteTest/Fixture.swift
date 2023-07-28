@@ -1,6 +1,6 @@
 import Foundation
 import MapboxDirections
-import MapboxCoreNavigation
+import VietMapCoreNavigation
 
 class Fixture {
     class func JSONFromFileNamed(name: String, bundle: Bundle = .main) -> [String: Any] {

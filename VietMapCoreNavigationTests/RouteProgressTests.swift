@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 import MapboxDirections
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 class RouteProgressTests: XCTestCase {
     func testRouteProgress() {

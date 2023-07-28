@@ -1,7 +1,7 @@
 import XCTest
 import MapboxDirections
 @testable import VietMapNavigation
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 
 func instructionsView(size: CGSize = .iPhone6Plus) -> InstructionsBannerView {

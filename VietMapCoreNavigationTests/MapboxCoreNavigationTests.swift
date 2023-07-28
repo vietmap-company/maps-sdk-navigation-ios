@@ -1,7 +1,7 @@
 import XCTest
 import MapboxDirections
 import Turf
-@testable import MapboxCoreNavigation
+@testable import VietMapCoreNavigation
 
 let response = Fixture.JSONFromFileNamed(name: "routeWithInstructions")
 let jsonRoute = (response["routes"] as! [AnyObject]).first as! [String : Any]
@@ -13,7 +13,7 @@ let route = Route(json: jsonRoute, waypoints: [waypoint1, waypoint2], options: N
 let waitForInterval: TimeInterval = 5
 
 
-class MapboxCoreNavigationTests: XCTestCase {
+class VietMapCoreNavigationTests: XCTestCase {
     
     var navigation: RouteController!
     
