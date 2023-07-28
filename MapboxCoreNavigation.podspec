@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.summary = "Core components for turn-by-turn navigation on iOS."
 
   s.description  = <<-DESC
-  Mapbox Core Navigation provides the core spatial and timing logic for turn-by-turn navigation along a route. For a complete turn-by-turn navigation interface, use the Mapbox Navigation SDK for iOS (MapboxNavigation).
+  Mapbox Core Navigation provides the core spatial and timing logic for turn-by-turn navigation along a route. For a complete turn-by-turn navigation interface, use the Mapbox Navigation SDK for iOS (VietMapNavigation).
                    DESC
 
   s.homepage = "https://www.mapbox.com/ios-sdk/navigation/"

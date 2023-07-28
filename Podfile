@@ -47,14 +47,14 @@ target 'MapboxCoreNavigation' do
 
 end
 
-target 'MapboxNavigation' do
+target 'VietMapNavigation' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for MapboxNavigation
-  pod 'VietMap', '~> 1.0.13'
+  # Pods for VietMapNavigation
+  pod 'VietMap', '~> 1.0.14'
 
-  target 'MapboxNavigationTests' do
+  target 'VietMapNavigationTests' do
     # Pods for testing
   end
 

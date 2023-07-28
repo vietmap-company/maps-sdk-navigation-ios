@@ -12,8 +12,8 @@ fi
 
 # Build XCFramework for iOS devices (arm64, armv7)
 xcodebuild archive \
-  -scheme "MapboxNavigation" \
-  -archivePath "$OUTPUT_DIR/MapboxNavigation-iOS" \
+  -scheme "VietMapNavigation" \
+  -archivePath "$OUTPUT_DIR/VietMapNavigation-iOS" \
   -sdk "iphoneos" \
   -configuration Release \
   BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
@@ -22,8 +22,8 @@ xcodebuild archive \
 
 # Build XCFramework for iOS simulator (x86_64, arm64)
 xcodebuild archive \
-  -scheme "MapboxNavigation" \
-  -archivePath "$OUTPUT_DIR/MapboxNavigation-iOS-Simulator" \
+  -scheme "VietMapNavigation" \
+  -archivePath "$OUTPUT_DIR/VietMapNavigation-iOS-Simulator" \
   -sdk "iphonesimulator" \
   -configuration Release \
   BUILD_LIBRARY_FOR_DISTRIBUTION=YES \
@@ -32,12 +32,12 @@ xcodebuild archive \
 
 # Create a universal XCFramework
 xcodebuild -create-xcframework \
-  -framework "$OUTPUT_DIR/MapboxNavigation-iOS.xcarchive/Products/Library/Frameworks/MapboxNavigation.framework" \
-  -framework "$OUTPUT_DIR/MapboxNavigation-iOS-Simulator.xcarchive/Products/Library/Frameworks/MapboxNavigation.framework" \
-  -output "$OUTPUT_DIR/MapboxNavigation.xcframework"
+  -framework "$OUTPUT_DIR/VietMapNavigation-iOS.xcarchive/Products/Library/Frameworks/VietMapNavigation.framework" \
+  -framework "$OUTPUT_DIR/VietMapNavigation-iOS-Simulator.xcarchive/Products/Library/Frameworks/VietMapNavigation.framework" \
+  -output "$OUTPUT_DIR/VietMapNavigation.xcframework"
 
 # Clean up the intermediate build artifacts
-rm -rf "$OUTPUT_DIR/MapboxNavigation-iOS.xcarchive"
-rm -rf "$OUTPUT_DIR/MapboxNavigation-iOS-Simulator.xcarchive"
+rm -rf "$OUTPUT_DIR/VietMapNavigation-iOS.xcarchive"
+rm -rf "$OUTPUT_DIR/VietMapNavigation-iOS-Simulator.xcarchive"
 
-echo "Distribution XCFramework is created at: $OUTPUT_DIR/MapboxNavigation.xcframework"
+echo "Distribution XCFramework is created at: $OUTPUT_DIR/VietMapNavigation.xcframework"

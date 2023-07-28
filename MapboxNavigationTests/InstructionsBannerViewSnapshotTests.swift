@@ -1,7 +1,7 @@
 import XCTest
 import FBSnapshotTestCase
 import MapboxDirections
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 @testable import MapboxCoreNavigation
 
 class InstructionsBannerViewSnapshotTests: FBSnapshotTestCase {

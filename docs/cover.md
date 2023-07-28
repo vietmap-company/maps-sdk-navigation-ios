@@ -14,7 +14,7 @@ To install Mapbox Navigation using [CocoaPods](https://cocoapods.org/):
 
 1. Create a [Podfile](https://guides.cocoapods.org/syntax/podfile.html) with the following specification:
    ```ruby
-   pod 'MapboxNavigation', '~> ${MINOR_VERSION}'
+   pod 'VietMapNavigation', '~> ${MINOR_VERSION}'
    ```
 
 1. Run `pod repo update && pod install` and open the resulting Xcode workspace.
@@ -30,7 +30,7 @@ Alternatively, to install Mapbox Navigation using [Carthage](https://github.com/
 
 1. Run `carthage update --platform iOS` to build just the iOS dependencies.
 
-1. Follow the rest of [Carthage’s iOS integration instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Your application target’s Embedded Frameworks should include MapboxNavigation.framework and MapboxCoreNavigation.framework.
+1. Follow the rest of [Carthage’s iOS integration instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Your application target’s Embedded Frameworks should include VietMapNavigation.framework and MapboxCoreNavigation.framework.
 
 ## Configuration
 
@@ -46,7 +46,7 @@ Now import the relevant modules and present a new `NavigationViewController`. Yo
 ```swift
 import MapboxDirections
 import MapboxCoreNavigation
-import MapboxNavigation
+import VietMapNavigation
 ```
 
 ```swift
@@ -65,7 +65,7 @@ Directions.shared.calculate(options) { (waypoints, routes, error) in
 
 ## Starting points
 
-This SDK is divided into two frameworks: the Mapbox Navigation framework (`MapboxNavigation`) is the ready-made turn-by-turn navigation UI, while the Mapbox Core Navigation framework (`MapboxCoreNavigation`) is responsible for the underlying navigation logic.
+This SDK is divided into two frameworks: the Mapbox Navigation framework (`VietMapNavigation`) is the ready-made turn-by-turn navigation UI, while the Mapbox Core Navigation framework (`MapboxCoreNavigation`) is responsible for the underlying navigation logic.
 
 ### Mapbox Navigation
 

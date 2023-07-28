@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.name = "MapboxNavigation"
+  s.name = "VietMapNavigation"
   s.version = "1.0.2"
   s.summary = "Complete turn-by-turn navigation interface for iOS."
 
@@ -32,16 +32,16 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["MapboxNavigation/**/*.{h,m,swift}", "MapboxCoreNavigation/{Date,Sequence,String}.swift"]
+  s.source_files = ["VietMapNavigation/**/*.{h,m,swift}", "MapboxCoreNavigation/{Date,Sequence,String}.swift"]
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*']
+  s.resources = ['VietMapNavigation/Resources/*/*', 'VietMapNavigation/Resources/*']
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name = "MapboxNavigation"
+  s.module_name = "VietMapNavigation"
 
   s.dependency "MapboxCoreNavigation", "#{s.version.to_s}"
   s.dependency "Mapbox-iOS-SDK", "~> 4.3"

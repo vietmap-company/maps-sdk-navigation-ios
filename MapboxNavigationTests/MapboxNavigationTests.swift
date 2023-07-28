@@ -1,7 +1,7 @@
 import XCTest
 import FBSnapshotTestCase
 import MapboxDirections
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 @testable import MapboxCoreNavigation
 
 let response = Fixture.JSONFromFileNamed(name: "route-with-lanes")
@@ -12,7 +12,7 @@ let bogusToken = "pk.feedCafeDeadBeefBadeBede"
 let directions = Directions(accessToken: bogusToken)
 let route = Route(json: jsonRoute, waypoints: [waypoint1, waypoint2], routeOptions: RouteOptions(waypoints: [waypoint1, waypoint2]))
 
-class MapboxNavigationTests: FBSnapshotTestCase {
+class VietMapNavigationTests: FBSnapshotTestCase {
 
     override func setUp() {
         super.setUp()
@@ -21,7 +21,7 @@ class MapboxNavigationTests: FBSnapshotTestCase {
     }
 
     func storyboard() -> UIStoryboard {
-        return UIStoryboard(name: "Navigation", bundle: .mapboxNavigation)
+        return UIStoryboard(name: "Navigation", bundle: .VietMapNavigation)
     }
 
     func testLanes() {

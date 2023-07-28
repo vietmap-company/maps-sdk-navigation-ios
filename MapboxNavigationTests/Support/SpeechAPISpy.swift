@@ -1,6 +1,6 @@
 import Foundation
 import MapboxSpeech
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 /**
  * This class can be used as a substitute for SpeechSynthesizer under test, in order to verify whether expected calls were made.
  */
@@ -8,7 +8,7 @@ import MapboxSpeech
 
 class SpeechAPISpy: SpeechSynthesizer {
     struct AudioDataCall {
-        static let sound = NSDataAsset(name: "reroute-sound", bundle: .mapboxNavigation)!
+        static let sound = NSDataAsset(name: "reroute-sound", bundle: .VietMapNavigation)!
         
         let options: MapboxSpeech.SpeechOptions
         let completion: SpeechSynthesizer.CompletionHandler

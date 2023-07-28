@@ -1,5 +1,5 @@
 import XCTest
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 #if canImport(CarPlay)
 import CarPlay
 

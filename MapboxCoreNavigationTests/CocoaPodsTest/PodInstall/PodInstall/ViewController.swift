@@ -1,5 +1,5 @@
 import UIKit
-import MapboxNavigation
+import VietMapNavigation
 import MapboxCoreNavigation
 
 class ViewController: UIViewController {

@@ -1,5 +1,5 @@
 import UIKit
-import MapboxNavigation
+import VietMapNavigation
 
 
 @UIApplicationMain

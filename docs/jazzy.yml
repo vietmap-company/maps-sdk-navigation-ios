@@ -1,8 +1,8 @@
-module: MapboxNavigation
+module: VietMapNavigation
 author: Mapbox
 author_url: https://www.mapbox.com/ios-sdk/navigation/
 github_url: https://github.com/mapbox/mapbox-navigation-ios
-dash_url: https://www.mapbox.com/mapbox-navigation-ios/navigation/docsets/MapboxNavigation.xml
+dash_url: https://www.mapbox.com/mapbox-navigation-ios/navigation/docsets/VietMapNavigation.xml
 copyright: '© 2014–2018 [Mapbox](https://www.mapbox.com/). See [license](https://github.com/mapbox/mapbox-navigation-ios/blob/master/LICENSE.md) for more details.'
 
 head: |

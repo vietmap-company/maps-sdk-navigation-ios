@@ -1,5 +1,5 @@
 import Foundation
-import MapboxNavigation
+import VietMapNavigation
 
 /**
  To find more pieces of the UI to customize, checkout DayStyle.swift.

@@ -1,6 +1,6 @@
 import UIKit
 import MapboxCoreNavigation
-import MapboxNavigation
+import VietMapNavigation
 import VietMap
 import CoreLocation
 import AVFoundation

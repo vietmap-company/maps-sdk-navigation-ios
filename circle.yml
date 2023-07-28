@@ -86,37 +86,37 @@ step-library:
       run:
         name: Build and Test MapboxCoreNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxCoreNavigation  -resultBundlePath MapboxCoreNavigationResults clean build test | tee MapboxCoreNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme MapboxCoreNavigation  -resultBundlePath MapboxCoreNavigationResults clean build test | tee MapboxCoreNavigation-xcodebuild.log | xcpretty
 
   - &build-test-MapboxCoreNavigation-ios-12
       run:
         name: Build and Test MapboxCoreNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxCoreNavigation -resultBundlePath MapboxCoreNavigationResults clean build test | tee MapboxCoreNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme MapboxCoreNavigation -resultBundlePath MapboxCoreNavigationResults clean build test | tee MapboxCoreNavigation-xcodebuild.log | xcpretty
 
-  - &build-test-MapboxNavigation-ios-11
+  - &build-test-VietMapNavigation-ios-11
       run:
-        name: Build and Test MapboxNavigation
+        name: Build and Test VietMapNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxNavigation -resultBundlePath MapboxNavigationResults clean build test | tee MapboxNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme VietMapNavigation -resultBundlePath VietMapNavigationResults clean build test | tee VietMapNavigation-xcodebuild.log | xcpretty
 
-  - &build-test-MapboxNavigation-ios-12
+  - &build-test-VietMapNavigation-ios-12
       run:
-        name: Build and Test MapboxNavigation
+        name: Build and Test VietMapNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxNavigation -resultBundlePath MapboxNavigationResults clean build test | tee MapboxNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme VietMapNavigation -resultBundlePath VietMapNavigationResults clean build test | tee VietMapNavigation-xcodebuild.log | xcpretty
 
   - &build-Example-Obj-C
       run:
         name: Build Example-Objective-C
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme Example-Objective-C clean build | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme Example-Objective-C clean build | xcpretty
 
   - &build-Example-Swift
       run:
         name: Build Example-Swift
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme Example-Swift clean build | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme Example-Swift clean build | xcpretty
 
   - &cocoapods-integration-test
       run:
@@ -126,11 +126,11 @@ step-library:
           pod install --repo-update
           xcodebuild -workspace PodInstall.xcworkspace/ -scheme PodInstall -destination 'platform=iOS Simulator,name=iPhone 6 Plus' clean build | xcpretty
 
-  - &print-MapboxNavigation-xcodebuild-log
+  - &print-VietMapNavigation-xcodebuild-log
       run:
-        name: Print MapboxNavigation-xcodebuild.log
+        name: Print VietMapNavigation-xcodebuild.log
         when: on_fail
-        command: cat MapboxNavigation-xcodebuild.log
+        command: cat VietMapNavigation-xcodebuild.log
 
   - &print-MapboxCoreNavigation-xcodebuild-log
       run:
@@ -138,9 +138,9 @@ step-library:
         when: on_fail
         command: cat MapboxCoreNavigation-xcodebuild.log
 
-  - &store-MapboxNavigationResults-artifacts
+  - &store-VietMapNavigationResults-artifacts
       store_artifacts:
-          path: MapboxNavigationResults
+          path: VietMapNavigationResults
 
   - &store-MapboxCoreNavigationResults-artifacts
       store_artifacts:
@@ -160,10 +160,10 @@ jobs:
       - *restore-cache
       - *install-dependencies
       - *build-test-MapboxCoreNavigation-ios-12
-      - *build-test-MapboxNavigation-ios-12
-      - *print-MapboxNavigation-xcodebuild-log
+      - *build-test-VietMapNavigation-ios-12
+      - *print-VietMapNavigation-xcodebuild-log
       - *print-MapboxCoreNavigation-xcodebuild-log
-      - *store-MapboxNavigationResults-artifacts
+      - *store-VietMapNavigationResults-artifacts
       - *store-MapboxCoreNavigationResults-artifacts
       - *save-cache
 
@@ -180,10 +180,10 @@ jobs:
       - *install-dependencies
       - *verify-missing-localizable-strings
       - *build-test-MapboxCoreNavigation-ios-11
-      - *build-test-MapboxNavigation-ios-11
-      - *print-MapboxNavigation-xcodebuild-log
+      - *build-test-VietMapNavigation-ios-11
+      - *print-VietMapNavigation-xcodebuild-log
       - *print-MapboxCoreNavigation-xcodebuild-log
-      - *store-MapboxNavigationResults-artifacts
+      - *store-VietMapNavigationResults-artifacts
       - *store-MapboxCoreNavigationResults-artifacts
       - *save-cache
 

@@ -1,6 +1,6 @@
 import XCTest
 import Solar
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 
 struct Location {
     static let sf = CLLocation(latitude: 37.78, longitude: -122.40)

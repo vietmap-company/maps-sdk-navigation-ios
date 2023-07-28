@@ -2,7 +2,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-NAVIGATION="${DIR}/../MapboxNavigation"
+NAVIGATION="${DIR}/../VietMapNavigation"
 CORE="${DIR}/../MapboxCoreNavigation"
 
 LANGUAGES=( "Base" )

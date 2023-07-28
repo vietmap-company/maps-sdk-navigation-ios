@@ -1,5 +1,5 @@
 import XCTest
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 
 class ImageRepositoryTests: XCTestCase {
 

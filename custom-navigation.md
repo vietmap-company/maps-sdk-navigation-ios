@@ -5,11 +5,11 @@ _⚠️Warning: this page is for advanced use cases only and is not necessary fo
 The Mapbox Navigation SDK is comprised of two modules:
 
 * MapboxCoreNavigation - responsible for rerouting, snapping, progress updates etc.
-* MapboxNavigation - responsible for everything UI related.
+* VietMapNavigation - responsible for everything UI related.
 
-If the UI provided by MapboxNavigation is not something that can work for your project, it is possible to create a custom navigation experience built on top of MapboxCoreNavigation directly. Note, this is not ideal as it will be a lot of work for the developer. If there is something missing from the UI or not optimal, feel free to open a ticket instead of venturing down this path.
+If the UI provided by VietMapNavigation is not something that can work for your project, it is possible to create a custom navigation experience built on top of MapboxCoreNavigation directly. Note, this is not ideal as it will be a lot of work for the developer. If there is something missing from the UI or not optimal, feel free to open a ticket instead of venturing down this path.
 
-The installation process is very similar to install MapboxNavigation:
+The installation process is very similar to install VietMapNavigation:
 
 ### Installing MapboxCoreNavigation
 

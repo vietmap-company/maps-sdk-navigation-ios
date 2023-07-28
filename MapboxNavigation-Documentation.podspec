@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.name = "MapboxNavigation-Documentation"
+  s.name = "VietMapNavigation-Documentation"
   s.version = "1.0.2"
   s.summary = "Complete turn-by-turn navigation interface for iOS."
 
@@ -32,16 +32,16 @@ Pod::Spec.new do |s|
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source_files = ["MapboxNavigation/*", "MapboxCoreNavigation/*"]
+  s.source_files = ["VietMapNavigation/*", "MapboxCoreNavigation/*"]
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.resources = ['MapboxNavigation/Resources/*/*', 'MapboxNavigation/Resources/*']
+  s.resources = ['VietMapNavigation/Resources/*/*', 'VietMapNavigation/Resources/*']
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.requires_arc = true
-  s.module_name = "MapboxNavigation"
+  s.module_name = "VietMapNavigation"
 
   s.frameworks = ['CarPlay']
 

@@ -3,7 +3,7 @@
 @import AVFoundation;
 @import MapboxCoreNavigation;
 @import MapboxDirections;
-@import MapboxNavigation;
+@import VietMapNavigation;
 @import VietMap;
 
 @interface ViewController () <AVSpeechSynthesizerDelegate>

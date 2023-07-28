@@ -3,7 +3,7 @@ import MapboxDirections
 import MapboxCoreNavigation
 import MapboxSpeech
 import AVKit
-@testable import MapboxNavigation
+@testable import VietMapNavigation
 
 class MapboxVoiceControllerTests: XCTestCase {
 
@@ -102,7 +102,7 @@ fileprivate extension Notification.Name {
     }
 }
 class AudioPlayerDummy: AVAudioPlayer {
-    public let sound = NSDataAsset(name: "reroute-sound", bundle: .mapboxNavigation)!
+    public let sound = NSDataAsset(name: "reroute-sound", bundle: .VietMapNavigation)!
     
     lazy var notifier: NotificationCenter = .default
     fileprivate typealias Note = Notification.Name.MapboxVoiceTests

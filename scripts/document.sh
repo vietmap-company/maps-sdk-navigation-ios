@@ -51,7 +51,7 @@ find Mapbox{Core,}Navigation/ -name *.swift -exec \
     perl -pi -e 's/\@available\s*\(\s*iOS \d+.\d,.*?\)//' {} \;
 
 jazzy \
-    --podspec MapboxNavigation-Documentation.podspec \
+    --podspec VietMapNavigation-Documentation.podspec \
     --config docs/jazzy.yml \
     --sdk iphonesimulator \
     --module-version ${SHORT_VERSION} \
@@ -62,7 +62,7 @@ jazzy \
     --theme ${THEME} \
     --output ${OUTPUT}
 
-REPLACE_REGEXP='s/MapboxNavigation\s+(Docs|Reference)/Mapbox Navigation SDK for iOS $1/, '
+REPLACE_REGEXP='s/VietMapNavigation\s+(Docs|Reference)/Mapbox Navigation SDK for iOS $1/, '
 REPLACE_REGEXP+='s/BRANDLESS_DOCSET_TITLE/Navigation SDK for iOS $1/, '
 REPLACE_REGEXP+="s/<span class=\"kt\">(${DIRECTIONS_SYMBOLS})<\/span>/<span class=\"kt\"><a href=\"${BASE_URL//\//\\/}\/directions\/${DIRECTIONS_VERSION}\/Classes\/\$1.html\">\$1<\/a><\/span>/, "
 

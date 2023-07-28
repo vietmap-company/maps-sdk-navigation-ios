@@ -74,7 +74,7 @@ Use the following code as inspiration:
 import Mapbox
 import MapboxDirections
 import MapboxCoreNavigation
-import MapboxNavigation
+import VietMapNavigation
 
 class ViewController: UIViewController {
     var navigationView: NavigationMapView?
