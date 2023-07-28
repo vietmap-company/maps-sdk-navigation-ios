@@ -255,7 +255,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         let styles = [CustomDayStyle(), CustomNightStyle()]
 
         self.navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
-        navigationViewController.delegate = self
+//        navigationViewController.delegate = self
 //        navigationViewController.mapView?.showsUserHeadingIndicator = true
         navigationViewController.mapView?.userTrackingMode = .follow
         presentAndRemoveMapview(navigationViewController)
@@ -282,16 +282,19 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     @objc func progressDidReroute(_ notification: Notification) {
         let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
         if let userInfo = notification.object as? RouteController {
-            navigationViewController.mapView?.showRoutes([userInfo.routeProgress.route])
-//            centerMap(userInfo.locationManager.location!)
-            navigationViewController.mapView?.recenterMap()
-            navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
+//            navigationViewController.mapView?.showRoutes([userInfo.routeProgress.route])
+////            centerMap(userInfo.locationManager.location!)
+//            navigationViewController.mapView?.recenterMap()
+//            navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
         }
    }
     
     @objc func progressDidChange(_ notification: NSNotification ) {
 //        let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
         let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
+        print("---------start get location-------------")
+        print(location.coordinate)
+        print("---------end   get location-------------")
 //        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
 //            let camera = MGLMapCamera(
 //                lookingAtCenter: location.coordinate,
@@ -302,7 +305,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 //            print("locaiton: \(location.coordinate)")
 //            navigationViewController.mapView?.setCamera(camera, animated: true)
 //        }
-        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
+//        navigationViewController.mapView?.updateCourseTracking(location: location, animated: true)
     }
 
     func configureMapView(_ mapView: NavigationMapView) {
@@ -388,13 +391,13 @@ extension ViewController: VoiceControllerDelegate {
 // MARK: WaypointConfirmationViewControllerDelegate
 extension ViewController: WaypointConfirmationViewControllerDelegate {
     func confirmationControllerDidConfirm(_ confirmationController: WaypointConfirmationViewController) {
-        confirmationController.dismiss(animated: true, completion: {
-            guard let navigationViewController = self.presentedViewController as? NavigationViewController else { return }
-
-            guard navigationViewController.routeController.routeProgress.route.legs.count > navigationViewController.routeController.routeProgress.legIndex + 1 else { return }
-            navigationViewController.routeController.routeProgress.legIndex += 1
-            navigationViewController.routeController.resume()
-        })
+//        confirmationController.dismiss(animated: true, completion: {
+//            guard let navigationViewController = self.presentedViewController as? NavigationViewController else { return }
+//
+//            guard navigationViewController.routeController.routeProgress.route.legs.count > navigationViewController.routeController.routeProgress.legIndex + 1 else { return }
+//            navigationViewController.routeController.routeProgress.legIndex += 1
+//            navigationViewController.routeController.resume()
+//        })
     }
 }
 
