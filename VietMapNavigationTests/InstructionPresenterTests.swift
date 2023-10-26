@@ -1,7 +1,7 @@
 import Foundation
 import XCTest
 @testable import VietMapNavigation
-import MapboxDirections
+import VietMapDirections
 
 class InstructionPresenterTests: XCTestCase {
     

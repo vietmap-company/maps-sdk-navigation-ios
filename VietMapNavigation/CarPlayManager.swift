@@ -5,7 +5,7 @@ import MapboxGeocoder
 #endif
 import Turf
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 
 /**
  The activity during which a `CPTemplate` is displayed. This enumeration is used to distinguish between different templates during different phases of user interaction.

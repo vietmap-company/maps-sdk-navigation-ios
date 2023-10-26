@@ -1,6 +1,6 @@
 import XCTest
 @testable import VietMapNavigation
-import MapboxDirections
+import VietMapDirections
 
 class NavigationMapViewTests: XCTestCase {
     

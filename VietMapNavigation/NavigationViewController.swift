@@ -1,6 +1,6 @@
 import UIKit
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 import VietMap
 #if canImport(CarPlay)
 import CarPlay
@@ -194,7 +194,7 @@ public protocol NavigationViewControllerDelegate: VisualInstructionDelegate {
 open class NavigationViewController: UIViewController {
     
     /** 
-     A `Route` object constructed by [MapboxDirections](https://mapbox.github.io/mapbox-navigation-ios/directions/).
+     A `Route` object constructed by [VietMapDirections](https://mapbox.github.io/mapbox-navigation-ios/directions/).
      
      In cases where you need to update the route after navigation has started you can set a new `route` here and `NavigationViewController` will update its UI accordingly.
      */

@@ -1,6 +1,6 @@
 import Foundation
 import CoreLocation
-import MapboxDirections
+import VietMapDirections
 
 extension Array {
     
@@ -42,7 +42,7 @@ extension Array {
     }
 }
 
-extension Array where Element: MapboxDirections.Route {
+extension Array where Element: VietMapDirections.Route {
     func mostSimilar(to route: Route) -> Route? {
         let target = route.description
         return self.min { (left, right) -> Bool in

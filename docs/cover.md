@@ -44,7 +44,7 @@ Alternatively, to install Mapbox Navigation using [Carthage](https://github.com/
 Now import the relevant modules and present a new `NavigationViewController`. You can also [push to a navigation view controller from within a storyboard](https://www.mapbox.com/ios-sdk/navigation/overview/storyboards/) if your application’s UI is laid out in Interface Builder.
 
 ```swift
-import MapboxDirections
+import VietMapDirections
 import VietMapCoreNavigation
 import VietMapNavigation
 ```

@@ -1,6 +1,6 @@
 import UIKit
 import VietMap
-import MapboxDirections
+import VietMapDirections
 import VietMapCoreNavigation
 import Turf
 import AVFoundation

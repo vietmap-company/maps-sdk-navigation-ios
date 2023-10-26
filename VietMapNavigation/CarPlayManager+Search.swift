@@ -2,7 +2,7 @@
 import Foundation
 import CarPlay
 import MapboxGeocoder
-import MapboxDirections
+import VietMapDirections
 
 @available(iOS 12.0, *)
 extension CarPlayManager: CPSearchTemplateDelegate {

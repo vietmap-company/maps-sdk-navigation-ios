@@ -1,4 +1,4 @@
-import MapboxDirections
+import VietMapDirections
 
 extension RouteOptions {
     internal var activityType: CLActivityType {

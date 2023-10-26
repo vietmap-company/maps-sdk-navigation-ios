@@ -1,5 +1,5 @@
 import Foundation
-import MapboxDirections
+import VietMapDirections
 import Turf
 
 fileprivate let maximumSpeed: CLLocationSpeed = 30 // ~108 kmh

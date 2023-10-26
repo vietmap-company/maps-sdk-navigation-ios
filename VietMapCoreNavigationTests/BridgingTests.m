@@ -2,7 +2,7 @@
 #import "VietMapCoreNavigationTests-Swift.h"
 //@import Mapbox;
 @import VietMapCoreNavigation;
-@import MapboxDirections;
+@import VietMapDirections;
 
 @interface BridgingTests : XCTestCase
 @property (nonatomic) MBRouteController *routeController;

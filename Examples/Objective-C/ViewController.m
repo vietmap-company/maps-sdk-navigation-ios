@@ -2,7 +2,7 @@
 
 @import AVFoundation;
 @import VietMapCoreNavigation;
-@import MapboxDirections;
+@import VietMapDirections;
 @import VietMapNavigation;
 @import VietMap;
 

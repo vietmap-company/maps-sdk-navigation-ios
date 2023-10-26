@@ -1,5 +1,5 @@
 import Foundation
-import MapboxDirections
+import VietMapDirections
 
 @objc(MBDirectionsSpy)
 class DirectionsSpy: Directions {

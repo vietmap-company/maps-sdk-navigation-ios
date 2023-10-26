@@ -1,5 +1,5 @@
 import UIKit
-import MapboxDirections
+import VietMapDirections
 
 fileprivate enum ConstraintSpacing: CGFloat {
     case closer = 8.0

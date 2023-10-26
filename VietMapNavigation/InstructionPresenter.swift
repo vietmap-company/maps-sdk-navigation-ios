@@ -1,5 +1,5 @@
 import UIKit
-import MapboxDirections
+import VietMapDirections
 
 protocol InstructionPresenterDataSource: AnyObject {
     var availableBounds: (() -> CGRect)! { get }

@@ -3,7 +3,7 @@ import VietMapNavigation
 #if canImport(CarPlay)
 import CarPlay
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 
 
 /**

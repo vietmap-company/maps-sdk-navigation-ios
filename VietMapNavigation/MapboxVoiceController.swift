@@ -1,9 +1,9 @@
 import Foundation
 import CoreLocation
 import AVFoundation
-import MapboxSpeech
+import VietMapSpeech
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 
 /**
  `MapboxVoiceController` extends the default `RouteVoiceController` by providing a more robust speech synthesizer via the Mapbox Speech API. `RouteVoiceController` will be used as a fallback during poor network conditions.

@@ -1,4 +1,4 @@
-import MapboxDirections
+import VietMapDirections
 
 extension RouteStep {
     static func ==(left: RouteStep, right: RouteStep) -> Bool {

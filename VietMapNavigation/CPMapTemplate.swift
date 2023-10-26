@@ -1,5 +1,5 @@
 import Foundation
-import MapboxDirections
+import VietMapDirections
 #if canImport(CarPlay)
 import CarPlay
 

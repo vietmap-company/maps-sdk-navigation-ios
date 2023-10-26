@@ -1,5 +1,5 @@
 import Polyline
-import MapboxDirections
+import VietMapDirections
 import AVFoundation
 import UIKit
 

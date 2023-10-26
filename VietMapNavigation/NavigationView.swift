@@ -1,5 +1,5 @@
 import UIKit
-import MapboxDirections
+import VietMapDirections
 
 /**
  A view that represents the root view of the VietMapNavigation drop-in UI.

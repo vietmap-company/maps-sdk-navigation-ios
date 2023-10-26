@@ -1,5 +1,5 @@
 import UIKit
-import MapboxDirections
+import VietMapDirections
 import VietMapCoreNavigation
 
 /// :nodoc:

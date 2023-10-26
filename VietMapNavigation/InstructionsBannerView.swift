@@ -1,6 +1,6 @@
 import UIKit
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 
 /**
  `InstructionsBannerViewDelegate` provides methods for reacting to user interactions in `InstructionsBannerView`.

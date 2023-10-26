@@ -1,6 +1,6 @@
 import Foundation
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 
 class RouteControllerDelegateSpy: RouteControllerDelegate {
     private(set) var recentMessages: [String] = []

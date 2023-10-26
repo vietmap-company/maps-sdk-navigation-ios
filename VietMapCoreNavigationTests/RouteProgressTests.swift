@@ -1,6 +1,6 @@
 import Foundation
 import XCTest
-import MapboxDirections
+import VietMapDirections
 @testable import VietMapCoreNavigation
 
 class RouteProgressTests: XCTestCase {

@@ -5,7 +5,7 @@
 //  Created by Sander van Tulden on 28/10/2022.
 //  Copyright © 2022 Mapbox. All rights reserved.
 //
-import MapboxDirections
+import VietMapDirections
 
 extension Route {
     convenience init(jsonFileName: String, waypoints: [CLLocationCoordinate2D], polylineShapeFormat: RouteShapeFormat = .polyline6, bundle: Bundle = .main, accessToken: String) {

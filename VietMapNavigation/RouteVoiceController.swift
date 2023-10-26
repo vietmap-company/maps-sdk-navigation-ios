@@ -1,7 +1,7 @@
 
 import Foundation
 import AVFoundation
-import MapboxDirections
+import VietMapDirections
 import VietMapCoreNavigation
 
 extension ErrorUserInfoKey {

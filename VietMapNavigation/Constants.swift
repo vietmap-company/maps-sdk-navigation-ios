@@ -1,5 +1,5 @@
 import Foundation
-import MapboxDirections
+import VietMapDirections
 
 typealias CongestionSegment = ([CLLocationCoordinate2D], CongestionLevel)
 

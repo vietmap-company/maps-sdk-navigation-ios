@@ -1,6 +1,6 @@
 import Foundation
 import CoreLocation
-import MapboxDirections
+import VietMapDirections
 import UIKit.UIDevice
 
 

@@ -1,6 +1,6 @@
 import Foundation
 import UIKit
-import MapboxDirections
+import VietMapDirections
 
 public extension UIEdgeInsets {
     static func +(left: UIEdgeInsets, right: UIEdgeInsets) -> UIEdgeInsets {

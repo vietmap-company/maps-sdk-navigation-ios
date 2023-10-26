@@ -1,6 +1,6 @@
 import Foundation
 import CoreLocation
-import MapboxDirections
+import VietMapDirections
 
 @objc public protocol Router: AnyObject, CLLocationManagerDelegate {
     @objc var locationManager: NavigationLocationManager! { get }

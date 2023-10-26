@@ -72,7 +72,7 @@ Use the following code as inspiration:
 
 ```
 import Mapbox
-import MapboxDirections
+import VietMapDirections
 import VietMapCoreNavigation
 import VietMapNavigation
 

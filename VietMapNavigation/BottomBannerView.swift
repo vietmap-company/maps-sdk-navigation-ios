@@ -1,6 +1,6 @@
 import UIKit
 import VietMapCoreNavigation
-import MapboxDirections
+import VietMapDirections
 
 protocol BottomBannerViewDelegate: AnyObject {
     func didCancel()

@@ -1,6 +1,6 @@
 import XCTest
 import Foundation
-import MapboxDirections
+import VietMapDirections
 import CoreLocation
 
 internal class Fixture {

@@ -1,5 +1,5 @@
 import XCTest
-import MapboxDirections
+import VietMapDirections
 @testable import VietMapNavigation
 @testable import VietMapCoreNavigation
 
