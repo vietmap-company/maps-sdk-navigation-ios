@@ -2,10 +2,6 @@ Partial of this code is licensed under MIT and partial is ISC.
 
 The MIT License (MIT)
 
-Copyright (c) 2020 Flitsmeister
-
-Copyright (c) 2016 Matthijs Hollemans and contributors
-
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
@@ -26,7 +22,7 @@ SOFTWARE.
 
 ISC License (ISC)
 
-Copyright © 2014–2018, Mapbox
+Copyright, VietMap
 
 Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
 

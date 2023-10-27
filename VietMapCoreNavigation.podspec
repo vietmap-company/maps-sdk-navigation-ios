@@ -3,33 +3,27 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name = "VietMapCoreNavigation"
-  s.version = "1.0.2"
-  s.summary = "Core components for turn-by-turn navigation on iOS."
-
-  s.description  = <<-DESC
-  Mapbox Core Navigation provides the core spatial and timing logic for turn-by-turn navigation along a route. For a complete turn-by-turn navigation interface, use the Mapbox Navigation SDK for iOS (VietMapNavigation).
-                   DESC
-
-  s.homepage = "https://www.mapbox.com/ios-sdk/navigation/"
-  s.documentation_url = "https://www.mapbox.com/mapbox-navigation-ios/navigation/"
+  s.version = "2.1.1"
+  s.summary           = 'Vietmap Navigation'
+  s.homepage          = 'https://github.com/vietmap-company'
+  s.documentation_url = "https://maps.vietmap.vn/docs/sdk-mobile/sdk-ios/sdk-ios-ver2.0/"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.license = { :type => "ISC", :file => "LICENSE.md" }
+  s.license = { :type => "ISC", :text => "LICENSE.md" }
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.author = { "Mapbox" => "mobile@mapbox.com" }
-  s.social_media_url = "https://twitter.com/mapbox"
+  s.author            = { 'NhatPV' => 'nhatpv@vietmap.vn' }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.ios.deployment_target = "9.0"
+  s.ios.deployment_target = "12.0"
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/mapbox/mapbox-navigation-ios.git", :tag => "v#{s.version.to_s}" }
+  s.source = { :git => "https://github.com/vietmap-company/maps-sdk-navigation-ios.git", :tag => "#{s.version.to_s}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
@@ -40,9 +34,9 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.module_name = "VietMapCoreNavigation"
 
-  s.dependency "VietMapDirections.swift", "~> 0.23.0"
-  s.dependency "MapboxMobileEvents", "~> 0.5"
-  s.dependency "Turf", "~> 0.2"
+  s.dependency "VietMapDirections.swift", "~> 2.0.1"
+  # s.dependency "MapboxMobileEvents", "~> 0.5"
+  s.dependency "VietMapTurf", "~> 1.0.2"
 
   # `swift_version` was introduced in CocoaPods 1.4.0. Without this check, if a user were to
   # directly specify this podspec while using <1.4.0, ruby would throw an unknown method error.
