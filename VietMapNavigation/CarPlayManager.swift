@@ -3,7 +3,7 @@ import CarPlay
 #if canImport(MapboxGeocoder)
 import MapboxGeocoder
 #endif
-import Turf
+import VietMapTurf
 import VietMapCoreNavigation
 import VietMapDirections
 

@@ -1,5 +1,5 @@
 import UIKit
-import Solar
+import VietMapSolar
 
 /**
  The `StyleManagerDelegate` protocol defines a set of methods used for controlling the style.

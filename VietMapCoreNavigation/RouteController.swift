@@ -1,8 +1,8 @@
 import Foundation
 import CoreLocation
 import VietMapDirections
-import Polyline
-import Turf
+import VietMapPolyline
+import VietMapTurf
 import UIKit
 
 /**

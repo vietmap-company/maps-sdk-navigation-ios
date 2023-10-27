@@ -1,7 +1,7 @@
 import UIKit
 import VietMapDirections
 import VietMapCoreNavigation
-import Turf
+import VietMapTurf
 
 /// :nodoc:
 @objc(MBStepsBackgroundView)

@@ -2,7 +2,7 @@ import UIKit
 import VietMap
 import VietMapDirections
 import VietMapCoreNavigation
-import Turf
+import VietMapTurf
 import AVFoundation
 
 class ArrowFillPolyline: MGLPolylineFeature {}

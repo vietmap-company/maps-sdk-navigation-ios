@@ -1,5 +1,5 @@
 import UIKit
-import Turf
+import VietMapTurf
 import VietMap
 
 let PuckSize: CGFloat = 45

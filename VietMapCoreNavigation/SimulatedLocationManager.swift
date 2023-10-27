@@ -1,6 +1,6 @@
 import Foundation
 import VietMapDirections
-import Turf
+import VietMapTurf
 
 fileprivate let maximumSpeed: CLLocationSpeed = 30 // ~108 kmh
 fileprivate let minimumSpeed: CLLocationSpeed = 6 // ~21 kmh

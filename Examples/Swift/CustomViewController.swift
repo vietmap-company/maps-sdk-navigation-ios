@@ -5,7 +5,7 @@ import VietMap
 import CoreLocation
 import AVFoundation
 import VietMapDirections
-import Turf
+import VietMapTurf
 
 class CustomViewController: UIViewController, MGLMapViewDelegate {
 

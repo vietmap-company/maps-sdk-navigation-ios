@@ -1,6 +1,6 @@
 import Foundation
 import VietMapDirections
-import Polyline
+import VietMapPolyline
 
 class CoreFeedbackEvent: Hashable {
     var id = UUID()

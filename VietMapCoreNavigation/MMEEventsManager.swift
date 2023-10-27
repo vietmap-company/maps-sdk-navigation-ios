@@ -1,4 +1,4 @@
-import Polyline
+import VietMapPolyline
 import VietMapDirections
 import AVFoundation
 import UIKit

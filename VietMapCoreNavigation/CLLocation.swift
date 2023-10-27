@@ -1,6 +1,6 @@
 import CoreLocation
 import VietMapDirections
-import Turf
+import VietMapTurf
 
 extension CLLocation {
     

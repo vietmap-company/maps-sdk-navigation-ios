@@ -1,6 +1,6 @@
 import Foundation
 import VietMapDirections
-import Turf
+import VietMapTurf
 #if canImport(CarPlay)
 import CarPlay
 #endif
