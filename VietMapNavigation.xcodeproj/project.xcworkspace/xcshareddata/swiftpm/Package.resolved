@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/vietmap-company/maps-sdk-ios.git",
       "state" : {
-        "revision" : "5fd666b2198af9a8ef2d0212c8e3deb9de2c9602",
-        "version" : "2.0.1"
+        "revision" : "649eabcb21a36c3d0cfd871c07ccea641924fcdd",
+        "version" : "2.1.0"
       }
     }
   ],
