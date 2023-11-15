@@ -23,6 +23,9 @@
 		16E3625C201265D600DF0592 /* ImageDownloadOperationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E3625B201265D600DF0592 /* ImageDownloadOperationSpy.swift */; };
 		16E4F97F205B05FE00531791 /* MapboxVoiceControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E4F97E205B05FE00531791 /* MapboxVoiceControllerTests.swift */; };
 		16EF6C22211BA4B300AA580B /* CarPlayMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16EF6C21211BA4B300AA580B /* CarPlayMapViewController.swift */; };
+		1AFE7C4E29DB9D800D34CEFA /* Pods_VietMapCoreNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7727B11D95BB9BE9B81A7AC3 /* Pods_VietMapCoreNavigation.framework */; };
+		1FDA776F3FBE5C16ED416029 /* Pods_Example_Objective_CTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AEA5CC77D994C458E9B72B5 /* Pods_Example_Objective_CTests.framework */; };
+		2E3268BBFC87D6034C5285EE /* Pods_VietMapNavigation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92B33A9FFA5287EEE67112B1 /* Pods_VietMapNavigation.framework */; };
 		35002D611E5F6ADB0090E733 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35002D5F1E5F6ADB0090E733 /* Assets.xcassets */; };
 		35002D621E5F6ADB0090E733 /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 35002D601E5F6ADB0090E733 /* Base.lproj */; };
 		35002D691E5F6B2F0090E733 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35002D661E5F6B1B0090E733 /* Main.storyboard */; };
@@ -145,8 +148,12 @@
 		3EA937B1F4DF73EB004BA6BE /* InstructionPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA93230997B8D59E3B76C8C /* InstructionPresenter.swift */; };
 		3EA93A1FEFDDB709DE84BED9 /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA938BE5468824787100228 /* ImageRepository.swift */; };
 		3EA93DC5BA00B5DFCBE7BAC3 /* RouteControllerDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA93EBD6E6BEC966BBE51D6 /* RouteControllerDelegateSpy.swift */; };
+		5564949426E202FD8C97D8AD /* Pods_Example_CarPlay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 686B1D656A8A89E300E43C4A /* Pods_Example_CarPlay.framework */; };
 		6441B16A1EFC64E50076499F /* WaypointConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6441B1691EFC64E50076499F /* WaypointConfirmationViewController.swift */; };
 		64847A041F04629D003F3A69 /* Feedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64847A031F04629D003F3A69 /* Feedback.swift */; };
+		6B8177332ECAB3F02D22398B /* Pods_VietMapNavigation_VietMapNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19B36D4DD7401DD3EC8C3116 /* Pods_VietMapNavigation_VietMapNavigationTests.framework */; };
+		8307B3EA378B60413A98CB89 /* Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE3E2209B1181ABB46FE5B2 /* Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework */; };
+		8BB9CBCA08D5E09A1E141F35 /* Pods_Example_Objective_C.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CA6D629125D5DAA1448E824 /* Pods_Example_Objective_C.framework */; };
 		8D07C5A820B612310093D779 /* EmptyStyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 8D07C5A720B612310093D779 /* EmptyStyle.json */; };
 		8D24A2F62040960C0098CBF8 /* UIEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24A2F52040960C0098CBF8 /* UIEdgeInsets.swift */; };
 		8D24A2F820409A890098CBF8 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D24A2F720409A890098CBF8 /* CGSize.swift */; };
@@ -173,35 +180,8 @@
 		AE997D2221137B8B00EB0AAB /* String+LocalizedConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE997D2121137B8B00EB0AAB /* String+LocalizedConstants.swift */; };
 		AEC3AC9A2106703100A26F34 /* HighwayShield.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC3AC992106703100A26F34 /* HighwayShield.swift */; };
 		AEF2C8F22072B603007B061F /* routeWithTunnels_9thStreetDC.json in Resources */ = {isa = PBXBuildFile; fileRef = AEF2C8F12072B603007B061F /* routeWithTunnels_9thStreetDC.json */; };
-		BE1115682AEB9C9800295DE6 /* VietMapTurf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115662AEB9C5300295DE6 /* VietMapTurf.xcframework */; };
-		BE1115692AEB9C9800295DE6 /* VietMapTurf.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115662AEB9C5300295DE6 /* VietMapTurf.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE11156A2AEB9C9900295DE6 /* VietMapSolar.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115642AEB9C4E00295DE6 /* VietMapSolar.xcframework */; };
-		BE11156B2AEB9C9900295DE6 /* VietMapSolar.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115642AEB9C4E00295DE6 /* VietMapSolar.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE11156C2AEB9C9A00295DE6 /* VietMapPolyline.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115622AEB9C4300295DE6 /* VietMapPolyline.xcframework */; };
-		BE11156D2AEB9C9A00295DE6 /* VietMapPolyline.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115622AEB9C4300295DE6 /* VietMapPolyline.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE11156E2AEB9CAA00295DE6 /* VietMapTurf.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115662AEB9C5300295DE6 /* VietMapTurf.xcframework */; };
-		BE11156F2AEB9DD700295DE6 /* VietMapPolyline.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115622AEB9C4300295DE6 /* VietMapPolyline.xcframework */; };
-		BE1115702AEB9E2500295DE6 /* VietMapSpeech.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6ED2692AEA43DF00A24654 /* VietMapSpeech.xcframework */; };
-		BE1115712AEB9E3700295DE6 /* VietMapSolar.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1115642AEB9C4E00295DE6 /* VietMapSolar.xcframework */; };
-		BE2B62702AEA1DE90025FA0D /* VietMap in Frameworks */ = {isa = PBXBuildFile; productRef = BE2B626F2AEA1DE90025FA0D /* VietMap */; };
-		BE31D6FD2AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */; };
-		BE31D6FE2AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */; };
-		BE31D6FF2AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */; };
-		BE31D7002AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */; };
-		BE31D7032AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */; };
-		BE31D7042AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */; };
-		BE31D7052AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */; };
-		BE31D7062AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */; };
-		BE31D7072AEA733500D6F25C /* VietMapDirections.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */; };
-		BE31D7082AEA733500D6F25C /* VietMapDirections.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE31D7092AEA733700D6F25C /* VietMapGeocoder.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */; };
-		BE31D70A2AEA733700D6F25C /* VietMapGeocoder.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BE6ED26B2AEA43EA00A24654 /* VietMapSpeech.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE6ED2692AEA43DF00A24654 /* VietMapSpeech.xcframework */; };
-		BE6ED26C2AEA43EA00A24654 /* VietMapSpeech.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE6ED2692AEA43DF00A24654 /* VietMapSpeech.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEC684532AEA267C004173B9 /* VietMap in Frameworks */ = {isa = PBXBuildFile; productRef = BEC684522AEA267C004173B9 /* VietMap */; };
-		BEC684552AEA2682004173B9 /* VietMap in Frameworks */ = {isa = PBXBuildFile; productRef = BEC684542AEA2682004173B9 /* VietMap */; };
-		BEC684572AEA26B4004173B9 /* VietMap in Frameworks */ = {isa = PBXBuildFile; productRef = BEC684562AEA26B4004173B9 /* VietMap */; };
-		BEC684592AEA26BE004173B9 /* VietMap in Frameworks */ = {isa = PBXBuildFile; productRef = BEC684582AEA26BE004173B9 /* VietMap */; };
+		B729D9061A23F1850BC8629E /* Pods_Example_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52097D6B42C80CDD92B4FBAC /* Pods_Example_SwiftTests.framework */; };
+		BE8974223F0E08C7BAD368D8 /* Pods_RouteTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E203D1475ED0C2572B570E3 /* Pods_RouteTest.framework */; };
 		C51511D120EAC89D00372A91 /* CPMapTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51511D020EAC89D00372A91 /* CPMapTemplate.swift */; };
 		C51DF8661F38C31C006C6A15 /* Locale.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51DF8651F38C31C006C6A15 /* Locale.swift */; };
 		C51DF8671F38C337006C6A15 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5D9800E1EFBCDAD006DBF2E /* Date.swift */; };
@@ -297,6 +277,7 @@
 		DADAD82F20350849002E25CA /* MBRouteVoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = DADAD82D20350849002E25CA /* MBRouteVoiceController.m */; };
 		DAFA92071F01735000A7FB09 /* DistanceFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351BEC0B1E5BCC72006FE110 /* DistanceFormatter.swift */; };
 		F1D8FD2F28DB0A67006626A1 /* _TestPath.gpx in Resources */ = {isa = PBXBuildFile; fileRef = F1D8FD2E28DB0A67006626A1 /* _TestPath.gpx */; };
+		F61653DC0A7CC1D34E3EC789 /* Pods_Example_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F85B89E7B0C97E719E3E3444 /* Pods_Example_Swift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -426,14 +407,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BE31D70A2AEA733700D6F25C /* VietMapGeocoder.xcframework in Embed Frameworks */,
-				BE1115692AEB9C9800295DE6 /* VietMapTurf.xcframework in Embed Frameworks */,
 				354A01D51E6626AC00D765C2 /* VietMapCoreNavigation.framework in Embed Frameworks */,
-				BE11156B2AEB9C9900295DE6 /* VietMapSolar.xcframework in Embed Frameworks */,
-				BE11156D2AEB9C9A00295DE6 /* VietMapPolyline.xcframework in Embed Frameworks */,
-				BE31D7082AEA733500D6F25C /* VietMapDirections.xcframework in Embed Frameworks */,
 				35D4282B1FA0DF1D00176028 /* VietMapNavigation.framework in Embed Frameworks */,
-				BE6ED26C2AEA43EA00A24654 /* VietMapSpeech.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,6 +440,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0527ABBA33915D0D05AEE90C /* Pods-Example-CarPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-CarPlay.release.xcconfig"; path = "Target Support Files/Pods-Example-CarPlay/Pods-Example-CarPlay.release.xcconfig"; sourceTree = "<group>"; };
+		11CDCF794318A9D110957FD0 /* Pods-VietMapCoreNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapCoreNavigation.debug.xcconfig"; path = "Target Support Files/Pods-VietMapCoreNavigation/Pods-VietMapCoreNavigation.debug.xcconfig"; sourceTree = "<group>"; };
 		160A4A68212791010028B070 /* CPBarButton+MBTestable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CPBarButton+MBTestable.h"; sourceTree = "<group>"; };
 		160A4A69212791010028B070 /* CPBarButton+MBTestable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CPBarButton+MBTestable.m"; sourceTree = "<group>"; };
 		160D8278205996DA00D278D6 /* DataCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCache.swift; sourceTree = "<group>"; };
@@ -482,6 +459,12 @@
 		16E3625B201265D600DF0592 /* ImageDownloadOperationSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadOperationSpy.swift; sourceTree = "<group>"; };
 		16E4F97E205B05FE00531791 /* MapboxVoiceControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapboxVoiceControllerTests.swift; sourceTree = "<group>"; };
 		16EF6C21211BA4B300AA580B /* CarPlayMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarPlayMapViewController.swift; sourceTree = "<group>"; };
+		19B36D4DD7401DD3EC8C3116 /* Pods_VietMapNavigation_VietMapNavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VietMapNavigation_VietMapNavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADDB72111DD870FD0C17E75 /* Pods-Example-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Swift.debug.xcconfig"; path = "Target Support Files/Pods-Example-Swift/Pods-Example-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		1BCBDA4A9ACBD59DDAD842F5 /* Pods-Example-Objective-C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objective-C.release.xcconfig"; path = "Target Support Files/Pods-Example-Objective-C/Pods-Example-Objective-C.release.xcconfig"; sourceTree = "<group>"; };
+		1E094116CFB67F5973A0B63F /* Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.release.xcconfig"; path = "Target Support Files/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.release.xcconfig"; sourceTree = "<group>"; };
+		2CA6D629125D5DAA1448E824 /* Pods_Example_Objective_C.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Objective_C.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AE9DDBE438A8EB6C85E038 /* Pods-Example-Objective-CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objective-CTests.release.xcconfig"; path = "Target Support Files/Pods-Example-Objective-CTests/Pods-Example-Objective-CTests.release.xcconfig"; sourceTree = "<group>"; };
 		35002D5D1E5F6ABB0090E733 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35002D5F1E5F6ADB0090E733 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35002D601E5F6ADB0090E733 /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
@@ -624,6 +607,7 @@
 		35ECAF2C2092275100DC3BC3 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		35F1F5921FD57EFD00F8E502 /* StyleManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleManagerTests.swift; sourceTree = "<group>"; };
 		35F520BF1FB482A200FC9C37 /* NextBannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextBannerView.swift; sourceTree = "<group>"; };
+		3AE87107661AC80C60CF529D /* Pods-Example-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-Example-SwiftTests/Pods-Example-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
 		3EA93170CB959F3065ACFFC3 /* SpeechAPISpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechAPISpy.swift; sourceTree = "<group>"; };
 		3EA93230997B8D59E3B76C8C /* InstructionPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionPresenter.swift; sourceTree = "<group>"; };
 		3EA934C5D8DBAA19DB0F5271 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
@@ -631,8 +615,18 @@
 		3EA938BE5468824787100228 /* ImageRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
 		3EA93A10227A7DAF1861D9F5 /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		3EA93EBD6E6BEC966BBE51D6 /* RouteControllerDelegateSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteControllerDelegateSpy.swift; sourceTree = "<group>"; };
+		4204D023CCE9A5AAAD0CAF29 /* Pods-VietMapNavigation-VietMapNavigationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapNavigation-VietMapNavigationTests.release.xcconfig"; path = "Target Support Files/Pods-VietMapNavigation-VietMapNavigationTests/Pods-VietMapNavigation-VietMapNavigationTests.release.xcconfig"; sourceTree = "<group>"; };
+		435E79B00469A55FDEF4942E /* Pods-Example-CarPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-CarPlay.debug.xcconfig"; path = "Target Support Files/Pods-Example-CarPlay/Pods-Example-CarPlay.debug.xcconfig"; sourceTree = "<group>"; };
+		4E203D1475ED0C2572B570E3 /* Pods_RouteTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RouteTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		52097D6B42C80CDD92B4FBAC /* Pods_Example_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6441B1691EFC64E50076499F /* WaypointConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaypointConfirmationViewController.swift; sourceTree = "<group>"; };
 		64847A031F04629D003F3A69 /* Feedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feedback.swift; sourceTree = "<group>"; };
+		686B1D656A8A89E300E43C4A /* Pods_Example_CarPlay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_CarPlay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73F64B17100DAED669886414 /* Pods-VietMapNavigation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapNavigation.debug.xcconfig"; path = "Target Support Files/Pods-VietMapNavigation/Pods-VietMapNavigation.debug.xcconfig"; sourceTree = "<group>"; };
+		74A4DA1CFA35CCCEEFD32626 /* Pods-Example-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-Example-SwiftTests/Pods-Example-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7727B11D95BB9BE9B81A7AC3 /* Pods_VietMapCoreNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VietMapCoreNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AEA5CC77D994C458E9B72B5 /* Pods_Example_Objective_CTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Objective_CTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		89CF6BBBF96103B4DFB54DD1 /* Pods-RouteTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteTest.release.xcconfig"; path = "Target Support Files/Pods-RouteTest/Pods-RouteTest.release.xcconfig"; sourceTree = "<group>"; };
 		8D07C5A720B612310093D779 /* EmptyStyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = EmptyStyle.json; sourceTree = "<group>"; };
 		8D24A2F52040960C0098CBF8 /* UIEdgeInsets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIEdgeInsets.swift; sourceTree = "<group>"; };
 		8D24A2F720409A890098CBF8 /* CGSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
@@ -650,6 +644,11 @@
 		8DCE104F210FC5880048B0FB /* EndOfRouteFeedback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfRouteFeedback.swift; sourceTree = "<group>"; };
 		8DE879651FBB9980002F06C0 /* EndOfRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndOfRouteViewController.swift; sourceTree = "<group>"; };
 		8DF399B11FB257B30034904C /* UIGestureRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGestureRecognizer.swift; sourceTree = "<group>"; };
+		909D94F0D7E3826F45493397 /* Pods-VietMapNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapNavigation.release.xcconfig"; path = "Target Support Files/Pods-VietMapNavigation/Pods-VietMapNavigation.release.xcconfig"; sourceTree = "<group>"; };
+		92B33A9FFA5287EEE67112B1 /* Pods_VietMapNavigation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VietMapNavigation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93333F043D7D2ADD3B6E5641 /* Pods-VietMapNavigation-VietMapNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapNavigation-VietMapNavigationTests.debug.xcconfig"; path = "Target Support Files/Pods-VietMapNavigation-VietMapNavigationTests/Pods-VietMapNavigation-VietMapNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		93D08CFD9D6B62482594D6BD /* Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.debug.xcconfig"; path = "Target Support Files/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A68EAB4CADD06F5938421619 /* Pods-Example-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Swift.release.xcconfig"; path = "Target Support Files/Pods-Example-Swift/Pods-Example-Swift.release.xcconfig"; sourceTree = "<group>"; };
 		AE00A739209A2C38006A3DC7 /* StepsViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewControllerTests.swift; sourceTree = "<group>"; };
 		AE09EC13207BD88200782A33 /* TunnelIntersectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TunnelIntersectionManager.swift; sourceTree = "<group>"; };
 		AE46F95420EA735B00537AC2 /* VisualInstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualInstruction.swift; sourceTree = "<group>"; };
@@ -659,12 +658,8 @@
 		AEC3AC992106703100A26F34 /* HighwayShield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighwayShield.swift; sourceTree = "<group>"; };
 		AED2156E208F7FEA009AA673 /* NavigationViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewControllerTests.swift; sourceTree = "<group>"; };
 		AEF2C8F12072B603007B061F /* routeWithTunnels_9thStreetDC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = routeWithTunnels_9thStreetDC.json; sourceTree = "<group>"; };
-		BE1115622AEB9C4300295DE6 /* VietMapPolyline.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VietMapPolyline.xcframework; path = Carthage/Build/VietMapPolyline.xcframework; sourceTree = "<group>"; };
-		BE1115642AEB9C4E00295DE6 /* VietMapSolar.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VietMapSolar.xcframework; path = Carthage/Build/VietMapSolar.xcframework; sourceTree = "<group>"; };
-		BE1115662AEB9C5300295DE6 /* VietMapTurf.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VietMapTurf.xcframework; path = Carthage/Build/VietMapTurf.xcframework; sourceTree = "<group>"; };
-		BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VietMapGeocoder.xcframework; path = Carthage/Build/VietMapGeocoder.xcframework; sourceTree = "<group>"; };
-		BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VietMapDirections.xcframework; path = Carthage/Build/VietMapDirections.xcframework; sourceTree = "<group>"; };
-		BE6ED2692AEA43DF00A24654 /* VietMapSpeech.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VietMapSpeech.xcframework; path = Carthage/Build/VietMapSpeech.xcframework; sourceTree = "<group>"; };
+		B6ACE0DF0DC5A3845A88C739 /* Pods-VietMapCoreNavigation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VietMapCoreNavigation.release.xcconfig"; path = "Target Support Files/Pods-VietMapCoreNavigation/Pods-VietMapCoreNavigation.release.xcconfig"; sourceTree = "<group>"; };
+		C4694F18DB5400E549FF0EDD /* Pods-Example-Objective-C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objective-C.debug.xcconfig"; path = "Target Support Files/Pods-Example-Objective-C/Pods-Example-Objective-C.debug.xcconfig"; sourceTree = "<group>"; };
 		C51511D020EAC89D00372A91 /* CPMapTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPMapTemplate.swift; sourceTree = "<group>"; };
 		C51DF8651F38C31C006C6A15 /* Locale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locale.swift; sourceTree = "<group>"; };
 		C51FC31620F689F800400CE7 /* CustomStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStyles.swift; sourceTree = "<group>"; };
@@ -734,6 +729,8 @@
 		C5F2DC9F206DBF5E002F99F6 /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		C5F4D21820DC468B0059FABF /* CongestionLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongestionLevel.swift; sourceTree = "<group>"; };
 		C5FFAC1420D96F5B009E7F98 /* CarPlayNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarPlayNavigationViewController.swift; sourceTree = "<group>"; };
+		CDB8104DCD258A1714522575 /* Pods-Example-Objective-CTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objective-CTests.debug.xcconfig"; path = "Target Support Files/Pods-Example-Objective-CTests/Pods-Example-Objective-CTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CEE3E2209B1181ABB46FE5B2 /* Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72CC42B2451A2F800238549 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
 		DA1811FD20128B0900C91918 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		DA1811FE20128B0900C91918 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Navigation.strings; sourceTree = "<group>"; };
@@ -829,7 +826,9 @@
 		DAFEB36D2093A11F00A86A83 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAFEB36E2093A3E000A86A83 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAFEB36F2093A3EF00A86A83 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ko; path = Resources/ko.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		EF3196757F7CC3E68D2255A8 /* Pods-RouteTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RouteTest.debug.xcconfig"; path = "Target Support Files/Pods-RouteTest/Pods-RouteTest.debug.xcconfig"; sourceTree = "<group>"; };
 		F1D8FD2E28DB0A67006626A1 /* _TestPath.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = _TestPath.gpx; sourceTree = "<group>"; };
+		F85B89E7B0C97E719E3E3444 /* Pods_Example_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -837,11 +836,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE1115712AEB9E3700295DE6 /* VietMapSolar.xcframework in Frameworks */,
-				BE1115702AEB9E2500295DE6 /* VietMapSpeech.xcframework in Frameworks */,
-				BE31D7062AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */,
-				BE31D7002AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */,
-				BEC684552AEA2682004173B9 /* VietMap in Frameworks */,
+				2E3268BBFC87D6034C5285EE /* Pods_VietMapNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,6 +844,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B729D9061A23F1850BC8629E /* Pods_Example_SwiftTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -856,6 +852,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FDA776F3FBE5C16ED416029 /* Pods_Example_Objective_CTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -865,6 +862,7 @@
 			files = (
 				3546BF8A207BA920007FF453 /* VietMapCoreNavigation.framework in Frameworks */,
 				3546BF8E207BA920007FF453 /* VietMapNavigation.framework in Frameworks */,
+				BE8974223F0E08C7BAD368D8 /* Pods_RouteTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -872,14 +870,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE31D7092AEA733700D6F25C /* VietMapGeocoder.xcframework in Frameworks */,
 				35E9B0AD1F9E0F8F00BF84AB /* VietMapNavigation.framework in Frameworks */,
-				BE2B62702AEA1DE90025FA0D /* VietMap in Frameworks */,
-				BE1115682AEB9C9800295DE6 /* VietMapTurf.xcframework in Frameworks */,
-				BE11156C2AEB9C9A00295DE6 /* VietMapPolyline.xcframework in Frameworks */,
-				BE31D7072AEA733500D6F25C /* VietMapDirections.xcframework in Frameworks */,
-				BE11156A2AEB9C9900295DE6 /* VietMapSolar.xcframework in Frameworks */,
-				BE6ED26B2AEA43EA00A24654 /* VietMapSpeech.xcframework in Frameworks */,
+				F61653DC0A7CC1D34E3EC789 /* Pods_Example_Swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -888,10 +880,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				354A01DB1E6626E900D765C2 /* VietMapCoreNavigation.framework in Frameworks */,
-				BE31D6FD2AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */,
-				BE31D7032AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */,
 				354A01DD1E6626EA00D765C2 /* VietMapNavigation.framework in Frameworks */,
-				BEC684592AEA26BE004173B9 /* VietMap in Frameworks */,
+				8BB9CBCA08D5E09A1E141F35 /* Pods_Example_Objective_C.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,11 +889,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE11156F2AEB9DD700295DE6 /* VietMapPolyline.xcframework in Frameworks */,
-				BE11156E2AEB9CAA00295DE6 /* VietMapTurf.xcframework in Frameworks */,
-				BE31D6FF2AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */,
-				BE31D7052AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */,
-				BEC684532AEA267C004173B9 /* VietMap in Frameworks */,
+				1AFE7C4E29DB9D800D34CEFA /* Pods_VietMapCoreNavigation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -915,6 +901,7 @@
 				C546587028FED7F200C068EA /* FBSnapshotTestCase.xcframework in Frameworks */,
 				3525449D1E663D32004C8F1C /* VietMapCoreNavigation.framework in Frameworks */,
 				35B711D41E5E7AD2001EDA8D /* VietMapNavigation.framework in Frameworks */,
+				6B8177332ECAB3F02D22398B /* Pods_VietMapNavigation_VietMapNavigationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -922,10 +909,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BE31D6FE2AEA6EF200D6F25C /* VietMapGeocoder.xcframework in Frameworks */,
 				C53F2EEA20EBC95600D9798F /* VietMapNavigation.framework in Frameworks */,
-				BEC684572AEA26B4004173B9 /* VietMap in Frameworks */,
-				BE31D7042AEA732C00D6F25C /* VietMapDirections.xcframework in Frameworks */,
+				5564949426E202FD8C97D8AD /* Pods_Example_CarPlay.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -936,6 +921,7 @@
 				C54658B2290001B500C068EA /* Nimble.xcframework in Frameworks */,
 				352BBC3B1E5E6A0C00703DF1 /* VietMapCoreNavigation.framework in Frameworks */,
 				C546586628FECEFA00C068EA /* Quick.xcframework in Frameworks */,
+				8307B3EA378B60413A98CB89 /* Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1231,18 +1217,49 @@
 			name = Examples;
 			sourceTree = "<group>";
 		};
+		A5FFAF964885E0E565956BD6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				435E79B00469A55FDEF4942E /* Pods-Example-CarPlay.debug.xcconfig */,
+				0527ABBA33915D0D05AEE90C /* Pods-Example-CarPlay.release.xcconfig */,
+				C4694F18DB5400E549FF0EDD /* Pods-Example-Objective-C.debug.xcconfig */,
+				1BCBDA4A9ACBD59DDAD842F5 /* Pods-Example-Objective-C.release.xcconfig */,
+				CDB8104DCD258A1714522575 /* Pods-Example-Objective-CTests.debug.xcconfig */,
+				32AE9DDBE438A8EB6C85E038 /* Pods-Example-Objective-CTests.release.xcconfig */,
+				1ADDB72111DD870FD0C17E75 /* Pods-Example-Swift.debug.xcconfig */,
+				A68EAB4CADD06F5938421619 /* Pods-Example-Swift.release.xcconfig */,
+				74A4DA1CFA35CCCEEFD32626 /* Pods-Example-SwiftTests.debug.xcconfig */,
+				3AE87107661AC80C60CF529D /* Pods-Example-SwiftTests.release.xcconfig */,
+				EF3196757F7CC3E68D2255A8 /* Pods-RouteTest.debug.xcconfig */,
+				89CF6BBBF96103B4DFB54DD1 /* Pods-RouteTest.release.xcconfig */,
+				11CDCF794318A9D110957FD0 /* Pods-VietMapCoreNavigation.debug.xcconfig */,
+				B6ACE0DF0DC5A3845A88C739 /* Pods-VietMapCoreNavigation.release.xcconfig */,
+				93D08CFD9D6B62482594D6BD /* Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.debug.xcconfig */,
+				1E094116CFB67F5973A0B63F /* Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.release.xcconfig */,
+				73F64B17100DAED669886414 /* Pods-VietMapNavigation.debug.xcconfig */,
+				909D94F0D7E3826F45493397 /* Pods-VietMapNavigation.release.xcconfig */,
+				93333F043D7D2ADD3B6E5641 /* Pods-VietMapNavigation-VietMapNavigationTests.debug.xcconfig */,
+				4204D023CCE9A5AAAD0CAF29 /* Pods-VietMapNavigation-VietMapNavigationTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		A9E2B43473B53369153F54C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BE31D7012AEA732C00D6F25C /* VietMapDirections.xcframework */,
-				BE31D6FB2AEA6EF200D6F25C /* VietMapGeocoder.xcframework */,
-				BE6ED2692AEA43DF00A24654 /* VietMapSpeech.xcframework */,
-				BE1115622AEB9C4300295DE6 /* VietMapPolyline.xcframework */,
-				BE1115642AEB9C4E00295DE6 /* VietMapSolar.xcframework */,
-				BE1115662AEB9C5300295DE6 /* VietMapTurf.xcframework */,
 				C54658B1290001B500C068EA /* Nimble.xcframework */,
 				C546586528FECEFA00C068EA /* Quick.xcframework */,
 				C546586E28FED7F200C068EA /* FBSnapshotTestCase.xcframework */,
+				686B1D656A8A89E300E43C4A /* Pods_Example_CarPlay.framework */,
+				2CA6D629125D5DAA1448E824 /* Pods_Example_Objective_C.framework */,
+				7AEA5CC77D994C458E9B72B5 /* Pods_Example_Objective_CTests.framework */,
+				F85B89E7B0C97E719E3E3444 /* Pods_Example_Swift.framework */,
+				52097D6B42C80CDD92B4FBAC /* Pods_Example_SwiftTests.framework */,
+				4E203D1475ED0C2572B570E3 /* Pods_RouteTest.framework */,
+				7727B11D95BB9BE9B81A7AC3 /* Pods_VietMapCoreNavigation.framework */,
+				CEE3E2209B1181ABB46FE5B2 /* Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework */,
+				92B33A9FFA5287EEE67112B1 /* Pods_VietMapNavigation.framework */,
+				19B36D4DD7401DD3EC8C3116 /* Pods_VietMapNavigation_VietMapNavigationTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1371,6 +1388,7 @@
 				3546BF75207BA4A8007FF453 /* RouteTest */,
 				C5ADFBCA1DDCC7840011824B /* Products */,
 				A9E2B43473B53369153F54C6 /* Frameworks */,
+				A5FFAF964885E0E565956BD6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1474,6 +1492,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 351BEBDE1E5BCC28006FE110 /* Build configuration list for PBXNativeTarget "VietMapNavigation" */;
 			buildPhases = (
+				F89DA93B6B3A5AD7D0E53F87 /* [CP] Check Pods Manifest.lock */,
 				351BEBD21E5BCC28006FE110 /* Sources */,
 				351BEBD41E5BCC28006FE110 /* Headers */,
 				351BEBD51E5BCC28006FE110 /* Resources */,
@@ -1486,7 +1505,6 @@
 			);
 			name = VietMapNavigation;
 			packageProductDependencies = (
-				BEC684542AEA2682004173B9 /* VietMap */,
 			);
 			productName = VietMapNavigation;
 			productReference = 351BEBD71E5BCC28006FE110 /* VietMapNavigation.framework */;
@@ -1496,6 +1514,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 352BBC4E1E5E78D700703DF1 /* Build configuration list for PBXNativeTarget "Example-SwiftTests" */;
 			buildPhases = (
+				3337D08BECA111F88BB487CD /* [CP] Check Pods Manifest.lock */,
 				352BBC431E5E78D700703DF1 /* Sources */,
 				352BBC441E5E78D700703DF1 /* Frameworks */,
 				352BBC451E5E78D700703DF1 /* Resources */,
@@ -1514,6 +1533,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 352BBC5C1E5E78EA00703DF1 /* Build configuration list for PBXNativeTarget "Example-Objective-CTests" */;
 			buildPhases = (
+				9D76AD59376FA22CF7E43972 /* [CP] Check Pods Manifest.lock */,
 				352BBC511E5E78EA00703DF1 /* Sources */,
 				352BBC521E5E78EA00703DF1 /* Frameworks */,
 				352BBC531E5E78EA00703DF1 /* Resources */,
@@ -1532,11 +1552,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3546BF85207BA4AA007FF453 /* Build configuration list for PBXNativeTarget "RouteTest" */;
 			buildPhases = (
+				F185F1B12F34D85554A7AD75 /* [CP] Check Pods Manifest.lock */,
 				3546BF70207BA4A8007FF453 /* Sources */,
 				3546BF71207BA4A8007FF453 /* Frameworks */,
 				3546BF72207BA4A8007FF453 /* Resources */,
 				3546BF92207BA920007FF453 /* Embed Frameworks */,
 				3546BFA1207BA9DA007FF453 /* Apply Mapbox Access Token */,
+				B4683E31819AC51AE375E34D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1553,11 +1575,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 358D14741E5E3B7700ADE590 /* Build configuration list for PBXNativeTarget "Example-Swift" */;
 			buildPhases = (
+				93E97A311C348E57A1D28192 /* [CP] Check Pods Manifest.lock */,
 				358D14601E5E3B7700ADE590 /* Frameworks */,
 				358D145F1E5E3B7700ADE590 /* Sources */,
 				358D14611E5E3B7700ADE590 /* Resources */,
 				354A01C41E66265100D765C2 /* Embed Frameworks */,
 				DA408F661FB3CA3C004D9661 /* Apply Mapbox Access Token */,
+				251F167B70B4CAF6FCE970BC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1567,7 +1591,6 @@
 			);
 			name = "Example-Swift";
 			packageProductDependencies = (
-				BE2B626F2AEA1DE90025FA0D /* VietMap */,
 			);
 			productName = "Example-Swift";
 			productReference = 358D14631E5E3B7700ADE590 /* Example-Swift.app */;
@@ -1577,11 +1600,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 358D14BA1E5E3FDC00ADE590 /* Build configuration list for PBXNativeTarget "Example-Objective-C" */;
 			buildPhases = (
+				853CFD058C5AABAF3B01578D /* [CP] Check Pods Manifest.lock */,
 				358D14A21E5E3FDC00ADE590 /* Sources */,
 				358D14A31E5E3FDC00ADE590 /* Frameworks */,
 				358D14A41E5E3FDC00ADE590 /* Resources */,
 				354A01DF1E6626EA00D765C2 /* Embed Frameworks */,
 				DA408F671FB3CA5C004D9661 /* Apply Mapbox Access Token */,
+				4644A1943D5D0E7C0BD2A7AF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1591,7 +1616,6 @@
 			);
 			name = "Example-Objective-C";
 			packageProductDependencies = (
-				BEC684582AEA26BE004173B9 /* VietMap */,
 			);
 			productName = "Example-Objective-C";
 			productReference = 358D14A61E5E3FDC00ADE590 /* Example-Objective-C.app */;
@@ -1601,9 +1625,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35B711D71E5E7AD2001EDA8D /* Build configuration list for PBXNativeTarget "VietMapNavigationTests" */;
 			buildPhases = (
+				32C2B33B7D095EF0DBE38F12 /* [CP] Check Pods Manifest.lock */,
 				35B711CB1E5E7AD2001EDA8D /* Sources */,
 				35B711CC1E5E7AD2001EDA8D /* Frameworks */,
 				35B711CD1E5E7AD2001EDA8D /* Resources */,
+				52E608D3072323D1C42048A0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1621,11 +1647,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C53F2F0420EBC95600D9798F /* Build configuration list for PBXNativeTarget "Example-CarPlay" */;
 			buildPhases = (
+				41BF1A80B4BB98591276C9A6 /* [CP] Check Pods Manifest.lock */,
 				C53F2EE320EBC95600D9798F /* Sources */,
 				C53F2EE920EBC95600D9798F /* Frameworks */,
 				C53F2EF220EBC95600D9798F /* Resources */,
 				C53F2EF920EBC95600D9798F /* Embed Frameworks */,
 				C53F2F0320EBC95600D9798F /* Apply Mapbox Access Token */,
+				E6D16FC49720A0F9209D9088 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1635,7 +1663,6 @@
 			);
 			name = "Example-CarPlay";
 			packageProductDependencies = (
-				BEC684562AEA26B4004173B9 /* VietMap */,
 			);
 			productName = "Example-Swift";
 			productReference = C53F2F0720EBC95600D9798F /* Example-CarPlay.app */;
@@ -1645,6 +1672,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5ADFBDD1DDCC7840011824B /* Build configuration list for PBXNativeTarget "VietMapCoreNavigation" */;
 			buildPhases = (
+				0960E7061B9E1425871F829A /* [CP] Check Pods Manifest.lock */,
 				C5ADFBC41DDCC7840011824B /* Sources */,
 				C5ADFBC61DDCC7840011824B /* Headers */,
 				C5ADFBC71DDCC7840011824B /* Resources */,
@@ -1656,7 +1684,6 @@
 			);
 			name = VietMapCoreNavigation;
 			packageProductDependencies = (
-				BEC684522AEA267C004173B9 /* VietMap */,
 			);
 			productName = VietMapNavigation;
 			productReference = C5ADFBC91DDCC7840011824B /* VietMapCoreNavigation.framework */;
@@ -1666,9 +1693,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C5ADFBE01DDCC7840011824B /* Build configuration list for PBXNativeTarget "VietMapCoreNavigationTests" */;
 			buildPhases = (
+				93553DAB9A64C64774E78B40 /* [CP] Check Pods Manifest.lock */,
 				C5ADFBCE1DDCC7840011824B /* Sources */,
 				C5ADFBCF1DDCC7840011824B /* Frameworks */,
 				C5ADFBD01DDCC7840011824B /* Resources */,
+				71A5D4F50A5A31ABB0F589F4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1784,7 +1813,6 @@
 			);
 			mainGroup = C5ADFBBF1DDCC7840011824B;
 			packageReferences = (
-				BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */,
 			);
 			productRefGroup = C5ADFBCA1DDCC7840011824B /* Products */;
 			projectDirPath = "";
@@ -1934,6 +1962,89 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0960E7061B9E1425871F829A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VietMapCoreNavigation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		251F167B70B4CAF6FCE970BC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-Swift/Pods-Example-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-Swift/Pods-Example-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-Swift/Pods-Example-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32C2B33B7D095EF0DBE38F12 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VietMapNavigation-VietMapNavigationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3337D08BECA111F88BB487CD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-SwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3546BFA1207BA9DA007FF453 /* Apply Mapbox Access Token */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1947,6 +2058,184 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "";
+		};
+		41BF1A80B4BB98591276C9A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-CarPlay-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4644A1943D5D0E7C0BD2A7AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-Objective-C/Pods-Example-Objective-C-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-Objective-C/Pods-Example-Objective-C-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-Objective-C/Pods-Example-Objective-C-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52E608D3072323D1C42048A0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VietMapNavigation-VietMapNavigationTests/Pods-VietMapNavigation-VietMapNavigationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VietMapNavigation-VietMapNavigationTests/Pods-VietMapNavigation-VietMapNavigationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VietMapNavigation-VietMapNavigationTests/Pods-VietMapNavigation-VietMapNavigationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71A5D4F50A5A31ABB0F589F4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		853CFD058C5AABAF3B01578D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-Objective-C-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93553DAB9A64C64774E78B40 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VietMapCoreNavigation-VietMapCoreNavigationTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93E97A311C348E57A1D28192 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D76AD59376FA22CF7E43972 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Example-Objective-CTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B4683E31819AC51AE375E34D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RouteTest/Pods-RouteTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RouteTest/Pods-RouteTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RouteTest/Pods-RouteTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		C53F2F0320EBC95600D9798F /* Apply Mapbox Access Token */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1992,6 +2281,67 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "";
+		};
+		E6D16FC49720A0F9209D9088 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-CarPlay/Pods-Example-CarPlay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Example-CarPlay/Pods-Example-CarPlay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Example-CarPlay/Pods-Example-CarPlay-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F185F1B12F34D85554A7AD75 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RouteTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F89DA93B6B3A5AD7D0E53F87 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VietMapNavigation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -2494,6 +2844,7 @@
 /* Begin XCBuildConfiguration section */
 		351BEBDC1E5BCC28006FE110 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73F64B17100DAED669886414 /* Pods-VietMapNavigation.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2526,6 +2877,7 @@
 		};
 		351BEBDD1E5BCC28006FE110 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 909D94F0D7E3826F45493397 /* Pods-VietMapNavigation.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -2558,6 +2910,7 @@
 		};
 		352BBC4F1E5E78D700703DF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 74A4DA1CFA35CCCEEFD32626 /* Pods-Example-SwiftTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2583,6 +2936,7 @@
 		};
 		352BBC501E5E78D700703DF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AE87107661AC80C60CF529D /* Pods-Example-SwiftTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -2607,6 +2961,7 @@
 		};
 		352BBC5D1E5E78EA00703DF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB8104DCD258A1714522575 /* Pods-Example-Objective-CTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2626,6 +2981,7 @@
 		};
 		352BBC5E1E5E78EA00703DF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AE9DDBE438A8EB6C85E038 /* Pods-Example-Objective-CTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = "";
@@ -2644,6 +3000,7 @@
 		};
 		3546BF83207BA4AA007FF453 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF3196757F7CC3E68D2255A8 /* Pods-RouteTest.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2677,6 +3034,7 @@
 		};
 		3546BF84207BA4AA007FF453 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89CF6BBBF96103B4DFB54DD1 /* Pods-RouteTest.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2709,6 +3067,7 @@
 		};
 		358D14721E5E3B7700ADE590 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1ADDB72111DD870FD0C17E75 /* Pods-Example-Swift.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2738,6 +3097,7 @@
 		};
 		358D14731E5E3B7700ADE590 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A68EAB4CADD06F5938421619 /* Pods-Example-Swift.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2764,6 +3124,7 @@
 		};
 		358D14BB1E5E3FDC00ADE590 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4694F18DB5400E549FF0EDD /* Pods-Example-Objective-C.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2787,6 +3148,7 @@
 		};
 		358D14BC1E5E3FDC00ADE590 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BCBDA4A9ACBD59DDAD842F5 /* Pods-Example-Objective-C.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2808,6 +3170,7 @@
 		};
 		35B711D81E5E7AD2001EDA8D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93333F043D7D2ADD3B6E5641 /* Pods-VietMapNavigation-VietMapNavigationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -2834,6 +3197,7 @@
 		};
 		35B711D91E5E7AD2001EDA8D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4204D023CCE9A5AAAD0CAF29 /* Pods-VietMapNavigation-VietMapNavigationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = "";
@@ -2859,6 +3223,7 @@
 		};
 		C53F2F0520EBC95600D9798F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 435E79B00469A55FDEF4942E /* Pods-Example-CarPlay.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -2891,6 +3256,7 @@
 		};
 		C53F2F0620EBC95600D9798F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0527ABBA33915D0D05AEE90C /* Pods-Example-CarPlay.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -3046,6 +3412,7 @@
 		};
 		C5ADFBDE1DDCC7840011824B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11CDCF794318A9D110957FD0 /* Pods-VietMapCoreNavigation.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -3078,6 +3445,7 @@
 		};
 		C5ADFBDF1DDCC7840011824B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6ACE0DF0DC5A3845A88C739 /* Pods-VietMapCoreNavigation.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -3109,6 +3477,7 @@
 		};
 		C5ADFBE11DDCC7840011824B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93D08CFD9D6B62482594D6BD /* Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -3136,6 +3505,7 @@
 		};
 		C5ADFBE21DDCC7840011824B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E094116CFB67F5973A0B63F /* Pods-VietMapCoreNavigation-VietMapCoreNavigationTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -3263,45 +3633,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vietmap-company/maps-sdk-ios.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		BE2B626F2AEA1DE90025FA0D /* VietMap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
-			productName = VietMap;
-		};
-		BEC684522AEA267C004173B9 /* VietMap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
-			productName = VietMap;
-		};
-		BEC684542AEA2682004173B9 /* VietMap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
-			productName = VietMap;
-		};
-		BEC684562AEA26B4004173B9 /* VietMap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
-			productName = VietMap;
-		};
-		BEC684582AEA26BE004173B9 /* VietMap */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BE2B626E2AEA1CE20025FA0D /* XCRemoteSwiftPackageReference "maps-sdk-ios" */;
-			productName = VietMap;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C5ADFBC01DDCC7840011824B /* Project object */;
 }
