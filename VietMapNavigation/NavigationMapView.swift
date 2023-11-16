@@ -509,8 +509,10 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
             let lineCasing = navigationMapDelegate?.navigationMapView?(self, routeCasingStyleLayerWithIdentifier: routeLayerCasingIdentifier, source: lineCasingSource) ?? routeCasingStyleLayer(identifier: routeLayerCasingIdentifier, source: lineSource)
             
             for layer in style.layers.reversed() {
-                if !(layer is MGLSymbolStyleLayer) &&
-                    layer.identifier != arrowLayerIdentifier && layer.identifier != arrowSymbolLayerIdentifier && layer.identifier != arrowCasingSymbolLayerIdentifier && layer.identifier != arrowLayerStrokeIdentifier && layer.identifier != waypointCircleIdentifier {
+//                if !(layer is MGLSymbolStyleLayer) &&
+//                    layer.identifier != arrowLayerIdentifier && layer.identifier != arrowSymbolLayerIdentifier && layer.identifier != arrowCasingSymbolLayerIdentifier && layer.identifier != arrowLayerStrokeIdentifier && layer.identifier != waypointCircleIdentifier
+                if !(layer is MGLSymbolStyleLayer) && layer.identifier == "vmadmin_province"
+                {
                     style.insertLayer(line, below: layer)
                     style.insertLayer(lineCasing, below: line)
                     break
