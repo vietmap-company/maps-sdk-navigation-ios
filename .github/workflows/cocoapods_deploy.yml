@@ -10,6 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: Validate CocoaPod
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
         run: |
           pod spec lint VietMapNavigation.podspec --allow-warnings
       - name: Publish to CocoaPod register
