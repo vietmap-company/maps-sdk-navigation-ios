@@ -3,7 +3,7 @@ on:
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
-    
+      
 jobs:
   build:
     runs-on: macOS-latest
@@ -12,10 +12,14 @@ jobs:
       - name: Validate CocoaPod
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
+        with:
+          credentialJson: ${{ secrets.PUB_DEV_TOKEN }}
         run: |
           pod spec lint VietMapNavigation.podspec --allow-warnings
       - name: Publish to CocoaPod register
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
+        with:
+          credentialJson: ${{ secrets.PUB_DEV_TOKEN }}
         run: |
           pod trunk push VietMapNavigation.podspec --allow-warnings
