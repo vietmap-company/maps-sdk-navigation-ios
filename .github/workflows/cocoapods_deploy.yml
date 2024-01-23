@@ -9,6 +9,9 @@ jobs:
     runs-on: macOS-latest
     steps:
       - uses: actions/checkout@v1
+      - name: Validate CocoaPod
+        run: |
+          pod spec lint VietMapNavigation.podspec --allow-warnings
       - name: Publish to CocoaPod register
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
