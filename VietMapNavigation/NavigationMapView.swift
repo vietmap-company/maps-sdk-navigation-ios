@@ -840,6 +840,7 @@ open class NavigationMapView: MGLMapView, UIGestureRecognizerDelegate {
         return MGLShapeCollectionFeature(shapes: altRoutes + congestedRoute)
     }
     
+    
     func addCongestion(to route: Route, legIndex: Int?) -> [MGLPolylineFeature]? {
         guard let coordinates = route.coordinates else { return nil }
         
