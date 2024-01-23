@@ -1,9 +1,9 @@
 #import "ViewController.h"
 
 @import AVFoundation;
-@import MapboxCoreNavigation;
-@import MapboxDirections;
-@import MapboxNavigation;
+@import VietMapCoreNavigation;
+@import VietMapDirections;
+@import VietMapNavigation;
 @import VietMap;
 
 @interface ViewController () <AVSpeechSynthesizerDelegate>
@@ -62,7 +62,7 @@
 }
 
 - (void)progressDidChange:(NSNotification *)notification {
-    // If you are using MapboxCoreNavigation,
+    // If you are using VietMapCoreNavigation,
     // this would be a good time to update UI elements.
     // You can grab the current routeProgress like:
     // let routeProgress = notification.userInfo![RouteControllerRouteProgressKey] as! RouteProgress

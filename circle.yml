@@ -19,7 +19,7 @@ step-library:
   - &restore-cache-cocoapods
       restore_cache:
         keys:
-          - cp-cache-v1-{{ .Environment.CIRCLE_JOB }}-{{ checksum "MapboxCoreNavigationTests/CocoaPodsTest/PodInstall/Podfile.lock" }}
+          - cp-cache-v1-{{ .Environment.CIRCLE_JOB }}-{{ checksum "VietMapCoreNavigationTests/CocoaPodsTest/PodInstall/Podfile.lock" }}
           - cp-cache-v1
 
   - &restore-cache-podmaster
@@ -35,9 +35,9 @@ step-library:
 
   - &save-cache-cocoapods
       save_cache:
-        key: cp-cache-v1-{{ .Environment.CIRCLE_JOB }}-{{ checksum "MapboxCoreNavigationTests/CocoaPodsTest/PodInstall/Podfile.lock" }}
+        key: cp-cache-v1-{{ .Environment.CIRCLE_JOB }}-{{ checksum "VietMapCoreNavigationTests/CocoaPodsTest/PodInstall/Podfile.lock" }}
         paths:
-          - MapboxCoreNavigationTests/CocoaPodsTest/PodInstall/Pods
+          - VietMapCoreNavigationTests/CocoaPodsTest/PodInstall/Pods
 
   - &save-cache-podmaster
       save_cache:
@@ -82,69 +82,69 @@ step-library:
         name: Install Dependencies
         command: carthage bootstrap --platform ios --cache-builds --configuration Release --no-use-binaries
 
-  - &build-test-MapboxCoreNavigation-ios-11
+  - &build-test-VietMapCoreNavigation-ios-11
       run:
-        name: Build and Test MapboxCoreNavigation
+        name: Build and Test VietMapCoreNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxCoreNavigation  -resultBundlePath MapboxCoreNavigationResults clean build test | tee MapboxCoreNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme VietMapCoreNavigation  -resultBundlePath VietMapCoreNavigationResults clean build test | tee VietMapCoreNavigation-xcodebuild.log | xcpretty
 
-  - &build-test-MapboxCoreNavigation-ios-12
+  - &build-test-VietMapCoreNavigation-ios-12
       run:
-        name: Build and Test MapboxCoreNavigation
+        name: Build and Test VietMapCoreNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxCoreNavigation -resultBundlePath MapboxCoreNavigationResults clean build test | tee MapboxCoreNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme VietMapCoreNavigation -resultBundlePath VietMapCoreNavigationResults clean build test | tee VietMapCoreNavigation-xcodebuild.log | xcpretty
 
-  - &build-test-MapboxNavigation-ios-11
+  - &build-test-VietMapNavigation-ios-11
       run:
-        name: Build and Test MapboxNavigation
+        name: Build and Test VietMapNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxNavigation -resultBundlePath MapboxNavigationResults clean build test | tee MapboxNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme VietMapNavigation -resultBundlePath VietMapNavigationResults clean build test | tee VietMapNavigation-xcodebuild.log | xcpretty
 
-  - &build-test-MapboxNavigation-ios-12
+  - &build-test-VietMapNavigation-ios-12
       run:
-        name: Build and Test MapboxNavigation
+        name: Build and Test VietMapNavigation
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme MapboxNavigation -resultBundlePath MapboxNavigationResults clean build test | tee MapboxNavigation-xcodebuild.log | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme VietMapNavigation -resultBundlePath VietMapNavigationResults clean build test | tee VietMapNavigation-xcodebuild.log | xcpretty
 
   - &build-Example-Obj-C
       run:
         name: Build Example-Objective-C
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme Example-Objective-C clean build | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme Example-Objective-C clean build | xcpretty
 
   - &build-Example-Swift
       run:
         name: Build Example-Swift
         command: |
-          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project MapboxNavigation.xcodeproj -scheme Example-Swift clean build | xcpretty
+          xcodebuild -sdk iphonesimulator -destination 'platform=iOS Simulator,OS=11.4,name=iPhone 6 Plus' -project VietMapNavigation.xcodeproj -scheme Example-Swift clean build | xcpretty
 
   - &cocoapods-integration-test
       run:
         name: CocoaPods integration test
         command: |
-          cd MapboxCoreNavigationTests/CocoaPodsTest/PodInstall
+          cd VietMapCoreNavigationTests/CocoaPodsTest/PodInstall
           pod install --repo-update
           xcodebuild -workspace PodInstall.xcworkspace/ -scheme PodInstall -destination 'platform=iOS Simulator,name=iPhone 6 Plus' clean build | xcpretty
 
-  - &print-MapboxNavigation-xcodebuild-log
+  - &print-VietMapNavigation-xcodebuild-log
       run:
-        name: Print MapboxNavigation-xcodebuild.log
+        name: Print VietMapNavigation-xcodebuild.log
         when: on_fail
-        command: cat MapboxNavigation-xcodebuild.log
+        command: cat VietMapNavigation-xcodebuild.log
 
-  - &print-MapboxCoreNavigation-xcodebuild-log
+  - &print-VietMapCoreNavigation-xcodebuild-log
       run:
-        name: Print MapboxCoreNavigation-xcodebuild.log
+        name: Print VietMapCoreNavigation-xcodebuild.log
         when: on_fail
-        command: cat MapboxCoreNavigation-xcodebuild.log
+        command: cat VietMapCoreNavigation-xcodebuild.log
 
-  - &store-MapboxNavigationResults-artifacts
+  - &store-VietMapNavigationResults-artifacts
       store_artifacts:
-          path: MapboxNavigationResults
+          path: VietMapNavigationResults
 
-  - &store-MapboxCoreNavigationResults-artifacts
+  - &store-VietMapCoreNavigationResults-artifacts
       store_artifacts:
-          path: MapboxCoreNavigationResults
+          path: VietMapCoreNavigationResults
 
 jobs:
   xcode-10:
@@ -159,12 +159,12 @@ jobs:
       - *prepare-iphone6s-plus-ios-12
       - *restore-cache
       - *install-dependencies
-      - *build-test-MapboxCoreNavigation-ios-12
-      - *build-test-MapboxNavigation-ios-12
-      - *print-MapboxNavigation-xcodebuild-log
-      - *print-MapboxCoreNavigation-xcodebuild-log
-      - *store-MapboxNavigationResults-artifacts
-      - *store-MapboxCoreNavigationResults-artifacts
+      - *build-test-VietMapCoreNavigation-ios-12
+      - *build-test-VietMapNavigation-ios-12
+      - *print-VietMapNavigation-xcodebuild-log
+      - *print-VietMapCoreNavigation-xcodebuild-log
+      - *store-VietMapNavigationResults-artifacts
+      - *store-VietMapCoreNavigationResults-artifacts
       - *save-cache
 
   xcode-9:
@@ -179,12 +179,12 @@ jobs:
       - *restore-cache
       - *install-dependencies
       - *verify-missing-localizable-strings
-      - *build-test-MapboxCoreNavigation-ios-11
-      - *build-test-MapboxNavigation-ios-11
-      - *print-MapboxNavigation-xcodebuild-log
-      - *print-MapboxCoreNavigation-xcodebuild-log
-      - *store-MapboxNavigationResults-artifacts
-      - *store-MapboxCoreNavigationResults-artifacts
+      - *build-test-VietMapCoreNavigation-ios-11
+      - *build-test-VietMapNavigation-ios-11
+      - *print-VietMapNavigation-xcodebuild-log
+      - *print-VietMapCoreNavigation-xcodebuild-log
+      - *store-VietMapNavigationResults-artifacts
+      - *store-VietMapCoreNavigationResults-artifacts
       - *save-cache
 
   xcode-10-cocoapods-integration:

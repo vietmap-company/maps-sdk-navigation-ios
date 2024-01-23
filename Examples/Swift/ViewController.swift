@@ -1,7 +1,7 @@
 import UIKit
-import MapboxCoreNavigation
-import MapboxNavigation
-import MapboxDirections
+import VietMapCoreNavigation
+import VietMapNavigation
+import VietMapDirections
 import UserNotifications
 
 
@@ -111,7 +111,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.mapView = NavigationMapView(frame: view.bounds, styleURL: URL(string: "https://api.maptiler.com/maps/streets/style.json?key=AVXR2vOTw3aGpqw8nlv2"))
+        self.mapView = NavigationMapView(frame: view.bounds, styleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE"))
 
         // Reset the navigation styling to the defaults if we are returning from a presentation.
         if (presentedViewController != nil) {
@@ -269,7 +269,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     }
 
     func presentAndRemoveMapview(_ navigationViewController: NavigationViewController) {
-        self.navigationViewController.mapView?.styleURL = URL(string: "https://api.maptiler.com/maps/streets/style.json?key=AVXR2vOTw3aGpqw8nlv2");
+        self.navigationViewController.mapView?.styleURL = URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE");
         self.navigationViewController.mapView?.tracksUserCourse = true
         NotificationCenter.default.addObserver(self, selector: #selector(progressDidChange(_ :)), name: .routeControllerProgressDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(progressDidReroute(_ :)), name: .routeControllerDidReroute, object: nil)
@@ -421,7 +421,7 @@ extension ViewController: NavigationViewControllerDelegate {
         }
 
         confirmationController.delegate = self
-        self.mapView = NavigationMapView(frame: view.bounds, styleURL: URL(string: "https://api.maptiler.com/maps/streets/style.json?key=AVXR2vOTw3aGpqw8nlv2"))
+        self.mapView = NavigationMapView(frame: view.bounds, styleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE"))
         navigationViewController.present(confirmationController, animated: true, completion: nil)
         return false
     }
@@ -429,7 +429,7 @@ extension ViewController: NavigationViewControllerDelegate {
     // Called when the user hits the exit button.
     // If implemented, you are responsible for also dismissing the UI.
     func navigationViewControllerDidDismiss(_ navigationViewController: NavigationViewController, byCanceling canceled: Bool) {
-        self.mapView = NavigationMapView(frame: view.bounds, styleURL: URL(string: "https://api.maptiler.com/maps/streets/style.json?key=AVXR2vOTw3aGpqw8nlv2"))
+        self.mapView = NavigationMapView(frame: view.bounds, styleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE"))
         navigationViewController.dismiss(animated: true, completion: nil)
     }
 }

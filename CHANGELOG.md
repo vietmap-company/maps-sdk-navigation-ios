@@ -230,7 +230,7 @@
 #### Breaking changes
 
 * Removed the dependency on AWSPolly. Voice announcements are now coming directly from Mapbox and for free for all developers. Because of this, PollyVoiceController has been removed.  [#617](https://github.com/mapbox/mapbox-navigation-ios/pull/617)
-* MapboxDirections.swift version 0.17.x is now required. [#1085](https://github.com/mapbox/mapbox-navigation-ios/pull/1085)
+* VietMapDirections.swift version 0.17.x is now required. [#1085](https://github.com/mapbox/mapbox-navigation-ios/pull/1085)
 * Removed the key `RouteControllerNotificationUserInfoKey.estimatedTimeUntilManeuverKey` from `.routeControllerProgressDidChange`. Please use `durationRemaining` instead which can be found on the `RouteProgress`. [#1126](https://github.com/mapbox/mapbox-navigation-ios/pull/1126/)
 * Renamed notification names associated with `RouteController` in Objective-C code. [#1122](https://github.com/mapbox/mapbox-navigation-ios/pull/1122)
 * The user info keys of `RouteController`-related notifications have been renamed and are now members of the `RouteControllerNotificationUserInfoKey` struct in Swift and the `MBRouteControllerNotificationUserInfoKey` extensible enumeration in Objective-C. [#1122](https://github.com/mapbox/mapbox-navigation-ios/pull/1122)
@@ -378,7 +378,7 @@
 
 ### Packaging
 
-* Upgraded to MapboxDirections.swift [v0.16.0](https://github.com/mapbox/MapboxDirections.swift/releases/tag/v0.16.0), which makes `ManeuverType`, `ManeuverDirection`, and `TransportType` non-optional. (#1040)
+* Upgraded to VietMapDirections.swift [v0.16.0](https://github.com/mapbox/VietMapDirections.swift/releases/tag/v0.16.0), which makes `ManeuverType`, `ManeuverDirection`, and `TransportType` non-optional. (#1040)
 * Added Danish and Hebrew localizations. (#1031, #1043)
 
 ### User location
@@ -425,7 +425,7 @@ Beginning with this release, we’ve compiled [a set of examples](https://www.ma
 
 ### Breaking changes 🚨
 
-* If you install this SDK using Carthage, you must now include each of this SDK’s dependencies in your Run Script build phase: AWSCore.framework, AWSPolly.framework, Mapbox.framework, MapboxDirections.framework, MapboxMobileEvents.framework, Polyline.framework, SDWebImage.framework, Solar.framework, and Turf.framework. These dependencies are no longer embedded inside MapboxNavigation.framework. See [the Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for details. (#930)
+* If you install this SDK using Carthage, you must now include each of this SDK’s dependencies in your Run Script build phase: AWSCore.framework, AWSPolly.framework, Mapbox.framework, VietMapDirections.framework, MapboxMobileEvents.framework, Polyline.framework, SDWebImage.framework, Solar.framework, and Turf.framework. These dependencies are no longer embedded inside VietMapNavigation.framework. See [the Carthage documentation](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos) for details. (#930)
 * This library no longer depends on [OSRM Text Instructions for Swift](https://github.com/Project-OSRM/osrm-text-instructions.swift/). If you have previously installed this SDK using Carthage, you may need to remove OSRMTextInstructions.framework from a Run Script build step. (#925)
 * Notification names are now members of `Notification.Name`. (#943)
 
@@ -577,7 +577,7 @@ Beginning with this release, the navigation SDK and Core Navigation are written 
 
 ## v0.8.1 (September 28, 2017)
 
-* Fixed a build error that occurred if MapboxNavigation was installed via CocoaPods. (#632)
+* Fixed a build error that occurred if VietMapNavigation was installed via CocoaPods. (#632)
 * The turn banner shows more of the upcoming road name before truncating. (#657)
 * When entering a roundabout, the icon in the turn banner indicates the correct direction of travel. (#640)
 * When beginning a new route, the SDK announces the initial road and direction of travel. (#654)
@@ -821,7 +821,7 @@ Beginning with this release, the navigation SDK and Core Navigation are written 
 
 * Renamed `RouteViewController` to `NavigationViewController`. (#133)
 * Replaced the `NavigationUI.routeViewController(for:)` method with the `NavigationViewController(for:)` initializer. (#133)
-* Fixed compatibility with MapboxDirections.swift v0.9.0. This library now depends on MapboxDirections.swift v0.9.x. (#139)
+* Fixed compatibility with VietMapDirections.swift v0.9.0. This library now depends on VietMapDirections.swift v0.9.x. (#139)
 * Fixed an issue causing the SDK to ignore certain routing options when rerouting the user. (#139)
 * Added a `NavigationViewController.simulatesLocationUpdates` property that causes the SDK to simulate location updates along a route. (#111)
 * Added a `NavigationViewControllerDelegate.navigationViewController(_:didArriveAt:)` method that gets called when user arrives at the destination. (#158)
@@ -831,18 +831,18 @@ Beginning with this release, the navigation SDK and Core Navigation are written 
 
 ## v0.2.1 (April 15, 2017)
 
-* This library now requires MapboxDirections.swift v0.8.x as opposed to v0.9.0, which is incompatible. ([#150](https://github.com/mapbox/mapbox-navigation-ios/pull/150))
+* This library now requires VietMapDirections.swift v0.8.x as opposed to v0.9.0, which is incompatible. ([#150](https://github.com/mapbox/mapbox-navigation-ios/pull/150))
 
 ## v0.2.0 (April 14, 2017)
 
-* Renamed MapboxNavigation and MapboxNavigationUI to MapboxCoreNavigation and MapboxNavigation, respectively. MapboxNavigation provides the complete turn-by-turn navigation experience, including UI and voice announcements, while MapboxCoreNavigation provides the raw utilities for building your own UI. ([#129](https://github.com/mapbox/mapbox-navigation-ios/pull/129))
+* Renamed VietMapNavigation and VietMapNavigationUI to VietMapCoreNavigation and VietMapNavigation, respectively. VietMapNavigation provides the complete turn-by-turn navigation experience, including UI and voice announcements, while VietMapCoreNavigation provides the raw utilities for building your own UI. ([#129](https://github.com/mapbox/mapbox-navigation-ios/pull/129))
 * Exposed methods on NavigationMapView that you can override to customize the route line’s appearance on the map. ([#116](https://github.com/mapbox/mapbox-navigation-ios/pull/116))
 * Removed an unused dependency on MapboxGeocoder.swift. ([#112](https://github.com/mapbox/mapbox-navigation-ios/pull/112))
 * Fixed memory leaks. ([#120](https://github.com/mapbox/mapbox-navigation-ios/pull/120))
 
 ## v0.1.0 (March 30, 2017)
 
-* Adds MapboxNavigationUI for a drop in navigation experience
+* Adds VietMapNavigationUI for a drop in navigation experience
 * Allows for Integration with [AWS Polly](https://aws.amazon.com/polly/) for improved voice announcements
 * Adds optional user snapping to route line. This option also snaps the users course
 * Fixes an issue where announcements with`Continue`would not announce the way names correctly
@@ -851,8 +851,8 @@ Beginning with this release, the navigation SDK and Core Navigation are written 
 
 ## v0.0.4 (January 24, 2017)
 
-- Fixed an issue where a `finalHeading` just below `360` and a user heading just above `0`, would not be less than `RouteControllerMaximumAllowedDegreeOffsetForTurnCompletion` ([#25](https://github.com/mapbox/MapboxNavigation.swift/pull/25))
-- Better specified the swift version ([#26](https://github.com/mapbox/MapboxNavigation.swift/pull/26))
+- Fixed an issue where a `finalHeading` just below `360` and a user heading just above `0`, would not be less than `RouteControllerMaximumAllowedDegreeOffsetForTurnCompletion` ([#25](https://github.com/mapbox/VietMapNavigation.swift/pull/25))
+- Better specified the swift version ([#26](https://github.com/mapbox/VietMapNavigation.swift/pull/26))
 
 ## v0.0.3 (January 19, 2017)
 

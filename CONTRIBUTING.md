@@ -22,7 +22,7 @@ When reporting a bug in the navigation SDK itself, please indicate:
 To build this SDK, you need Xcode 9 and [Carthage](https://github.com/Carthage/Carthage/):
 
 1. Run `carthage bootstrap --platform iOS --cache-builds`.
-1. Once the Carthage build finishes, open `MapboxNavigation.xcodeproj` in Xcode and build the MapboxNavigation scheme.
+1. Once the Carthage build finishes, open `VietMapNavigation.xcodeproj` in Xcode and build the VietMapNavigation scheme.
 
 See [the README](./README.md#running-the-example-project) for instructions on building and running the included Swift and Objective-C example projects.
 
@@ -46,7 +46,7 @@ To add any type, constant, or member to the SDK’s public interface:
 
 ## Adding image assets
 
-Image assets are designed in a [PaintCode](http://paintcodeapp.com/) document managed in the [navigation-ui-resources](https://github.com/mapbox/navigation-ui-resources/) repository. After changes to that repository are merged, export the PaintCode drawings as Swift source code and add or replace files in the [MapboxNavigation](https://github.com/mapbox/mapbox-navigation-ios/tree/master/MapboxNavigation/) folder.
+Image assets are designed in a [PaintCode](http://paintcodeapp.com/) document managed in the [navigation-ui-resources](https://github.com/mapbox/navigation-ui-resources/) repository. After changes to that repository are merged, export the PaintCode drawings as Swift source code and add or replace files in the [VietMapNavigation](https://github.com/mapbox/mapbox-navigation-ios/tree/master/VietMapNavigation/) folder.
 
 ## Adding user-facing text
 
@@ -54,13 +54,13 @@ To add or update text that the user may see in the navigation SDK:
 
 1. Use the `NSLocalizedString(_:tableName:bundle:value:comment:)` method:
    ```swift
-   NSLocalizedString("UNIQUE_IDENTIFIER", bundle: .mapboxNavigation, value: "What English speakers see", comment: "Where this text appears or how it is used")
+   NSLocalizedString("UNIQUE_IDENTIFIER", bundle: .VietMapNavigation, value: "What English speakers see", comment: "Where this text appears or how it is used")
    ```
 1. _(Optional.)_ If you need to embed some text in a string, use `NSLocalizedString(_:tableName:bundle:value:comment:)` with `String.localizedStringWithFormat(_:_:)` instead of `String(format:)`:
    ```swift
-   String.localizedStringWithFormat(NSLocalizedString("UNIQUE_IDENTIFIER", bundle: .mapboxNavigation, value: "What English speakers see with %@ for each embedded string", comment: "Format string for a string with an embedded string; 1 = the first embedded string"), embeddedString)
+   String.localizedStringWithFormat(NSLocalizedString("UNIQUE_IDENTIFIER", bundle: .VietMapNavigation, value: "What English speakers see with %@ for each embedded string", comment: "Format string for a string with an embedded string; 1 = the first embedded string"), embeddedString)
    ```
-1. _(Optional.)_ When dealing with a number followed by a pluralized word, do not split the string. Instead, use a format string and make `val` ambiguous, like `%d file(s)`. Then pluralize for English in the appropriate [.stringsdict file](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/StringsdictFileFormat/StringsdictFileFormat.html). See [MapboxNavigation/Resources/en.lproj/Localizable.stringsdict](MapboxNavigation/Resources/en.lproj/Localizable.stringsdict) for an example. Localizers should do likewise for their languages.
+1. _(Optional.)_ When dealing with a number followed by a pluralized word, do not split the string. Instead, use a format string and make `val` ambiguous, like `%d file(s)`. Then pluralize for English in the appropriate [.stringsdict file](https://developer.apple.com/library/ios/documentation/MacOSX/Conceptual/BPInternational/StringsdictFileFormat/StringsdictFileFormat.html). See [VietMapNavigation/Resources/en.lproj/Localizable.stringsdict](VietMapNavigation/Resources/en.lproj/Localizable.stringsdict) for an example. Localizers should do likewise for their languages.
 1. Run `scripts/extract_localizable.sh` to add the new text to the .strings files.
 1. Open a pull request with your changes. Once the pull request is merged, Transifex will pick up the changes within a few hours.
 
@@ -77,7 +77,7 @@ While you’re there, please consider also translating the following related pro
 Once you’ve finished translating the iOS navigation SDK into a new language in Transifex, open an issue in this repository asking to pull in your localization. Or do it yourself and open a pull request with the results:
 
 1. _(First time only.)_ Download the [`tx` command line tool](https://docs.transifex.com/client/installing-the-client) and [configure your .transifexrc](https://docs.transifex.com/client/client-configuration).
-1. In MapboxNavigation.xcodeproj, open the project editor. Using the project editor’s sidebar or tab bar dropdown, go to the “MapboxNavigation” project. Under the Localizations section of the Info tab, click the + button to add your language to the project.
+1. In VietMapNavigation.xcodeproj, open the project editor. Using the project editor’s sidebar or tab bar dropdown, go to the “VietMapNavigation” project. Under the Localizations section of the Info tab, click the + button to add your language to the project.
 1. In the sheet that appears, select all the files, then click Finish.
 
 The .strings files should still be in the original English – that’s expected. Now you can pull your translations into this repository:

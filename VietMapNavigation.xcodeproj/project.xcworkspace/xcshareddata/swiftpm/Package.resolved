@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "maps-sdk-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vietmap-company/maps-sdk-ios.git",
+      "state" : {
+        "revision" : "649eabcb21a36c3d0cfd871c07ccea641924fcdd",
+        "version" : "2.1.0"
+      }
+    }
+  ],
+  "version" : 2
+}

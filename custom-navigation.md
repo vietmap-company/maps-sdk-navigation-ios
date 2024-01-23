@@ -4,23 +4,23 @@ _⚠️Warning: this page is for advanced use cases only and is not necessary fo
 
 The Mapbox Navigation SDK is comprised of two modules:
 
-* MapboxCoreNavigation - responsible for rerouting, snapping, progress updates etc.
-* MapboxNavigation - responsible for everything UI related.
+* VietMapCoreNavigation - responsible for rerouting, snapping, progress updates etc.
+* VietMapNavigation - responsible for everything UI related.
 
-If the UI provided by MapboxNavigation is not something that can work for your project, it is possible to create a custom navigation experience built on top of MapboxCoreNavigation directly. Note, this is not ideal as it will be a lot of work for the developer. If there is something missing from the UI or not optimal, feel free to open a ticket instead of venturing down this path.
+If the UI provided by VietMapNavigation is not something that can work for your project, it is possible to create a custom navigation experience built on top of VietMapCoreNavigation directly. Note, this is not ideal as it will be a lot of work for the developer. If there is something missing from the UI or not optimal, feel free to open a ticket instead of venturing down this path.
 
-The installation process is very similar to install MapboxNavigation:
+The installation process is very similar to install VietMapNavigation:
 
-### Installing MapboxCoreNavigation
+### Installing VietMapCoreNavigation
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![CocoaPods](https://img.shields.io/cocoapods/v/MapboxCoreNavigation.svg)](https://cocoapods.org/pods/MapboxCoreNavigation/)
+[![CocoaPods](https://img.shields.io/cocoapods/v/VietMapCoreNavigation.svg)](https://cocoapods.org/pods/VietMapCoreNavigation/)
 
 To install Mapbox Core Navigation using [CocoaPods](https://cocoapods.org/):
 
 1. Specify the following dependency in your Podfile:
    ```ruby
-   pod 'MapboxCoreNavigation', '~> 1.0.3'
+   pod 'VietMapCoreNavigation', '~> 1.0.3'
    ```
 
 1. Run `pod install` and open the resulting Xcode workspace.
@@ -36,4 +36,4 @@ Alternatively, to install Mapbox Core Navigation using [Carthage](https://github
 
 1. Run `carthage update --platform iOS` to build just the iOS dependencies.
 
-1. Follow the rest of [Carthage’s iOS integration instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Your application target’s Embedded Frameworks should include MapboxCoreNavigation.framework.
+1. Follow the rest of [Carthage’s iOS integration instructions](https://github.com/Carthage/Carthage#if-youre-building-for-ios-tvos-or-watchos). Your application target’s Embedded Frameworks should include VietMapCoreNavigation.framework.

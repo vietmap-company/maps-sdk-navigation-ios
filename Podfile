@@ -35,35 +35,40 @@ target 'Example-Swift' do
 
 end
 
-target 'MapboxCoreNavigation' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for MapboxCoreNavigation
-
-  target 'MapboxCoreNavigationTests' do
-    # Pods for testing
-  end
-
-end
-
-target 'MapboxNavigation' do
-  # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
-  # Pods for MapboxNavigation
-  pod 'VietMap', '~> 1.0.13'
-
-  target 'MapboxNavigationTests' do
-    # Pods for testing
-  end
-
-end
-
 target 'RouteTest' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for RouteTest
+
+end
+
+target 'VietMapCoreNavigation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VietMapCoreNavigation
+  pod 'VietMapDirections.swift', '~> 2.0.1'
+  pod 'VietMapTurf', '~> 1.0.2'
+
+  target 'VietMapCoreNavigationTests' do
+    # Pods for testing
+  end
+
+end
+
+target 'VietMapNavigation' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for VietMapNavigation
+  pod 'VietMap', '~> 1.1.0'
+  pod 'VietMapDirections.swift', '~> 2.0.1'
+  pod 'VietMapSolar', '~> 1.0.3'
+  pod 'VietMapSpeech', '~> 2.0.1'
+
+  target 'VietMapNavigationTests' do
+    # Pods for testing
+  end
 
 end

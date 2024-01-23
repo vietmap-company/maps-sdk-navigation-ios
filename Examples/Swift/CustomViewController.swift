@@ -1,11 +1,11 @@
 import UIKit
-import MapboxCoreNavigation
-import MapboxNavigation
+import VietMapCoreNavigation
+import VietMapNavigation
 import VietMap
 import CoreLocation
 import AVFoundation
-import MapboxDirections
-import Turf
+import VietMapDirections
+import VietMapTurf
 
 class CustomViewController: UIViewController, MGLMapViewDelegate {
 

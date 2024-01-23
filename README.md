@@ -72,9 +72,9 @@ Use the following code as inspiration:
 
 ```
 import Mapbox
-import MapboxDirections
-import MapboxCoreNavigation
-import MapboxNavigation
+import VietMapDirections
+import VietMapCoreNavigation
+import VietMapNavigation
 
 class ViewController: UIViewController {
     var navigationView: NavigationMapView?

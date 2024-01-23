@@ -1,7 +1,7 @@
 import UIKit
-import MapboxNavigation
-import MapboxCoreNavigation
-import MapboxDirections
+import VietMapNavigation
+import VietMapCoreNavigation
+import VietMapDirections
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, NavigationViewControllerDelegate {
