@@ -2,7 +2,7 @@ name: CI
 on:
   push:
     tags:
-      - 'v[0-9]+.[0-9]+.[0-9]+'
+      - '[0-9]+.[0-9]+.[0-9]+'
     
 jobs:
   build:
@@ -13,4 +13,4 @@ jobs:
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
         run: |
-          pod trunk push .podspec
+          pod trunk push VietMapNavigation.podspec --allow-warnings
