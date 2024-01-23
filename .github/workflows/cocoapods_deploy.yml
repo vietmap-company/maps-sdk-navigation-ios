@@ -6,12 +6,11 @@ on:
     
 jobs:
   build:
-  runs-on: macOS-latest
-    
+    runs-on: macOS-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Publish to CocoaPod register
-      env:
-        COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
-      run: |
-        pod trunk push .podspec
+      - uses: actions/checkout@v1
+      - name: Publish to CocoaPod register
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPOD_PASSWORD_LOGIN }}
+        run: |
+          pod trunk push .podspec
