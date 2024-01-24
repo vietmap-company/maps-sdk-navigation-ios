@@ -23,7 +23,9 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
-  s.source = { :git => "https://github.com/vietmap-company/maps-sdk-navigation-ios.git", :tag => "#{s.version.to_s}" }
+  s.source = { 
+  :git => "https://github.com/vietmap-company/maps-sdk-navigation-ios.git", 
+  :tag => s.version.to_s }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
