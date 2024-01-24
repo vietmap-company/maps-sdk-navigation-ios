@@ -1,4 +1,11 @@
 Note: VietMapNavigation sẽ phụ thuộc vào VietMapCoreNavigation, nên khi VietMapCoreNavigation có thay đổi thì phải build lại VietMapNavigation
+
+
+
+
+
+#-----------------------------------------------------------------------
+
 # Thực hiện build
 Thay đổi version trong file VietMapNavigation.podspec
 push lên repo + tag github (tag là version thay đổi)
