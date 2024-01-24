@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name = "VietMapNavigation"
-  s.version = "2.1.17"
+  s.version = "2.1.18"
   s.summary           = 'Vietmap Navigation'
   s.homepage          = 'https://github.com/vietmap-company'
   s.documentation_url = "https://maps.vietmap.vn/docs/sdk-mobile/sdk-ios/sdk-ios-ver2.0/"
@@ -24,7 +24,7 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => "https://github.com/vietmap-company/maps-sdk-navigation-ios.git", 
-    :tag => s.version.to_s
+    :tag => 'vm-navigation-v'+s.version.to_s
  }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
