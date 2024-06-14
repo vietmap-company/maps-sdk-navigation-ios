@@ -62,7 +62,10 @@ target 'VietMapNavigation' do
   use_frameworks!
 
   # Pods for VietMapNavigation
-  pod 'VietMap', '~> 1.1.0'
+#  pod 'VietMap', '~> 1.2.0'
+  
+#  s.vendored_frameworks = 'Frameworks/VietMap.xcframework', '2.0.0'
+  
   pod 'VietMapDirections.swift', '~> 2.0.1'
   pod 'VietMapSolar', '~> 1.0.3'
   pod 'VietMapSpeech', '~> 2.0.1'

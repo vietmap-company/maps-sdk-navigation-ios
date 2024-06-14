@@ -21,18 +21,18 @@ public enum FavoritesList {
         var location: CLLocation {
             switch self {
             case .mapboxSF:
-                return CLLocation(latitude: 37.788443, longitude: -122.4020258)
+                return CLLocation(latitude: 10.766129, longitude: 106.657740)
             case .timesSquare:
-                return CLLocation(latitude: 40.758899, longitude: -73.9873197)
+                return CLLocation(latitude: 10.774137, longitude: 106.722039)
             }
         }
         
         var rawValue: String {
             switch self {
             case .mapboxSF:
-                return "Mapbox SF"
+                return "NTD Phu Tho"
             case .timesSquare:
-                return "Times Square"
+                return "CV Sala"
             }
         }
         

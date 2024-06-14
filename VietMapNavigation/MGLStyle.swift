@@ -2,7 +2,7 @@ import Foundation
 import VietMap
 
 
-extension MGLStyle {
+extension MLNStyle {
     
     // The Mapbox China Day Style URL.
     static let mapboxChinaDayStyleURL = URL(string:"mapbox://styles/mapbox/streets-zh-v1")!
