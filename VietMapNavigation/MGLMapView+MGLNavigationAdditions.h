@@ -1,6 +1,6 @@
 #import <VietMap/VietMap.h>
 
-@interface MGLMapView (MGLNavigationAdditions)
+@interface MLNMapView (MGLNavigationAdditions)
 
 - (void)mapViewDidFinishRenderingFrameFullyRendered:(BOOL)fullyRendered;
 

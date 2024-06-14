@@ -9,7 +9,7 @@ private typealias RouteRequestSuccess = (([Route]) -> Void)
 private typealias RouteRequestFailure = ((NSError) -> Void)
 
 
-class ViewController: UIViewController, MGLMapViewDelegate {
+class ViewController: UIViewController, MLNMapViewDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var longPressHintView: UIView!
@@ -239,7 +239,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 
         customViewController.userRoute = route
 
-        let destination = MGLPointAnnotation()
+        let destination = MLNPointAnnotation()
         destination.coordinate = route.coordinates!.last!
         customViewController.destination = destination
         customViewController.simulateLocation = simulationButton.isSelected
@@ -296,7 +296,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         print(location.coordinate)
         print("---------end   get location-------------")
 //        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
-//            let camera = MGLMapCamera(
+//            let camera = MLNMapCamera(
 //                lookingAtCenter: location.coordinate,
 //                acrossDistance: 500,
 //                pitch: 75,
@@ -319,11 +319,11 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.addGestureRecognizer(singleTap)
     }
 
-    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    func mapView(_ mapView: MLNMapView, didFinishLoading style: MLNStyle) {
         self.mapView?.localizeLabels()
         
         if let routes = routes, let currentRoute = routes.first, let coords = currentRoute.coordinates {
-            mapView.setVisibleCoordinateBounds(MGLPolygon(coordinates: coords, count: currentRoute.coordinateCount).overlayBounds, animated: false)
+            mapView.setVisibleCoordinateBounds(MLNPolygon(coordinates: coords, count: currentRoute.coordinateCount).overlayBounds, animated: false)
             self.mapView?.showRoutes(routes)
             self.mapView?.showWaypoints(currentRoute)
         }
