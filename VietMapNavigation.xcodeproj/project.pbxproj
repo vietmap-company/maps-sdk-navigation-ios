@@ -266,9 +266,6 @@
 		C5F4D21920DC468B0059FABF /* CongestionLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F4D21820DC468B0059FABF /* CongestionLevel.swift */; };
 		C5FFAC1520D96F5C009E7F98 /* CarPlayNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5FFAC1420D96F5B009E7F98 /* CarPlayNavigationViewController.swift */; };
 		D72CC42C2451A2F800238549 /* ConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72CC42B2451A2F800238549 /* ConfigManager.swift */; };
-		D78158EE2C1C2D790059CD3A /* VietMap.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78158EC2C1C2D790059CD3A /* VietMap.xcframework */; };
-		D78158EF2C1C2D8A0059CD3A /* VietMap.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = D78158EC2C1C2D790059CD3A /* VietMap.xcframework */; };
-		D78158F02C1C2D8A0059CD3A /* VietMap.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D78158EC2C1C2D790059CD3A /* VietMap.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DA23C9611F4FC05C00BA9522 /* MGLMapView+MGLNavigationAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 35D825F91E6A2DBE0088F83B /* MGLMapView+MGLNavigationAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DA3525702010A5210048DDFC /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = DA35256E2010A5200048DDFC /* Localizable.stringsdict */; };
 		DAAE5F301EAE4C4700832871 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAE5F321EAE4C4700832871 /* Localizable.strings */; };
@@ -412,7 +409,6 @@
 			files = (
 				354A01D51E6626AC00D765C2 /* VietMapCoreNavigation.framework in Embed Frameworks */,
 				35D4282B1FA0DF1D00176028 /* VietMapNavigation.framework in Embed Frameworks */,
-				D78158F02C1C2D8A0059CD3A /* VietMap.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -736,7 +732,6 @@
 		CDB8104DCD258A1714522575 /* Pods-Example-Objective-CTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example-Objective-CTests.debug.xcconfig"; path = "Target Support Files/Pods-Example-Objective-CTests/Pods-Example-Objective-CTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CEE3E2209B1181ABB46FE5B2 /* Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VietMapCoreNavigation_VietMapCoreNavigationTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D72CC42B2451A2F800238549 /* ConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigManager.swift; sourceTree = "<group>"; };
-		D78158EC2C1C2D790059CD3A /* VietMap.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = VietMap.xcframework; sourceTree = "<group>"; };
 		DA1811FD20128B0900C91918 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Main.strings; sourceTree = "<group>"; };
 		DA1811FE20128B0900C91918 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Navigation.strings; sourceTree = "<group>"; };
 		DA18120120128B7B00C91918 /* he */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = he; path = he.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -877,7 +872,6 @@
 			files = (
 				35E9B0AD1F9E0F8F00BF84AB /* VietMapNavigation.framework in Frameworks */,
 				F61653DC0A7CC1D34E3EC789 /* Pods_Example_Swift.framework in Frameworks */,
-				D78158EF2C1C2D8A0059CD3A /* VietMap.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,7 +899,6 @@
 			files = (
 				C54658B3290001B500C068EA /* Nimble.xcframework in Frameworks */,
 				C546587028FED7F200C068EA /* FBSnapshotTestCase.xcframework in Frameworks */,
-				D78158EE2C1C2D790059CD3A /* VietMap.xcframework in Frameworks */,
 				3525449D1E663D32004C8F1C /* VietMapCoreNavigation.framework in Frameworks */,
 				35B711D41E5E7AD2001EDA8D /* VietMapNavigation.framework in Frameworks */,
 				6B8177332ECAB3F02D22398B /* Pods_VietMapNavigation_VietMapNavigationTests.framework in Frameworks */,
@@ -1255,7 +1248,6 @@
 			isa = PBXGroup;
 			children = (
 				C54658B1290001B500C068EA /* Nimble.xcframework */,
-				D78158EC2C1C2D790059CD3A /* VietMap.xcframework */,
 				C546586528FECEFA00C068EA /* Quick.xcframework */,
 				C546586E28FED7F200C068EA /* FBSnapshotTestCase.xcframework */,
 				686B1D656A8A89E300E43C4A /* Pods_Example_CarPlay.framework */,
