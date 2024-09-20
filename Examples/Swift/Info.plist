@@ -61,6 +61,6 @@
 	<key>VietMapAPIBaseURL</key>
 	<string>https://maps.vietmap.vn/api/navigations/route/</string>
 	<key>VietMapAccessToken</key>
-	<string>95f852d9f8c38e08ceacfd456b59059d0618254a50d3854c</string>
+	<string>YOUR_API_KEY_HERE</string>
 </dict>
 </plist>
