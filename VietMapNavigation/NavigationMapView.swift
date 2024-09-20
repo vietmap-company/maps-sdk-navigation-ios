@@ -474,15 +474,16 @@ open class NavigationMapView: MLNMapView, UIGestureRecognizerDelegate {
             
             let line = self.navigationMapDelegate?.navigationMapView?(self, routeStyleLayerWithIdentifier: self.routeLayerIdentifier, source: lineSource) ?? self.routeStyleLayer(identifier: self.routeLayerIdentifier, source: lineSource)
             let lineCasing = self.navigationMapDelegate?.navigationMapView?(self, routeCasingStyleLayerWithIdentifier: self.routeLayerCasingIdentifier, source: lineCasingSource) ?? self.routeCasingStyleLayer(identifier: self.routeLayerCasingIdentifier, source: lineSource)
-            
             for layer in style.layers.reversed() {
-                if !(layer is MLNSymbolStyleLayer),
-                   layer.identifier != self.arrowLayerIdentifier, layer.identifier != self.arrowSymbolLayerIdentifier, layer.identifier != self.arrowCasingSymbolLayerIdentifier, layer.identifier != self.arrowLayerStrokeIdentifier, layer.identifier != self.waypointCircleIdentifier {
-                    style.insertLayer(line, below: layer)
-                    style.insertLayer(lineCasing, below: line)
-                    break
-                }
-            }
+            //                if !(layer is MLNSymbolStyleLayer) &&
+            //                    layer.identifier != arrowLayerIdentifier && layer.identifier != arrowSymbolLayerIdentifier && layer.identifier != arrowCasingSymbolLayerIdentifier && layer.identifier != arrowLayerStrokeIdentifier && layer.identifier != waypointCircleIdentifier
+                            if !(layer is MLNSymbolStyleLayer) && layer.identifier == "vmadmin_province"
+                            {
+                                style.insertLayer(line, below: layer)
+                                style.insertLayer(lineCasing, below: line)
+                                break
+                            }
+                        }
         }
     }
     
