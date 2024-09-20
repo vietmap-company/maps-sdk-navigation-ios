@@ -3,8 +3,7 @@ import Foundation
 import CarPlay
 
 @available(iOS 12.0, *)
-class CarPlayMapViewController: UIViewController, MGLMapViewDelegate {
-    
+class CarPlayMapViewController: UIViewController, MLNMapViewDelegate {
     static let defaultAltitude: CLLocationDistance = 16000
     
     var styleManager: StyleManager!
@@ -18,9 +17,7 @@ class CarPlayMapViewController: UIViewController, MGLMapViewDelegate {
     var isOverviewingRoutes: Bool = false
     
     var mapView: NavigationMapView {
-        get {
-            return self.view as! NavigationMapView
-        }
+        view as! NavigationMapView
     }
 
     lazy var recenterButton: CPMapButton = {
@@ -42,22 +39,28 @@ class CarPlayMapViewController: UIViewController, MGLMapViewDelegate {
         let mapView = NavigationMapView()
         mapView.delegate = self
 //        mapView.navigationMapDelegate = self
+        mapView.logoView.isHidden = true
+        mapView.attributionButton.isHidden = true
         
-        self.view = mapView
+        view = mapView
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        styleManager = StyleManager(self)
-        styleManager.styles = [DayStyle(), NightStyle()]
-        
-        resetCamera(animated: false, altitude: CarPlayMapViewController.defaultAltitude)
-        mapView.setUserTrackingMode(.followWithCourse, animated: true, completionHandler: nil)
+        self.styleManager = StyleManager(self, dayStyle: DayStyle(demoStyle: ()), nightStyle: NightStyle(demoStyle: ()))
+
+        self.resetCamera(animated: false, altitude: CarPlayMapViewController.defaultAltitude)
+        self.mapView.setUserTrackingMode(.followWithCourse, animated: true, completionHandler: nil)
     }
-    
+
+    override open func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.styleManager.ensureAppropriateStyle()
+    }
+
     public func zoomInButton() -> CPMapButton {
-        let zoomInButton = CPMapButton { [weak self] (button) in
+        let zoomInButton = CPMapButton { [weak self] _ in
             guard let strongSelf = self else {
                 return
             }
@@ -69,7 +72,7 @@ class CarPlayMapViewController: UIViewController, MGLMapViewDelegate {
     }
     
     public func zoomOutButton() -> CPMapButton {
-        let zoomInOut = CPMapButton { [weak self] (button) in
+        let zoomInOut = CPMapButton { [weak self] _ in
             guard let strongSelf = self else {
                 return
             }
@@ -80,61 +83,57 @@ class CarPlayMapViewController: UIViewController, MGLMapViewDelegate {
         return zoomInOut
     }
 
-    
-    // MARK: - MGLMapViewDelegate
+    // MARK: - MLNMapViewDelegate
 
-    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    func mapView(_ mapView: MLNMapView, didFinishLoading style: MLNStyle) {
         if let mapView = mapView as? NavigationMapView {
             mapView.localizeLabels()
         }
     }
     
     func resetCamera(animated: Bool = false, altitude: CLLocationDistance? = nil) {
-        let camera = mapView.camera
-        if let altitude = altitude {
+        let camera = self.mapView.camera
+        if let altitude {
             camera.altitude = altitude
         }
         camera.pitch = 60
-        mapView.setCamera(camera, animated: animated)
-
+        self.mapView.setCamera(camera, animated: animated)
     }
     
     override func viewSafeAreaInsetsDidChange() {
-        mapView.setContentInset(mapView.safeArea, animated: false, completionHandler: nil)
+        self.mapView.setContentInset(self.mapView.safeAreaInsets, animated: false, completionHandler: nil)
         
-        guard isOverviewingRoutes else {
+        guard self.isOverviewingRoutes else {
             super.viewSafeAreaInsetsDidChange()
             return
         }
         
-        
         guard let routes = mapView.routes,
-            let active = routes.first else {
-                super.viewSafeAreaInsetsDidChange()
-                return
+              let active = routes.first else {
+            super.viewSafeAreaInsetsDidChange()
+            return
         }
         
-        mapView.fit(to: active, animated: false)
+        self.mapView.fit(to: active, animated: false)
     }
 }
 
 @available(iOS 12.0, *)
 extension CarPlayMapViewController: StyleManagerDelegate {
     func locationFor(styleManager: StyleManager) -> CLLocation? {
-        return mapView.userLocationForCourseTracking ?? mapView.userLocation?.location ?? coarseLocationManager.location
+        self.mapView.userLocationForCourseTracking ?? self.mapView.userLocation?.location ?? self.coarseLocationManager.location
     }
     
     func styleManager(_ styleManager: StyleManager, didApply style: Style) {
         let styleURL = style.previewMapStyleURL
-        if mapView.styleURL != styleURL {
-            mapView.style?.transition = MGLTransition(duration: 0.5, delay: 0)
-            mapView.styleURL = styleURL
+        if self.mapView.styleURL != styleURL {
+            self.mapView.style?.transition = MLNTransition(duration: 0.5, delay: 0)
+            self.mapView.styleURL = styleURL
         }
     }
     
     func styleManagerDidRefreshAppearance(_ styleManager: StyleManager) {
-        mapView.reloadStyle(self)
+        self.mapView.reloadStyle(self)
     }
 }
 #endif
-

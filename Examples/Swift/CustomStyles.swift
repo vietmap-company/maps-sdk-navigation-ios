@@ -7,9 +7,15 @@ import VietMapNavigation
 // MARK: CustomDayStyle
 class CustomDayStyle: DayStyle {
     
-    required init() {
-        super.init()
-        mapStyleURL = URL(string: "mapbox://styles/mapbox/satellite-streets-v9")!
+//    required init() {
+//        super.init()
+//        mapStyleURL = URL(string: "mapbox://styles/mapbox/satellite-streets-v9")!
+//        styleType = .day
+//    }
+    
+    required init(mapStyleURL: URL) {
+        super.init(mapStyleURL: mapStyleURL)
+        self.mapStyleURL = mapStyleURL
         styleType = .day
     }
     
@@ -22,9 +28,15 @@ class CustomDayStyle: DayStyle {
 // MARK: CustomNightStyle
 class CustomNightStyle: NightStyle {
     
-    required init() {
-        super.init()
-        mapStyleURL = URL(string: "mapbox://styles/mapbox/satellite-streets-v9")!
+//    required init() {
+//        super.init()
+//        mapStyleURL = URL(string: "mapbox://styles/mapbox/satellite-streets-v9")!
+//        styleType = .night
+//    }
+    
+    required init(mapStyleURL: URL) {
+        super.init(mapStyleURL: mapStyleURL)
+        self.mapStyleURL = mapStyleURL
         styleType = .night
     }
     

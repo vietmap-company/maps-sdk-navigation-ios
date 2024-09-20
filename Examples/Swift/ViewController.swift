@@ -9,7 +9,7 @@ private typealias RouteRequestSuccess = (([Route]) -> Void)
 private typealias RouteRequestFailure = ((NSError) -> Void)
 
 
-class ViewController: UIViewController, MGLMapViewDelegate {
+class ViewController: UIViewController, MLNMapViewDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet weak var longPressHintView: UIView!
@@ -18,9 +18,8 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     @IBOutlet weak var bottomBar: UIView!
     @IBOutlet weak var clearMap: UIButton!
     @IBOutlet weak var bottomBarBackground: UIView!
-    
-    private var navigationViewController: NavigationViewController!
-    
+      
+    let navigationViewController = NavigationViewController(dayStyle:  DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!))
     // MARK: Properties
     var mapView: NavigationMapView? {
         didSet {
@@ -163,8 +162,13 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 
         let locationManager = ReplayLocationManager(locations: Array<CLLocation>.locations(from: filePath))
 
-        let navigationViewController = NavigationViewController(for: route, locationManager: locationManager)
+//        let navigationViewController = NavigationViewController(for: route, locationManager: locationManager)
 
+        let dayStyle = DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!)
+        let navigationViewController = NavigationViewController(dayStyle: dayStyle)
+        navigationViewController.route = route
+//        let directions = routeController.directions
+//        let navigationViewController = NavigationViewController(dayStyle: DayStyle(demoStyle: ()), nightStyle: NightStyle(demoStyle: ()), directions: directions)
         present(navigationViewController, animated: true, completion: nil)
     }
 
@@ -216,7 +220,10 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     func startBasicNavigation() {
         guard let route = routes?.first else { return }
 
-        let navigationViewController = NavigationViewController(for: route, locationManager: navigationLocationManager())
+//        let navigationViewController = NavigationViewController(for: route, locationManager: navigationLocationManager())
+        let dayStyle = DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!)
+        let navigationViewController = NavigationViewController(dayStyle: dayStyle)
+        navigationViewController.route = route
         navigationViewController.delegate = self
         
         presentAndRemoveMapview(navigationViewController)
@@ -225,7 +232,11 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     func startNavigation(styles: [Style]) {
         guard let route = routes?.first else { return }
         
-        let navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
+//        let navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
+        
+        let dayStyle = DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!)
+        let navigationViewController = NavigationViewController(dayStyle: dayStyle)
+        navigationViewController.route = route
         navigationViewController.delegate = self
         
         presentAndRemoveMapview(navigationViewController)
@@ -239,7 +250,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 
         customViewController.userRoute = route
 
-        let destination = MGLPointAnnotation()
+        let destination = MLNPointAnnotation()
         destination.coordinate = route.coordinates!.last!
         customViewController.destination = destination
         customViewController.simulateLocation = simulationButton.isSelected
@@ -254,10 +265,14 @@ class ViewController: UIViewController, MGLMapViewDelegate {
 
         let styles = [CustomDayStyle(), CustomNightStyle()]
 
-        self.navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
-//        navigationViewController.delegate = self
-//        navigationViewController.mapView?.showsUserHeadingIndicator = true
-        navigationViewController.mapView?.userTrackingMode = .follow
+//        self.navigationViewController = NavigationViewController(for: route, styles: styles, locationManager: navigationLocationManager())
+        
+        let dayStyle = DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!)
+        let navigationViewController = NavigationViewController(dayStyle: dayStyle)
+        navigationViewController.route = route
+        navigationViewController.delegate = self
+        navigationViewController.mapView.showsUserHeadingIndicator = true
+        navigationViewController.mapView.userTrackingMode = .follow
         presentAndRemoveMapview(navigationViewController)
     }
 
@@ -269,8 +284,8 @@ class ViewController: UIViewController, MGLMapViewDelegate {
     }
 
     func presentAndRemoveMapview(_ navigationViewController: NavigationViewController) {
-        self.navigationViewController.mapView?.styleURL = URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE");
-        self.navigationViewController.mapView?.tracksUserCourse = true
+        self.navigationViewController.mapView.styleURL = URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE");
+        self.navigationViewController.mapView.tracksUserCourse = true
         NotificationCenter.default.addObserver(self, selector: #selector(progressDidChange(_ :)), name: .routeControllerProgressDidChange, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(progressDidReroute(_ :)), name: .routeControllerDidReroute, object: nil)
         present(navigationViewController, animated: true) {
@@ -296,7 +311,7 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         print(location.coordinate)
         print("---------end   get location-------------")
 //        if ((navigationViewController.mapView?.tracksUserCourse) != nil && (navigationViewController.mapView?.tracksUserCourse) == true) {
-//            let camera = MGLMapCamera(
+//            let camera = MLNMapCamera(
 //                lookingAtCenter: location.coordinate,
 //                acrossDistance: 500,
 //                pitch: 75,
@@ -319,11 +334,11 @@ class ViewController: UIViewController, MGLMapViewDelegate {
         mapView.addGestureRecognizer(singleTap)
     }
 
-    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    func mapView(_ mapView: MLNMapView, didFinishLoading style: MLNStyle) {
         self.mapView?.localizeLabels()
         
         if let routes = routes, let currentRoute = routes.first, let coords = currentRoute.coordinates {
-            mapView.setVisibleCoordinateBounds(MGLPolygon(coordinates: coords, count: currentRoute.coordinateCount).overlayBounds, animated: false)
+            mapView.setVisibleCoordinateBounds(MLNPolygon(coordinates: coords, count: currentRoute.coordinateCount).overlayBounds, animated: false)
             self.mapView?.showRoutes(routes)
             self.mapView?.showWaypoints(currentRoute)
         }
@@ -412,7 +427,7 @@ extension ViewController: NavigationViewControllerDelegate {
         // This type of screen could show information about a destination, pickup/dropoff confirmation, instructions upon arrival, etc.
         
         //If we're not in a "Multiple Stops" demo, show the normal EORVC
-        if navigationViewController.routeController.routeProgress.isFinalLeg {
+        if ((navigationViewController.routeController?.routeProgress.isFinalLeg) != nil) {
             return true
         }
         

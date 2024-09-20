@@ -1,7 +1,7 @@
 import Foundation
 import VietMap
 
-extension MGLVectorTileSource {
+extension MLNVectorTileSource {
     var isMapboxStreets: Bool {
         guard let configurationURL = configurationURL else {
             return false

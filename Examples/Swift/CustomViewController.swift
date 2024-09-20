@@ -7,9 +7,9 @@ import AVFoundation
 import VietMapDirections
 import VietMapTurf
 
-class CustomViewController: UIViewController, MGLMapViewDelegate {
+class CustomViewController: UIViewController, MLNMapViewDelegate {
 
-    var destination: MGLPointAnnotation!
+    var destination: MLNPointAnnotation!
     let directions = Directions.shared
     var routeController: RouteController!
     var simulateLocation = false
@@ -68,7 +68,7 @@ class CustomViewController: UIViewController, MGLMapViewDelegate {
         NotificationCenter.default.removeObserver(self, name: .routeControllerDidPassVisualInstructionPoint, object: nil)
     }
 
-    func mapView(_ mapView: MGLMapView, didFinishLoading style: MGLStyle) {
+    func mapView(_ mapView: MLNMapView, didFinishLoading style: MLNStyle) {
         self.mapView.showRoutes([routeController.routeProgress.route])
     }
 
