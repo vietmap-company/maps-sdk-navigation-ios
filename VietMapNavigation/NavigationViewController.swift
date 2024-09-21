@@ -651,6 +651,7 @@ extension NavigationViewController: RouteControllerDelegate {
         }
     }
     
+    @available(iOS 12.0, *)
     public func routeController(_ routeController: RouteController, didArriveAt waypoint: Waypoint) -> Bool {
         let advancesToNextLeg = self.delegate?.navigationViewController?(self, didArriveAt: waypoint) ?? true
         
@@ -719,6 +720,8 @@ extension NavigationViewController: StyleManagerDelegate {
 // MARK: - Private
 
 private extension NavigationViewController {
+    
+    @available(iOS 12.0, *)
     var isConnectedToCarPlay: Bool {
         CarPlayManager.shared.isConnectedToCarPlay
     }
