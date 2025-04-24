@@ -511,7 +511,7 @@ open class NavigationViewController: UIViewController {
                 let locationManager = routeController.locationManager.copy() as! NavigationLocationManager
                 let directions = routeController.directions
                 let route = routeController.routeProgress.route
-                let navigationViewController = NavigationViewController(dayStyle: DayStyle(demoStyle: ()), nightStyle: NightStyle(demoStyle: ()), directions: directions)
+                let navigationViewController = NavigationViewController(dayStyle: DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!), nightStyle: NightStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!), directions: directions)
                 navigationViewController.startNavigation(with: route, animated: true, routeController: routeController, locationManager: locationManager)
 
                 window.rootViewController?.topMostViewController()?.present(navigationViewController, animated: true, completion: {

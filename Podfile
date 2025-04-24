@@ -62,7 +62,7 @@ target 'VietMapNavigation' do
   use_frameworks!
 
   # Pods for VietMapNavigation
-  pod 'VietMap', '~> 2.0.0'  
+  pod 'VietMap', '~> 2.4.1'  
   pod 'VietMapDirections.swift', '~> 2.0.1'
   pod 'VietMapSolar', '~> 1.0.3'
   pod 'VietMapSpeech', '~> 2.0.1'
