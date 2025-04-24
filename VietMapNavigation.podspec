@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
 
   s.name = "VietMapNavigation"
-  s.version = "3.2.0"
+  s.version = "3.2.1"
   s.summary           = 'Vietmap Navigation'
   s.homepage          = 'https://github.com/vietmap-company'
   s.documentation_url = "https://maps.vietmap.vn/docs/sdk-mobile/sdk-ios/sdk-ios-ver2.0/"
@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
   s.module_name = "VietMapNavigation"
 
   s.dependency "VietMapCoreNavigation", "3.1.0"
-  s.dependency "VietMap", "~> 2.4.1"
+  s.dependency "VietMap", "~> 2.4.2"
   s.dependency "VietMapSolar", "~> 1.0.3"
   s.dependency "VietMapSpeech", "~> 2.0.1"
 
