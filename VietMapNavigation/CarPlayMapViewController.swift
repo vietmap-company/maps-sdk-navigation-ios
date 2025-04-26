@@ -48,7 +48,7 @@ class CarPlayMapViewController: UIViewController, MLNMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.styleManager = StyleManager(self, dayStyle: DayStyle(demoStyle: ()), nightStyle: NightStyle(demoStyle: ()))
+        self.styleManager = StyleManager(self, dayStyle: DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!), nightStyle: NightStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!))
 
         self.resetCamera(animated: false, altitude: CarPlayMapViewController.defaultAltitude)
         self.mapView.setUserTrackingMode(.followWithCourse, animated: true, completionHandler: nil)

@@ -22,7 +22,6 @@ public class CarPlayNavigationViewController: UIViewController, MLNMapViewDelega
     var routeController: RouteController
     var mapView: NavigationMapView?
     let shieldHeight: CGFloat = 16
-    
     var carSession: CPNavigationSession!
     var mapTemplate: CPMapTemplate
     var carFeedbackTemplate: CPGridTemplate!
@@ -30,6 +29,10 @@ public class CarPlayNavigationViewController: UIViewController, MLNMapViewDelega
     var previousSafeAreaInsets: UIEdgeInsets?
     var styleManager: StyleManager!
     
+    
+    private func uninstall(_ navigationMapView: NavigationMapView) {
+        navigationMapView.removeFromSuperview()
+    }
     let distanceFormatter = DistanceFormatter(approximate: true)
     
     var edgePadding: UIEdgeInsets {
@@ -69,21 +72,27 @@ public class CarPlayNavigationViewController: UIViewController, MLNMapViewDelega
     override public func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let mapView = NavigationMapView(frame: view.bounds)
-        mapView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        mapView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin, .flexibleBottomMargin,.flexibleLeftMargin, .flexibleRightMargin]
         mapView.compassView.isHidden = true
         mapView.logoView.isHidden = true
         mapView.attributionButton.isHidden = true
         mapView.delegate = self
+        
 
         mapView.defaultAltitude = 500
         mapView.zoomedOutMotorwayAltitude = 1000
         mapView.longManeuverDistance = 500
-
+        
         self.mapView = mapView
+        view.layoutMargins = .zero
+        
+        view.autoresizesSubviews = true
+        
         view.addSubview(mapView)
         
-        self.styleManager = StyleManager(self, dayStyle: DayStyle(demoStyle: ()), nightStyle: NightStyle(demoStyle: ()))
+        self.styleManager = StyleManager(self, dayStyle: DayStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!), nightStyle: NightStyle(mapStyleURL: URL(string: "https://maps.vietmap.vn/api/maps/light/styles.json?apikey=YOUR_API_KEY_HERE")!))
 
         self.resumeNotifications()
         self.routeController.resume()
@@ -197,6 +206,7 @@ public class CarPlayNavigationViewController: UIViewController, MLNMapViewDelega
     }
     
     @objc func progressDidChange(_ notification: NSNotification) {
+        print("Location carplay changed------------------------")
         let routeProgress = notification.userInfo![RouteControllerNotificationUserInfoKey.routeProgressKey] as! RouteProgress
         let location = notification.userInfo![RouteControllerNotificationUserInfoKey.locationKey] as! CLLocation
         
