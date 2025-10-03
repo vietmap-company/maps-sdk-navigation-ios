@@ -17,7 +17,7 @@ public class DashedLineView: LineView {
         updateProperties()
     }
 
-    func updateProperties() {
+    override public func updateProperties() {
         let path = UIBezierPath()
         path.move(to: CGPoint(x: 0, y: bounds.height/2))
         path.addLine(to: CGPoint(x: bounds.width, y: bounds.height/2))
